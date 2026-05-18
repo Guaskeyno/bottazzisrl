@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Azienda — Bottazzi Srl</title>
+  <meta name="description" content="La storia di Bottazzi Srl: tre generazioni, dal 1983, a Casale Monferrato. Chi siamo e in cosa crediamo." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600&family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    img { display: block; }
+    a { text-decoration: none; }
+    ul { list-style: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+    /* ── Tokens ── */
+    :root {
+      --black:    #1e1e1e;
+      --white:    #ffffff;
+      --red:      #de3813;
+      --fog:      #f4f4f4;
+      --concrete: #c3b9b9;
+      --divider:  #d9d9d9;
+
+      --font-head: 'Sora', sans-serif;
+      --font-body: 'Geist', sans-serif;
+      --pad-x: 40px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-weight: 400;
+      color: var(--black);
+      background: var(--white);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ═══════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════ */
+    .hero-wrapper {
+      position: relative;
+      height: 467px;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.56);
+    }
+
+    /* ── Contact bar ── */
+    .contact-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 12px var(--pad-x);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--white);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .contact-item i { font-size: 24px; flex-shrink: 0; line-height: 1; }
+
+    .contact-divider {
+      width: 1px;
+      height: 24px;
+      background: rgba(255,255,255,0.5);
+      flex-shrink: 0;
+    }
+
+    /* ── Navbar ── */
+    .navbar {
+      position: absolute;
+      top: 81px;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 var(--pad-x);
+      gap: 40px;
+    }
+
+    .nav-logo img { height: 48px; width: auto; }
+
+    .nav-links {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.5);
+      font-size: 16px;
+      font-weight: 400;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--white); }
+
+    .btn-red {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--red);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 32px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    /* ── Hero content ── */
+    .hero-content {
+      position: absolute;
+      left: var(--pad-x);
+      bottom: 60px;
+      z-index: 5;
+    }
+
+    .hero-headline {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 48px;
+      letter-spacing: -0.5px;
+      line-height: 1;
+      color: var(--white);
+    }
+
+    /* ── Hamburger ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav-hamburger i { font-size: 24px; color: var(--white); line-height: 1; }
+
+    /* ── Shared section labels ── */
+    .section-label {
+      font-size: 18px;
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+
+    .section-title {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 36px;
+      letter-spacing: -0.5px;
+      color: var(--black);
+    }
+
+    /* ═══════════════════════════════════════
+       ABOUT SECTION
+    ═══════════════════════════════════════ */
+    .about-section {
+      padding: 80px var(--pad-x);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 80px;
+    }
+
+    .about-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      text-align: center;
+      max-width: 626px;
+    }
+
+    .about-header {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: center;
+    }
+
+    .about-body {
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--black);
+    }
+
+    .about-image {
+      width: 100%;
+      max-width: 901px;
+      height: 565px;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-image-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.32);
+      border-radius: 12px;
+    }
+
+    /* ═══════════════════════════════════════
+       VALUES SECTION
+    ═══════════════════════════════════════ */
+    .values-section {
+      padding: 80px var(--pad-x);
+      background: var(--fog);
+    }
+
+    .values-header {
+      margin-bottom: 48px;
+    }
+
+    .values-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 43px;
+    }
+
+    .value-card {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 425px;
+    }
+
+    .value-card__title {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--black);
+    }
+
+    .value-card__body {
+      font-size: 18px;
+      color: var(--black);
+      line-height: 1.5;
+    }
+
+    /* ═══════════════════════════════════════
+       SERVICES SECTION
+    ═══════════════════════════════════════ */
+    .services-section {
+      padding: 80px var(--pad-x);
+    }
+
+    .services-divider {
+      height: 1px;
+      background: var(--divider);
+      margin: 40px 0 0;
+    }
+
+    .services-grid {
+      display: flex;
+      gap: 182px;
+      margin-top: 60px;
+      flex-wrap: wrap;
+    }
+
+    .service-card {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      width: 506px;
+    }
+
+    .service-icon {
+      width: 45px;
+      height: 45px;
+      background: var(--black);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .service-icon i {
+      font-size: 24px;
+      line-height: 1;
+      color: var(--white);
+    }
+
+    .service-text {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .service-text__title {
+      font-size: 24px;
+      color: var(--black);
+    }
+
+    .service-text__body {
+      font-size: 18px;
+      color: var(--black);
+      line-height: 1.5;
+    }
+
+    .btn-dark-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--black);
+      color: var(--black);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 32px;
+      border-radius: 4px;
+      white-space: nowrap;
+      align-self: flex-start;
+    }
+
+    /* ═══════════════════════════════════════
+       FINAL CTA
+    ═══════════════════════════════════════ */
+    .final-cta {
+      position: relative;
+      height: 698px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .final-cta__bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .final-cta__overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.32);
+    }
+
+    .final-cta__content {
+      position: relative;
+      z-index: 2;
+      padding: 0 var(--pad-x);
+      max-width: 677px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: flex-start;
+      color: var(--white);
+    }
+
+    .final-cta__text {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .final-cta__subtitle {
+      font-size: 18px;
+    }
+
+    .final-cta__headline {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 48px;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--white);
+      color: var(--black);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 32px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    /* ═══════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════ */
+    .footer {
+      background: var(--black);
+      color: var(--white);
+      padding: 80px var(--pad-x);
+    }
+
+    .footer__inner { display: flex; flex-direction: column; gap: 32px; }
+    .footer__signet { width: 64px; height: 64px; object-fit: contain; }
+
+    .footer__info {
+      display: flex;
+      gap: 219px;
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    .footer__col { display: flex; flex-direction: column; gap: 42px; }
+    .footer__col-block { display: flex; flex-direction: column; gap: 8px; }
+    .footer__col-block--hours { display: flex; flex-direction: column; gap: 12px; }
+    .footer__hours-row { display: flex; flex-direction: column; gap: 8px; }
+    .footer__links { display: flex; flex-direction: column; gap: 8px; }
+    .footer__links a { color: var(--white); }
+    .footer__legal { font-size: 20px; margin-top: 40px; }
+
+    /* ═══════════════════════════════════════
+       MOBILE — ≤ 768px
+    ═══════════════════════════════════════ */
+    @media (max-width: 768px) {
+      :root { --pad-x: 20px; }
+
+      .contact-bar { display: none; }
+
+      .navbar {
+        top: 20px;
+        padding: 0 var(--pad-x);
+        gap: 0;
+      }
+
+      .nav-links {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.92);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        z-index: 100;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: 22px; color: rgba(255,255,255,0.6); }
+      .nav-links a.active { color: var(--white); }
+      .nav-cta-desktop { display: none; }
+      .nav-hamburger { display: flex; z-index: 110; }
+
+      .hero-wrapper { height: 320px; }
+      .hero-headline { font-size: 28px; }
+      .hero-content { bottom: 32px; }
+
+      .about-section { padding: 48px var(--pad-x); gap: 48px; }
+      .about-image { max-width: 100%; height: 300px; }
+      .section-title { font-size: 28px; }
+
+      .values-section { padding: 48px var(--pad-x); }
+      .value-card { width: 100%; }
+
+      .services-section { padding: 48px var(--pad-x); }
+      .services-grid { flex-direction: column; gap: 48px; }
+      .service-card { width: 100%; }
+
+      .final-cta { height: auto; padding: 80px 0; }
+      .final-cta__headline { font-size: 32px; }
+
+      .footer { padding: 48px var(--pad-x); }
+      .footer__info { flex-direction: column; gap: 40px; font-size: 16px; }
+      .footer__legal { font-size: 16px; margin-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <div class="hero-wrapper">
+    <img class="hero-bg" src="https://www.figma.com/api/mcp/asset/29cffd51-c9eb-47d7-b2b4-a4717b0ce00b" alt="Bottazzi Srl — tre generazioni" />
+    <div class="hero-overlay"></div>
+
+    <!-- Contact bar -->
+    <div class="contact-bar">
+      <div class="contact-item">
+        <i class="ph ph-envelope"></i>
+        info@bottazzisrl.com
+      </div>
+      <div class="contact-divider"></div>
+      <div class="contact-item">
+        <i class="ph ph-phone"></i>
+        +39 0142 452805
+      </div>
+      <div class="contact-divider"></div>
+      <div class="contact-item">
+        <i class="ph ph-map-pin"></i>
+        Via Enrico Motta 52, 15033 Casale Monferrato (AL)
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-logo">
+        <a href="index.html"><img src="assets/main-logo.png" alt="Bottazzi Srl" /></a>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalogo.html">Catalogo</a></li>
+        <li><a href="personalizzazione.html">Personalizzazione</a></li>
+        <li><a href="consulenza.html">Consulenza</a></li>
+        <li><a href="azienda.html" class="active">Azienda</a></li>
+      </ul>
+      <button class="btn-red nav-cta-desktop">Contattaci</button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <i class="ph ph-list"></i>
+      </button>
+    </nav>
+
+    <div class="hero-content">
+      <h1 class="hero-headline">Tre generazioni, una sola parola</h1>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       ABOUT
+  ═══════════════════════════════════════ -->
+  <section class="about-section">
+    <div class="about-text">
+      <div class="about-header">
+        <p class="section-label">Chi siamo</p>
+        <h2 class="section-title">Molto più di un negozio</h2>
+      </div>
+      <p class="about-body">Nel 1983 Casale Monferrato era una città di cemento e fabbriche, di artigiani, di mani al lavoro. Diego e Roberto Bottazzi hanno aperto un piccolo negozio con un'idea semplice: vendere bene quello che protegge chi lavora. Niente cataloghi infiniti, niente promesse facili: solo scarpe, guanti, tute, scelti uno a uno dai produttori migliori, e venduti alle persone che ne avevano bisogno. Quarant'anni dopo, l'idea è ancora la stessa.</p>
+    </div>
+    <div class="about-image">
+      <img src="https://www.figma.com/api/mcp/asset/7c2c06a1-63fe-4e1b-aa49-701086741694" alt="Lo storico di Bottazzi Srl" />
+      <div class="about-image-overlay"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       VALUES
+  ═══════════════════════════════════════ -->
+  <section class="values-section">
+    <div class="values-header">
+      <p class="section-label">I nostri valori</p>
+      <h2 class="section-title">Quello che conta</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <p class="value-card__title">Selezione</p>
+        <p class="value-card__body">Scegliamo bene, una cosa alla volta. Non vendiamo tutto: portiamo a magazzino solo quello che ci convince: la selezione è il primo lavoro che facciamo per te</p>
+      </div>
+      <div class="value-card">
+        <p class="value-card__title">Vicinanza</p>
+        <p class="value-card__body">Siamo a due passi: a Casale, in via Motta. Aperti dal lunedì al venerdì. La vicinanza non è solo geografica: ai tuoi ordini cerchiamo sempre di rispondere in giornata</p>
+      </div>
+      <div class="value-card">
+        <p class="value-card__title">Parola</p>
+        <p class="value-card__body">Ci sono cose che non cambiano nel tempo. Quello che diciamo, lo facciamo. Siamo di parola con i nostri clienti, e fornitori, oggi come quarant'anni fa</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SERVICES
+  ═══════════════════════════════════════ -->
+  <section class="services-section">
+    <p class="section-label">I nostri servizi</p>
+    <h2 class="section-title">Lavoriamo con te</h2>
+    <div class="services-divider"></div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="ph ph-paint-bucket"></i>
+        </div>
+        <div class="service-text">
+          <p class="service-text__title">Personalizzazione Capi</p>
+          <p class="service-text__body">Ricamo o stampa del logo aziendale: mettiamo il tuo nome sui capi che indossate. Minimi di ordine bassi, anche per una sola persona.</p>
+        </div>
+        <a href="personalizzazione.html" class="btn-dark-outline">Scopri di più</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="ph ph-chat-dots"></i>
+        </div>
+        <div class="service-text">
+          <p class="service-text__title">Consulenza DPI</p>
+          <p class="service-text__body">Ascoltiamo cosa fanno le persone, leggiamo la valutazione dei rischi, e proponiamo la dotazione: categoria per categoria, taglia per taglia. Senza vendere nulla che non serva.</p>
+        </div>
+        <a href="consulenza.html" class="btn-dark-outline">Come aiutiamo</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FINAL CTA
+  ═══════════════════════════════════════ -->
+  <section class="final-cta">
+    <img class="final-cta__bg" src="https://www.figma.com/api/mcp/asset/16e51b8b-2f46-45a7-a33d-bba116e57a74" alt="" />
+    <div class="final-cta__overlay"></div>
+    <div class="final-cta__content">
+      <div class="final-cta__text">
+        <p class="final-cta__subtitle">Da quarant'anni, dietro al bancone</p>
+        <h2 class="final-cta__headline">Pronto ad equipaggiare il tuo team?</h2>
+      </div>
+      <a href="catalogo.html" class="btn-white">Esplora il catalogo</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <img class="footer__signet" src="https://www.figma.com/api/mcp/asset/385a703c-05ec-4dcc-aa9e-ca8055911650" alt="Bottazzi Srl" />
+      <div class="footer__info">
+        <div class="footer__col">
+          <div class="footer__col-block">
+            <p>Bottazzi Srl</p>
+            <p>P.IVA 01093750063</p>
+          </div>
+          <div class="footer__col-block">
+            <p>+39 0142 452805</p>
+            <p>info@bottazzisrl.com</p>
+          </div>
+        </div>
+        <div class="footer__col">
+          <div class="footer__col-block">
+            <p>Via Pier Enrico Motta, 52</p>
+            <p>15033, Casale Monferrato (AL)</p>
+          </div>
+          <div class="footer__col-block--hours">
+            <div class="footer__hours-row">
+              <p>Lun - Ven</p>
+              <p>8,30 - 12,00; 14,30 - 19,00</p>
+            </div>
+            <div class="footer__hours-row">
+              <p>Sabato</p>
+              <p>8,30 - 12,00</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer__links">
+          <a href="catalogo.html">Catalogo</a>
+          <a href="personalizzazione.html">Personalizzazione</a>
+          <a href="consulenza.html">Consulenza</a>
+          <a href="azienda.html">Azienda</a>
+        </div>
+      </div>
+      <p class="footer__legal">Termini e Condizioni, Privacy Policy</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const hamburger = document.getElementById('hamburger');
+      const navLinks  = document.getElementById('navLinks');
+
+      hamburger.addEventListener('click', function () {
+        const isOpen = navLinks.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', isOpen);
+        hamburger.querySelector('i').className = isOpen ? 'ph ph-x' : 'ph ph-list';
+      });
+
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          navLinks.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          hamburger.querySelector('i').className = 'ph ph-list';
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

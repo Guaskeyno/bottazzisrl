@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personalizzazione Capi — Bottazzi Srl</title>
+  <meta name="description" content="Personalizzazione di capi da lavoro con stampa e ricamo in casa. Senza minimi, bozza fisica, consegna in 7-14 giorni." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600&family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    img { display: block; }
+    a { text-decoration: none; }
+    ul { list-style: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+    /* ── Tokens ── */
+    :root {
+      --black:     #1e1e1e;
+      --white:     #ffffff;
+      --red:       #de3813;
+      --fog:       #f4f4f4;
+      --concrete:  #c3b9b9;
+      --steel:     #5d5858;
+      --divider:   #d9d9d9;
+
+      --font-head: 'Sora', sans-serif;
+      --font-body: 'Geist', sans-serif;
+      --pad-x: 40px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-weight: 400;
+      color: var(--black);
+      background: var(--white);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ═══════════════════════════════════════
+       HERO WRAPPER
+    ═══════════════════════════════════════ */
+    .hero-wrapper {
+      position: relative;
+      height: 467px;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.56);
+    }
+
+    /* ── Contact bar ── */
+    .contact-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 12px var(--pad-x);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--white);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .contact-item i { font-size: 24px; flex-shrink: 0; line-height: 1; }
+
+    .contact-divider {
+      width: 1px;
+      height: 24px;
+      background: rgba(255,255,255,0.5);
+      flex-shrink: 0;
+    }
+
+    /* ── Navbar ── */
+    .navbar {
+      position: absolute;
+      top: 81px;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 var(--pad-x);
+      gap: 40px;
+    }
+
+    .nav-logo img { height: 48px; width: auto; }
+
+    .nav-links {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.5);
+      font-size: 16px;
+      font-weight: 400;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--white); }
+
+    .btn-red {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--red);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 32px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--white);
+      color: var(--black);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 32px;
+      border-radius: 4px;
+      white-space: nowrap;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* ── Hero content ── */
+    .hero-content {
+      position: absolute;
+      left: var(--pad-x);
+      bottom: 60px;
+      z-index: 5;
+    }
+
+    .hero-headline {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 48px;
+      letter-spacing: -0.5px;
+      line-height: 1;
+      color: var(--white);
+    }
+
+    /* ── Hamburger ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav-hamburger i { font-size: 24px; color: var(--white); line-height: 1; }
+
+    /* ── Section shared ── */
+    .section-label { font-size: 18px; color: var(--black); margin-bottom: 4px; }
+
+    .section-title {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 36px;
+      letter-spacing: -0.5px;
+      color: var(--black);
+    }
+
+    /* ═══════════════════════════════════════
+       SECTION 1 — VANTAGGI
+    ═══════════════════════════════════════ */
+    .vantaggi-section {
+      padding: 80px var(--pad-x);
+    }
+
+    .vantaggi-inner {
+      display: flex;
+      gap: 80px;
+      align-items: flex-start;
+    }
+
+    .vantaggi-left {
+      flex: 1;
+    }
+
+    .vantaggi-header {
+      margin-bottom: 40px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 40px;
+      column-gap: 80px;
+    }
+
+    .feature-item {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .feature-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--black);
+    }
+
+    .feature-body {
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--steel);
+      line-height: 1.55;
+    }
+
+    .vantaggi-right img {
+      width: 440px;
+      height: 440px;
+      border-radius: 12px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    /* ═══════════════════════════════════════
+       SECTION 2 — PROCESSO
+    ═══════════════════════════════════════ */
+    .processo-section {
+      padding: 80px var(--pad-x);
+      background: var(--fog);
+    }
+
+    .processo-header {
+      margin-bottom: 40px;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .step-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .step-card__image {
+      height: 280px;
+      border-radius: 12px;
+      overflow: hidden;
+      flex-shrink: 0;
+      margin-bottom: 20px;
+    }
+
+    .step-card__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .step-card__label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--red);
+      margin-bottom: 8px;
+    }
+
+    .step-card__title {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 8px;
+    }
+
+    .step-card__body {
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--steel);
+      line-height: 1.55;
+    }
+
+    /* ═══════════════════════════════════════
+       SECTION 3 — FAQ
+    ═══════════════════════════════════════ */
+    .faq-section {
+      padding: 80px var(--pad-x);
+    }
+
+    .faq-header {
+      margin-bottom: 40px;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .faq-item {
+      border-top: 1px solid var(--concrete);
+    }
+
+    .faq-item:last-child {
+      border-bottom: 1px solid var(--concrete);
+    }
+
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 24px 0;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .faq-question-text {
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--black);
+    }
+
+    .faq-question i {
+      font-size: 24px;
+      flex-shrink: 0;
+      color: var(--black);
+      line-height: 1;
+    }
+
+    .faq-answer {
+      display: none;
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--steel);
+      line-height: 1.6;
+      padding-bottom: 24px;
+    }
+
+    /* ═══════════════════════════════════════
+       FINAL CTA SECTION
+    ═══════════════════════════════════════ */
+    .final-cta {
+      height: 698px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .final-cta__bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 137.54%;
+      object-fit: cover;
+      top: -35.25%;
+    }
+
+    .final-cta__overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.32);
+    }
+
+    .final-cta__content {
+      position: absolute;
+      left: var(--pad-x);
+      top: 50%;
+      transform: translateY(-50%);
+      width: 677px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 40px;
+      z-index: 5;
+    }
+
+    .final-cta__text {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      color: var(--white);
+    }
+
+    .final-cta__label {
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    .final-cta__headline {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 48px;
+      letter-spacing: -0.5px;
+      line-height: 1.05;
+    }
+
+    /* ═══════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════ */
+    .footer {
+      background: var(--black);
+      color: var(--white);
+      padding: 80px var(--pad-x);
+    }
+
+    .footer__inner { display: flex; flex-direction: column; gap: 32px; }
+    .footer__signet { width: 64px; height: 64px; object-fit: contain; }
+
+    .footer__info {
+      display: flex;
+      gap: 219px;
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    .footer__col { display: flex; flex-direction: column; gap: 42px; }
+    .footer__col-block { display: flex; flex-direction: column; gap: 8px; }
+    .footer__col-block--hours { display: flex; flex-direction: column; gap: 12px; }
+    .footer__hours-row { display: flex; flex-direction: column; gap: 8px; }
+    .footer__links { display: flex; flex-direction: column; gap: 8px; }
+    .footer__links a { color: var(--white); }
+    .footer__legal { font-size: 20px; margin-top: 40px; }
+
+    /* ═══════════════════════════════════════
+       MOBILE — ≤ 768px
+    ═══════════════════════════════════════ */
+    @media (max-width: 768px) {
+      :root { --pad-x: 20px; }
+
+      .contact-bar { display: none; }
+
+      .navbar {
+        top: 20px;
+        padding: 0 var(--pad-x);
+        gap: 0;
+      }
+
+      .nav-links {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.92);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        z-index: 100;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: 22px; color: rgba(255,255,255,0.6); }
+      .nav-links a.active { color: var(--white); }
+      .nav-cta-desktop { display: none; }
+      .nav-hamburger { display: flex; z-index: 110; }
+
+      .hero-wrapper { height: 320px; }
+      .hero-headline { font-size: 32px; }
+      .hero-content { bottom: 32px; }
+
+      .section-title { font-size: 28px; }
+
+      /* Vantaggi section */
+      .vantaggi-inner {
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: 32px;
+      }
+
+      .vantaggi-right img {
+        width: 100%;
+        height: 280px;
+      }
+
+      /* Steps section */
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .step-card__image { height: 220px; }
+
+      /* Final CTA */
+      .final-cta { height: auto; min-height: 480px; }
+      .final-cta__bg { height: 100%; top: 0; }
+      .final-cta__content {
+        width: auto;
+        right: var(--pad-x);
+        position: relative;
+        transform: none;
+        top: auto;
+        left: auto;
+        padding: 60px var(--pad-x);
+      }
+      .final-cta__headline { font-size: 30px; }
+      .final-cta__label { font-size: 16px; }
+
+      /* Footer */
+      .footer { padding: 48px var(--pad-x); }
+      .footer__info { flex-direction: column; gap: 40px; font-size: 16px; }
+      .footer__legal { font-size: 16px; margin-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <div class="hero-wrapper">
+    <img class="hero-bg" src="https://www.figma.com/api/mcp/asset/790be5fa-78c3-41b4-9034-ebb864ca717a" alt="Personalizzazione capi Bottazzi Srl" />
+    <div class="hero-overlay"></div>
+
+    <!-- Contact bar -->
+    <div class="contact-bar">
+      <div class="contact-item">
+        <i class="ph ph-envelope"></i>
+        info@bottazzisrl.com
+      </div>
+      <div class="contact-divider"></div>
+      <div class="contact-item">
+        <i class="ph ph-phone"></i>
+        +39 0142 452805
+      </div>
+      <div class="contact-divider"></div>
+      <div class="contact-item">
+        <i class="ph ph-map-pin"></i>
+        Via Enrico Motta 52, 15033 Casale Monferrato (AL)
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-logo">
+        <a href="index.html"><img src="assets/main-logo.png" alt="Bottazzi Srl" /></a>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalogo.html">Catalogo</a></li>
+        <li><a href="personalizzazione.html" class="active">Personalizzazione</a></li>
+        <li><a href="consulenza.html">Consulenza</a></li>
+        <li><a href="azienda.html">Azienda</a></li>
+      </ul>
+      <button class="btn-red nav-cta-desktop">Contattaci</button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <i class="ph ph-list"></i>
+      </button>
+    </nav>
+
+    <div class="hero-content">
+      <h1 class="hero-headline">Personalizzazione</h1>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 1 — PERCHÉ SCEGLIERE BOTTAZZI
+  ═══════════════════════════════════════ -->
+  <section class="vantaggi-section">
+    <div class="vantaggi-inner">
+      <div class="vantaggi-left">
+        <div class="vantaggi-header">
+          <p class="section-label">Vantaggi</p>
+          <h2 class="section-title">Perché scegliere Bottazzi</h2>
+        </div>
+        <div class="feature-grid">
+          <div class="feature-item">
+            <p class="feature-title">Stampa e ricamo in casa</p>
+            <p class="feature-body">La personalizzazione la facciamo noi: non passa tramite fornitori terzi. Tempi e qualità sono sotto il nostro diretto controllo</p>
+          </div>
+          <div class="feature-item">
+            <p class="feature-title">Senza minimi assurdi</p>
+            <p class="feature-body">Niente minimi. Se cerchi un kit personalizzato per piccoli eventi oppure vuoi vestire un'intera squadra amatoriale, facciamo per te</p>
+          </div>
+          <div class="feature-item">
+            <p class="feature-title">Bozza fisica prima del lotto</p>
+            <p class="feature-body">Vuoi vedere il risultato? Ti facciamo un capo campione prima di partire con la produzione. Una volta approvato, replichiamo per tutto il lotto</p>
+          </div>
+          <div class="feature-item">
+            <p class="feature-title">Pronti in 7-14 giorni</p>
+            <p class="feature-body">Dalla bozza approvata alla consegna: una o due settimane lavorative. Per urgenze, ti diciamo subito come possiamo venirti incontro</p>
+          </div>
+        </div>
+      </div>
+      <div class="vantaggi-right">
+        <img src="https://www.figma.com/api/mcp/asset/8f59ad38-27aa-403b-bbde-6b45d7d3aecc" alt="Personalizzazione capi" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 2 — IL NOSTRO PROCESSO
+  ═══════════════════════════════════════ -->
+  <section class="processo-section">
+    <div class="processo-header">
+      <p class="section-label">Come funziona</p>
+      <h2 class="section-title">Il nostro processo</h2>
+    </div>
+    <div class="steps-grid">
+
+      <div class="step-card">
+        <div class="step-card__image">
+          <img src="https://www.figma.com/api/mcp/asset/8f59ad38-27aa-403b-bbde-6b45d7d3aecc" alt="Step 1 — Inviaci il tuo file" />
+        </div>
+        <p class="step-card__label">Step 1</p>
+        <p class="step-card__title">Inviaci il tuo file</p>
+        <p class="step-card__body">Ci mandi (o ci porti) il file vettoriale del tuo logo. Se non l'hai, ti aiutiamo a prepararlo</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-card__image">
+          <img src="https://www.figma.com/api/mcp/asset/8f59ad38-27aa-403b-bbde-6b45d7d3aecc" alt="Step 2 — Approva il campione" />
+        </div>
+        <p class="step-card__label">Step 2</p>
+        <p class="step-card__title">Approva il campione</p>
+        <p class="step-card__body">Ti facciamo un capo campione. Se serve, regoliamo posizione, dimensione, e colori.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-card__image">
+          <img src="https://www.figma.com/api/mcp/asset/8f59ad38-27aa-403b-bbde-6b45d7d3aecc" alt="Step 3 — Ricevi il lotto completo" />
+        </div>
+        <p class="step-card__label">Step 3</p>
+        <p class="step-card__title">Ricevi il lotto completo</p>
+        <p class="step-card__body">In una o due settimane lavorative dalla bozza approvata. Consegna, oppure ritiro in negozio.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 3 — DOMANDE FREQUENTI
+  ═══════════════════════════════════════ -->
+  <section class="faq-section">
+    <div class="faq-header">
+      <p class="section-label">Dubbi?</p>
+      <h2 class="section-title">Domande frequenti</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-question-text">Quale tipo di file devo inviare?</span>
+          <i class="ph ph-plus"></i>
+        </div>
+        <p class="faq-answer">Accettiamo file vettoriali in formato .ai, .eps, o .svg. Se hai solo un'immagine (JPG, PNG), possiamo aiutarti a convertirla o a ricreare il logo partendo da quello che hai.</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-question-text">Posso personalizzare capi che già posseggo?</span>
+          <i class="ph ph-plus"></i>
+        </div>
+        <p class="faq-answer">Sì, in molti casi è possibile. Portaci il capo e valutiamo insieme la fattibilità in base al materiale e alla tecnica (ricamo o stampa).</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span class="faq-question-text">Costa di più la stampa o il ricamo?</span>
+          <i class="ph ph-plus"></i>
+        </div>
+        <p class="faq-answer">Dipende dal logo e dalla quantità. Il ricamo è generalmente più durevole, la stampa è più adatta per grafiche complesse o multicolore. Ti diciamo subito qual è la soluzione migliore per il tuo caso.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FINAL CTA
+  ═══════════════════════════════════════ -->
+  <div class="final-cta">
+    <img class="final-cta__bg" src="https://www.figma.com/api/mcp/asset/b7e45702-71d9-4078-9a3d-dc77c8dabbd4" alt="" />
+    <div class="final-cta__overlay"></div>
+    <div class="final-cta__content">
+      <div class="final-cta__text">
+        <p class="final-cta__label">Da quarant'anni, dietro al bancone</p>
+        <p class="final-cta__headline">Pronto ad equipaggiare il tuo team?</p>
+      </div>
+      <a href="catalogo.html" class="btn-white">Esplora il catalogo</a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <img class="footer__signet" src="https://www.figma.com/api/mcp/asset/5c376285-aeaa-4ec4-8457-3a833bfc7bba" alt="Bottazzi Srl" />
+      <div class="footer__info">
+        <div class="footer__col">
+          <div class="footer__col-block">
+            <p>Bottazzi Srl</p>
+            <p>P.IVA 01093750063</p>
+          </div>
+          <div class="footer__col-block">
+            <p>+39 0142 452805</p>
+            <p>info@bottazzisrl.com</p>
+          </div>
+        </div>
+        <div class="footer__col">
+          <div class="footer__col-block">
+            <p>Via Pier Enrico Motta, 52</p>
+            <p>15033, Casale Monferrato (AL)</p>
+          </div>
+          <div class="footer__col-block--hours">
+            <div class="footer__hours-row">
+              <p>Lun - Ven</p>
+              <p>8,30 - 12,00; 14,30 - 19,00</p>
+            </div>
+            <div class="footer__hours-row">
+              <p>Sabato</p>
+              <p>8,30 - 12,00</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer__links">
+          <a href="catalogo.html">Catalogo</a>
+          <a href="personalizzazione.html">Personalizzazione</a>
+          <a href="consulenza.html">Consulenza</a>
+          <a href="azienda.html">Azienda</a>
+        </div>
+      </div>
+      <p class="footer__legal">Termini e Condizioni, Privacy Policy</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      /* ── Hamburger ── */
+      var hamburger = document.getElementById('hamburger');
+      var navLinks  = document.getElementById('navLinks');
+
+      hamburger.addEventListener('click', function () {
+        var isOpen = navLinks.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', isOpen);
+        hamburger.querySelector('i').className = isOpen ? 'ph ph-x' : 'ph ph-list';
+      });
+
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          navLinks.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          hamburger.querySelector('i').className = 'ph ph-list';
+        });
+      });
+    })();
+
+    /* ── FAQ accordion ── */
+    document.querySelectorAll('.faq-item').forEach(function(item) {
+      item.querySelector('.faq-question').addEventListener('click', function() {
+        var isOpen = item.classList.toggle('open');
+        item.querySelector('.faq-answer').style.display = isOpen ? 'block' : 'none';
+        var icon = item.querySelector('.faq-question i');
+        if (isOpen) {
+          icon.classList.remove('ph-plus');
+          icon.classList.add('ph-minus');
+        } else {
+          icon.classList.remove('ph-minus');
+          icon.classList.add('ph-plus');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

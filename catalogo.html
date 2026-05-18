@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catalogo — Bottazzi Srl</title>
+  <meta name="description" content="Esplora il catalogo di dispositivi di protezione individuale e abbigliamento da lavoro Bottazzi Srl." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600&family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    img { display: block; }
+    a { text-decoration: none; }
+    ul { list-style: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+    /* ── Tokens ── */
+    :root {
+      --black:     #1e1e1e;
+      --white:     #ffffff;
+      --red:       #de3813;
+      --fog:       #f4f4f4;
+      --concrete:  #c3b9b9;
+      --steel:     #5d5858;
+      --divider:   #d9d9d9;
+
+      --font-head: 'Sora', sans-serif;
+      --font-body: 'Geist', sans-serif;
+      --pad-x: 40px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-weight: 400;
+      color: var(--black);
+      background: var(--white);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ═══════════════════════════════════════
+       HERO WRAPPER
+    ═══════════════════════════════════════ */
+    .hero-wrapper {
+      position: relative;
+      height: 467px;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.56);
+    }
+
+    /* ── Contact bar ── */
+    .contact-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 12px var(--pad-x);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--white);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .contact-item i { font-size: 24px; flex-shrink: 0; line-height: 1; }
+
+    .contact-divider {
+      width: 1px;
+      height: 24px;
+      background: rgba(255,255,255,0.5);
+      flex-shrink: 0;
+    }
+
+    /* ── Navbar ── */
+    .navbar {
+      position: absolute;
+      top: 81px;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 var(--pad-x);
+      gap: 40px;
+    }
+
+    .nav-logo img { height: 48px; width: auto; }
+
+    .nav-links {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,0.5);
+      font-size: 16px;
+      font-weight: 400;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--white); }
+
+    .btn-red {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--red);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 32px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    /* ── Hero content ── */
+    .hero-content {
+      position: absolute;
+      left: var(--pad-x);
+      bottom: 60px;
+      z-index: 5;
+    }
+
+    .hero-headline {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 48px;
+      letter-spacing: -0.5px;
+      line-height: 1;
+      color: var(--white);
+    }
+
+    /* ── Hamburger ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav-hamburger i { font-size: 24px; color: var(--white); line-height: 1; }
+
+    /* ═══════════════════════════════════════
+       CATALOG LAYOUT
+    ═══════════════════════════════════════ */
+    .catalog-section {
+      padding: 60px var(--pad-x) 80px;
+    }
+
+    .catalog-section-header {
+      margin-bottom: 40px;
+    }
+
+    .section-label { font-size: 18px; color: var(--black); margin-bottom: 4px; }
+
+    .section-title {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 36px;
+      letter-spacing: -0.5px;
+      color: var(--black);
+    }
+
+    .catalog-body {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+    }
+
+    /* ── Filter Sidebar ── */
+    .filter-sidebar {
+      width: 300px;
+      flex-shrink: 0;
+      background: var(--white);
+      border: 1px solid var(--concrete);
+      border-radius: 12px;
+      padding: 16px 16px 24px;
+      position: sticky;
+      top: 24px;
+    }
+
+    .filter-group { margin-bottom: 24px; }
+
+    .filter-group__title {
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--black);
+      margin-bottom: 12px;
+    }
+
+    .filter-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .filter-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .filter-item input[type="checkbox"] { display: none; }
+
+    .custom-checkbox {
+      width: 24px;
+      height: 24px;
+      border: 1px solid var(--concrete);
+      border-radius: 8px;
+      background: var(--white);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s, border-color 0.15s;
+    }
+
+    .custom-checkbox i {
+      display: none;
+      width: 14px;
+      height: 14px;
+      color: var(--white);
+    }
+
+    .filter-item input:checked + .custom-checkbox {
+      background: var(--black);
+      border-color: var(--black);
+    }
+
+    .filter-item input:checked + .custom-checkbox i { display: block; }
+
+    .filter-item__label {
+      font-size: 16px;
+      color: var(--black);
+    }
+
+    .filter-divider {
+      height: 1px;
+      background: var(--concrete);
+      margin: 8px 0 16px;
+    }
+
+    /* Mobile filter toggle */
+    .filter-toggle-btn {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--black);
+      border: 1px solid var(--concrete);
+      border-radius: 8px;
+      padding: 10px 16px;
+      background: var(--white);
+      cursor: pointer;
+      margin-bottom: 24px;
+    }
+
+    /* ── Product Grid ── */
+    .product-grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .product-card {
+      border: 1px solid var(--concrete);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    .product-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.10); }
+
+    .product-card.hidden { display: none; }
+
+    .product-card__image {
+      position: relative;
+      height: 320px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .product-card__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .product-card__image-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.32);
+    }
+
+    .product-card__info {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .product-card__name-block {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .product-card__brand {
+      font-size: 14px;
+      color: var(--steel);
+    }
+
+    .product-card__name {
+      font-size: 20px;
+      color: var(--black);
+    }
+
+    .product-card__details {
+      display: flex;
+      gap: 12px;
+      font-size: 16px;
+      color: var(--black);
+      white-space: nowrap;
+    }
+
+    /* ── No results ── */
+    .no-results {
+      grid-column: 1 / -1;
+      padding: 60px 0;
+      text-align: center;
+      color: var(--steel);
+      font-size: 18px;
+      display: none;
+    }
+
+    /* ═══════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════ */
+    .footer {
+      background: var(--black);
+      color: var(--white);
+      padding: 80px var(--pad-x);
+    }
+
+    .footer__inner { display: flex; flex-direction: column; gap: 32px; }
+    .footer__signet { width: 64px; height: 64px; object-fit: contain; }
+
+    .footer__info {
+      display: flex;
+      gap: 219px;
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    .footer__col { display: flex; flex-direction: column; gap: 42px; }
+    .footer__col-block { display: flex; flex-direction: column; gap: 8px; }
+    .footer__col-block--hours { display: flex; flex-direction: column; gap: 12px; }
+    .footer__hours-row { display: flex; flex-direction: column; gap: 8px; }
+    .footer__links { display: flex; flex-direction: column; gap: 8px; }
+    .footer__links a { color: var(--white); }
+    .footer__legal { font-size: 20px; margin-top: 40px; }
+
+    /* ═══════════════════════════════════════
+       MOBILE — ≤ 768px
+    ═══════════════════════════════════════ */
+    @media (max-width: 768px) {
+      :root { --pad-x: 20px; }
+
+      .contact-bar { display: none; }
+
+      .navbar {
+        top: 20px;
+        padding: 0 var(--pad-x);
+        gap: 0;
+      }
+
+      .nav-links {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.92);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        z-index: 100;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: 22px; color: rgba(255,255,255,0.6); }
+      .nav-links a.active { color: var(--white); }
+      .nav-cta-desktop { display: none; }
+      .nav-hamburger { display: flex; z-index: 110; }
+
+      .hero-wrapper { height: 320px; }
+      .hero-headline { font-size: 32px; }
+      .hero-content { bottom: 32px; }
+
+      .catalog-section { padding: 40px var(--pad-x) 60px; }
+
+      .catalog-body { flex-direction: column; }
+
+      /* Sidebar becomes collapsible on mobile */
+      .filter-toggle-btn { display: flex; }
+
+      .filter-sidebar {
+        width: 100%;
+        position: static;
+        display: none;
+        margin-bottom: 8px;
+      }
+      .filter-sidebar.open { display: block; }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-card__image { height: 220px; }
+
+      .section-title { font-size: 28px; }
+
+      .footer { padding: 48px var(--pad-x); }
+      .footer__info { flex-direction: column; gap: 40px; font-size: 16px; }
+      .footer__legal { font-size: 16px; margin-top: 24px; }
+    }
+
+    @media (min-width: 769px) and (max-width: 1100px) {
+      .product-card__image { height: 240px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <div class="hero-wrapper">
+    <img class="hero-bg" src="https://www.figma.com/api/mcp/asset/5995eb23-eb20-46e7-833d-caef267fc2af" alt="Catalogo Bottazzi Srl" />
+    <div class="hero-overlay"></div>
+
+    <!-- Contact bar -->
+    <div class="contact-bar">
+      <div class="contact-item">
+        <i class="ph ph-envelope"></i>
+        info@bottazzisrl.com
+      </div>
+      <div class="contact-divider"></div>
+      <div class="contact-item">
+        <i class="ph ph-phone"></i>
+        +39 0142 452805
+      </div>
+      <div class="contact-divider"></div>
+      <div class="contact-item">
+        <i class="ph ph-map-pin"></i>
+        Via Enrico Motta 52, 15033 Casale Monferrato (AL)
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-logo">
+        <a href="index.html"><img src="assets/main-logo.png" alt="Bottazzi Srl" /></a>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalogo.html" class="active">Catalogo</a></li>
+        <li><a href="personalizzazione.html">Personalizzazione</a></li>
+        <li><a href="consulenza.html">Consulenza</a></li>
+        <li><a href="azienda.html">Azienda</a></li>
+      </ul>
+      <button class="btn-red nav-cta-desktop">Contattaci</button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <i class="ph ph-list"></i>
+      </button>
+    </nav>
+
+    <div class="hero-content">
+      <h1 class="hero-headline">Il nostro Catalogo</h1>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       CATALOG
+  ═══════════════════════════════════════ -->
+  <section class="catalog-section">
+    <div class="catalog-section-header">
+      <p class="section-label">I nostri prodotti</p>
+      <h2 class="section-title">Esplora la nostra selezione</h2>
+    </div>
+
+    <!-- Mobile filter toggle -->
+    <button class="filter-toggle-btn" id="filterToggle">
+      <i class="ph ph-funnel"></i>
+      Filtra
+    </button>
+
+    <div class="catalog-body">
+
+      <!-- Sidebar filters -->
+      <aside class="filter-sidebar" id="filterSidebar">
+
+        <div class="filter-group">
+          <p class="filter-group__title">Capo</p>
+          <div class="filter-list">
+            <label class="filter-item"><input type="checkbox" data-filter="elmetti"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Elmetti</span></label>
+            <label class="filter-item"><input type="checkbox" data-filter="berretti"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Berretti</span></label>
+            <label class="filter-item"><input type="checkbox" data-filter="occhiali"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Occhiali</span></label>
+            <label class="filter-item"><input type="checkbox" data-filter="udito"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Udito</span></label>
+            <label class="filter-item"><input type="checkbox" data-filter="respirazione"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Respirazione</span></label>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <p class="filter-group__title">Corpo</p>
+          <div class="filter-list">
+            <label class="filter-item"><input type="checkbox" data-filter="anticaduta"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Anticaduta</span></label>
+            <label class="filter-item"><input type="checkbox" data-filter="busto"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Busto</span></label>
+            <label class="filter-item"><input type="checkbox" data-filter="alta-visibilita"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Alta visibilità</span></label>
+            <label class="filter-item"><input type="checkbox" data-filter="multi-protezione"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Multi-protezione</span></label>
+            <label class="filter-item"><input type="checkbox" data-filter="pantaloni"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Pantaloni</span></label>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <p class="filter-group__title">Mani</p>
+          <div class="filter-list">
+            <label class="filter-item"><input type="checkbox" data-filter="rischio-chimico"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Rischio chimico</span></label>
+            <label class="filter-item"><input type="checkbox" data-filter="rischio-meccanico"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Rischio meccanico</span></label>
+            <label class="filter-item"><input type="checkbox" data-filter="rischio-termico"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Rischio termico</span></label>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <p class="filter-group__title">Piedi</p>
+          <div class="filter-list">
+            <label class="filter-item"><input type="checkbox" data-filter="scarpe"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Scarpe</span></label>
+            <label class="filter-item"><input type="checkbox" data-filter="stivali"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Stivali</span></label>
+          </div>
+        </div>
+
+        <div class="filter-divider"></div>
+
+        <div class="filter-group" style="margin-bottom:0">
+          <div class="filter-list">
+            <label class="filter-item"><input type="checkbox" data-filter="alberghiero"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Alberghiero</span></label>
+            <label class="filter-item"><input type="checkbox" data-filter="sanitario"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Sanitario</span></label>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- Product grid -->
+      <div class="product-grid" id="productGrid">
+
+        <a href="prodotto.html" class="product-card" data-categories="elmetti">
+          <div class="product-card__image">
+            <img src="https://www.figma.com/api/mcp/asset/59a1172e-6518-4df3-9133-d411e7effa8b" alt="Elmetto Delta Plus" />
+            <div class="product-card__image-overlay"></div>
+          </div>
+          <div class="product-card__info">
+            <div class="product-card__name-block">
+              <p class="product-card__brand">Delta Plus</p>
+              <p class="product-card__name">Elmetto Quartz</p>
+            </div>
+            <div class="product-card__details">
+              <span>Capo</span>
+              <span>Elmetti</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="prodotto.html" class="product-card" data-categories="occhiali">
+          <div class="product-card__image">
+            <img src="https://www.figma.com/api/mcp/asset/59a1172e-6518-4df3-9133-d411e7effa8b" alt="Occhiali 3M" />
+            <div class="product-card__image-overlay"></div>
+          </div>
+          <div class="product-card__info">
+            <div class="product-card__name-block">
+              <p class="product-card__brand">3M</p>
+              <p class="product-card__name">Occhiali SecureFit 3700</p>
+            </div>
+            <div class="product-card__details">
+              <span>Capo</span>
+              <span>Occhiali</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="prodotto.html" class="product-card" data-categories="udito">
+          <div class="product-card__image">
+            <img src="https://www.figma.com/api/mcp/asset/59a1172e-6518-4df3-9133-d411e7effa8b" alt="Cuffie udito 3M" />
+            <div class="product-card__image-overlay"></div>
+          </div>
+          <div class="product-card__info">
+            <div class="product-card__name-block">
+              <p class="product-card__brand">3M</p>
+              <p class="product-card__name">Cuffie Optime II</p>
+            </div>
+            <div class="product-card__details">
+              <span>Capo</span>
+              <span>Udito</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="prodotto.html" class="product-card" data-categories="alta-visibilita">
+          <div class="product-card__image">
+            <img src="https://www.figma.com/api/mcp/asset/59a1172e-6518-4df3-9133-d411e7effa8b" alt="Giacca alta visibilità Mascot" />
+            <div class="product-card__image-overlay"></div>
+          </div>
+          <div class="product-card__info">
+            <div class="product-card__name-block">
+              <p class="product-card__brand">Mascot</p>
+              <p class="product-card__name">Giacca Safe Supreme</p>
+            </div>
+            <div class="product-card__details">
+              <span>Corpo</span>
+              <span>Alta visibilità</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="prodotto.html" class="product-card" data-categories="anticaduta">
+          <div class="product-card__image">
+            <img src="https://www.figma.com/api/mcp/asset/59a1172e-6518-4df3-9133-d411e7effa8b" alt="Imbragatura Delta Plus" />
+            <div class="product-card__image-overlay"></div>
+          </div>
+          <div class="product-card__info">
+            <div class="product-card__name-block">
+              <p class="product-card__brand">Delta Plus</p>
+              <p class="product-card__name">Imbragatura Navaho Bod2</p>
+            </div>
+            <div class="product-card__details">
+              <span>Corpo</span>
+              <span>Anticaduta</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="prodotto.html" class="product-card" data-categories="pantaloni">
+          <div class="product-card__image">
+            <img src="https://www.figma.com/api/mcp/asset/59a1172e-6518-4df3-9133-d411e7effa8b" alt="Pantaloni Payper" />
+            <div class="product-card__image-overlay"></div>
+          </div>
+          <div class="product-card__info">
+            <div class="product-card__name-block">
+              <p class="product-card__brand">Payper</p>
+              <p class="product-card__name">Pantaloni Worker</p>
+            </div>
+            <div class="product-card__details">
+              <span>Corpo</span>
+              <span>Pantaloni</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="prodotto.html" class="product-card" data-categories="rischio-meccanico">
+          <div class="product-card__image">
+            <img src="https://www.figma.com/api/mcp/asset/59a1172e-6518-4df3-9133-d411e7effa8b" alt="Guanti meccanici Delta Plus" />
+            <div class="product-card__image-overlay"></div>
+          </div>
+          <div class="product-card__info">
+            <div class="product-card__name-block">
+              <p class="product-card__brand">Delta Plus</p>
+              <p class="product-card__name">Guanti Mechane</p>
+            </div>
+            <div class="product-card__details">
+              <span>Mani</span>
+              <span>Rischio meccanico</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="prodotto.html" class="product-card" data-categories="rischio-chimico">
+          <div class="product-card__image">
+            <img src="https://www.figma.com/api/mcp/asset/59a1172e-6518-4df3-9133-d411e7effa8b" alt="Guanti chimici 3M" />
+            <div class="product-card__image-overlay"></div>
+          </div>
+          <div class="product-card__info">
+            <div class="product-card__name-block">
+              <p class="product-card__brand">3M</p>
+              <p class="product-card__name">Guanti Neoprene Plus</p>
+            </div>
+            <div class="product-card__details">
+              <span>Mani</span>
+              <span>Rischio chimico</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="prodotto.html" class="product-card" data-categories="scarpe">
+          <div class="product-card__image">
+            <img src="https://www.figma.com/api/mcp/asset/59a1172e-6518-4df3-9133-d411e7effa8b" alt="Scarpe Pezzol" />
+            <div class="product-card__image-overlay"></div>
+          </div>
+          <div class="product-card__info">
+            <div class="product-card__name-block">
+              <p class="product-card__brand">Pezzol</p>
+              <p class="product-card__name">Scarpa Orbit S3</p>
+            </div>
+            <div class="product-card__details">
+              <span>Piedi</span>
+              <span>Scarpe</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="prodotto.html" class="product-card" data-categories="stivali">
+          <div class="product-card__image">
+            <img src="https://www.figma.com/api/mcp/asset/59a1172e-6518-4df3-9133-d411e7effa8b" alt="Stivali Lotto" />
+            <div class="product-card__image-overlay"></div>
+          </div>
+          <div class="product-card__info">
+            <div class="product-card__name-block">
+              <p class="product-card__brand">Lotto</p>
+              <p class="product-card__name">Stivale Works 500</p>
+            </div>
+            <div class="product-card__details">
+              <span>Piedi</span>
+              <span>Stivali</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="prodotto.html" class="product-card" data-categories="alberghiero">
+          <div class="product-card__image">
+            <img src="https://www.figma.com/api/mcp/asset/59a1172e-6518-4df3-9133-d411e7effa8b" alt="Divisa alberghiera Isacco" />
+            <div class="product-card__image-overlay"></div>
+          </div>
+          <div class="product-card__info">
+            <div class="product-card__name-block">
+              <p class="product-card__brand">Isacco</p>
+              <p class="product-card__name">Giacca Cuoco Classica</p>
+            </div>
+            <div class="product-card__details">
+              <span>Alberghiero</span>
+              <span>Ristorazione</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="prodotto.html" class="product-card" data-categories="sanitario">
+          <div class="product-card__image">
+            <img src="https://www.figma.com/api/mcp/asset/59a1172e-6518-4df3-9133-d411e7effa8b" alt="Tuta sanitaria 3M" />
+            <div class="product-card__image-overlay"></div>
+          </div>
+          <div class="product-card__info">
+            <div class="product-card__name-block">
+              <p class="product-card__brand">3M</p>
+              <p class="product-card__name">Tuta Coverall 4510</p>
+            </div>
+            <div class="product-card__details">
+              <span>Sanitario</span>
+              <span>Protezione biologica</span>
+            </div>
+          </div>
+        </a>
+
+        <div class="no-results" id="noResults">Nessun prodotto trovato per i filtri selezionati.</div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <img class="footer__signet" src="https://www.figma.com/api/mcp/asset/33543c22-52c9-47fb-8d77-7089a7ad673d" alt="Bottazzi Srl" />
+      <div class="footer__info">
+        <div class="footer__col">
+          <div class="footer__col-block">
+            <p>Bottazzi Srl</p>
+            <p>P.IVA 01093750063</p>
+          </div>
+          <div class="footer__col-block">
+            <p>+39 0142 452805</p>
+            <p>info@bottazzisrl.com</p>
+          </div>
+        </div>
+        <div class="footer__col">
+          <div class="footer__col-block">
+            <p>Via Pier Enrico Motta, 52</p>
+            <p>15033, Casale Monferrato (AL)</p>
+          </div>
+          <div class="footer__col-block--hours">
+            <div class="footer__hours-row">
+              <p>Lun - Ven</p>
+              <p>8,30 - 12,00; 14,30 - 19,00</p>
+            </div>
+            <div class="footer__hours-row">
+              <p>Sabato</p>
+              <p>8,30 - 12,00</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer__links">
+          <a href="catalogo.html">Catalogo</a>
+          <a href="personalizzazione.html">Personalizzazione</a>
+          <a href="consulenza.html">Consulenza</a>
+          <a href="azienda.html">Azienda</a>
+        </div>
+      </div>
+      <p class="footer__legal">Termini e Condizioni, Privacy Policy</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      /* ── Hamburger ── */
+      const hamburger = document.getElementById('hamburger');
+      const navLinks  = document.getElementById('navLinks');
+
+      hamburger.addEventListener('click', function () {
+        const isOpen = navLinks.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', isOpen);
+        hamburger.querySelector('i').className = isOpen ? 'ph ph-x' : 'ph ph-list';
+      });
+
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          navLinks.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          hamburger.querySelector('i').className = 'ph ph-list';
+        });
+      });
+
+      /* ── Mobile filter toggle ── */
+      const filterToggle  = document.getElementById('filterToggle');
+      const filterSidebar = document.getElementById('filterSidebar');
+
+      filterToggle.addEventListener('click', function () {
+        filterSidebar.classList.toggle('open');
+        filterToggle.textContent = filterSidebar.classList.contains('open') ? '✕  Chiudi filtri' : '⊞  Filtra';
+      });
+
+      /* ── Filtering ── */
+      const checkboxes = document.querySelectorAll('.filter-sidebar input[type="checkbox"]');
+      const cards      = document.querySelectorAll('.product-card');
+      const noResults  = document.getElementById('noResults');
+
+      function applyFilters() {
+        const active = Array.from(checkboxes)
+          .filter(function (cb) { return cb.checked; })
+          .map(function (cb) { return cb.dataset.filter; });
+
+        let visible = 0;
+        cards.forEach(function (card) {
+          if (active.length === 0) {
+            card.classList.remove('hidden');
+            visible++;
+            return;
+          }
+          const cats = (card.dataset.categories || '').split(' ');
+          const match = active.some(function (f) { return cats.includes(f); });
+          card.classList.toggle('hidden', !match);
+          if (match) visible++;
+        });
+
+        noResults.style.display = visible === 0 ? 'block' : 'none';
+      }
+
+      checkboxes.forEach(function (cb) {
+        cb.addEventListener('change', applyFilters);
+      });
+    })();
+  </script>
+
+</body>
+</html>

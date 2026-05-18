@@ -1,486 +1,1255 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#020808" />
-  <meta name="color-scheme" content="dark" />
-  <title>AIVC — Execution is the new alpha.</title>
-  <meta name="description" content="AIVC. Execution is the new alpha." />
-  <meta property="og:title" content="AIVC" />
-  <meta property="og:description" content="Execution is the new alpha." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bottazzi Srl — Sicurezza sul lavoro dal 1983</title>
+  <meta name="description" content="Bottazzi Srl. Equipaggiamo e proteggiamo chi lavora con dispositivi di protezione e abbigliamento dal 1983." />
+  <meta property="og:title" content="Bottazzi Srl — Sicurezza sul lavoro dal 1983" />
+  <meta property="og:description" content="Equipaggiamo e proteggiamo chi lavora dal 1983." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://aivc.com" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="AIVC" />
-  <meta name="twitter:description" content="Execution is the new alpha." />
-
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 159 151'><path fill='%2359FAA7' d='M77.29 54.36h4.49L107.95 0.03l21.31 12.03-32.73 63.22 32.75 63.16-21.32 12.03-26.16-54.11h-4.51L51.09 150.47l-21.33-12.06 28.41-53.35L0 87.48V63l58.18 2.33L29.76 12.03 51.08 0l26.21 54.36ZM158.95 62.32l-18.29 10.68v4.48l18.29 10.62-7.56 23.29-10.38-6.89c-11.49-7.74-22.71-14.7-22.71-29.16 0-15.77 9.88-21.24 22.71-29.81l10.38-6.49 7.56 23.27Z'/></svg>" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600&family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- Static: always show the arrows graphic. Dynamic picker preserved below for future use. -->
-  <script>
-    document.documentElement.setAttribute('data-graphic', 'arrows');
-  </script>
-  <!--
-  <script>
-    (function () {
-      var choices = ['arrows', 'ovals', 'star'];
-      var override = new URLSearchParams(window.location.search).get('g');
-      var pick = (override && choices.indexOf(override) !== -1) ? override : choices[Math.floor(Math.random() * choices.length)];
-      document.documentElement.setAttribute('data-graphic', pick);
-    })();
-  </script>
-  -->
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" />
 
   <style>
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    img { display: block; }
+    a { text-decoration: none; }
+    ul { list-style: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+    /* ── Tokens ── */
     :root {
-      /* AIVC dark manifest v1.1 — palette */
-      --bg-0: #020808;
-      --bg-1: #031208;
-      --bg-2: #072418;
-      --bg-3: #0E3830;
-      --bg-4: #1A5246;
+      --black:  #1e1e1e;
+      --white:  #ffffff;
+      --red:    #de3813;
+      --orange: #ff5900;
+      --green:  #00daa2;
+      --yellow: #ffcc00;
+      --blue:   #00c7ff;
+      --fog:    #f4f4f4;
+      --divider:#d9d9d9;
 
-      --text:        #FFFFFF;
-      --muted:       #A4A4A4;
-      --primary:     #59FAA7;   /* brand green 01 */
-      --primary-dim: #1AC96B;   /* brand green 02 */
-      --rule:        #0D723C;   /* title rule */
-      --frame:       #4E4E4E;
+      --font-head: 'Sora', sans-serif;
+      --font-body: 'Geist', sans-serif;
 
-      --font-display: "Inter", "Aptos", system-ui, -apple-system, "Segoe UI", sans-serif;
-      --font-mono:    "Geist Mono", ui-monospace, "SFMono-Regular", Menlo, Monaco, "Courier New", monospace;
-
-      --frame-inset: clamp(14px, 2.4vmin, 46px);
-      --pad-x:       clamp(28px, 5vw, 96px);
-      --pad-y:       clamp(28px, 5vh, 80px);
+      --pad-x: 40px;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; }
-
+    /* ── Base ── */
     body {
-      min-height: 100svh;
-      font-family: var(--font-display);
-      color: var(--text);
-      background-color: var(--bg-0);
-      background-image:
-        radial-gradient(ellipse 75% 70% at 25% 20%,
-          var(--bg-4) 0%,
-          var(--bg-3) 22%,
-          var(--bg-2) 48%,
-          var(--bg-1) 74%,
-          var(--bg-0) 100%);
-      background-attachment: fixed;
-      overflow: hidden;
+      font-family: var(--font-body);
+      font-weight: 400;
+      color: var(--black);
+      background: var(--white);
+      overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      text-rendering: optimizeLegibility;
     }
 
-    /* Subtle film grain */
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.06;
-      mix-blend-mode: overlay;
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    /* ═══════════════════════════════════════
+       HERO WRAPPER  (contact + nav + hero)
+    ═══════════════════════════════════════ */
+    .hero-wrapper {
+      position: relative;
+      height: 698px;
+      overflow: hidden;
     }
 
-    /* Soft secondary glow */
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      background:
-        radial-gradient(ellipse 50% 35% at 78% 92%, rgba(13,114,60,0.22) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 30% at 8% 95%, rgba(89,250,167,0.06) 0%, transparent 70%);
-    }
-
-    /* === Frame chrome === */
-    .frame {
-      position: fixed;
-      inset: var(--frame-inset);
-      border: 1px solid var(--frame);
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    .chrome {
-      position: fixed;
-      inset: 0;
-      z-index: 5;
-      pointer-events: none;
-    }
-    .chrome > * { pointer-events: auto; }
-
-    .footer-mark,
-    .footer-meta {
+    .hero-bg {
       position: absolute;
-      bottom: calc(var(--frame-inset) - 18px);
-      font-family: var(--font-mono);
-      font-size: clamp(10px, 0.9vw, 12px);
-      letter-spacing: 0.22em;
-      font-weight: 500;
-    }
-    .footer-mark { right: calc(var(--frame-inset) + 6px); color: var(--text); }
-    .footer-meta { left:  calc(var(--frame-inset) + 6px); color: var(--muted); letter-spacing: 0.18em; text-transform: uppercase; }
-
-    /* === Stage === two-column hero, left text + right graphic */
-    .stage {
-      position: fixed;
       inset: 0;
-      z-index: 3;
-      display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-      align-items: center;
-      gap: clamp(20px, 4vw, 64px);
-      padding:
-        calc(var(--frame-inset) + var(--pad-y))
-        calc(var(--frame-inset) + var(--pad-x));
-      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
 
-    .left {
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.32);
+    }
+
+    /* ── Contact bar ── */
+    .contact-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
       display: flex;
-      flex-direction: column;
-      gap: clamp(20px, 3.2vh, 36px);
-      max-width: 780px;
-      animation: rise 1.2s cubic-bezier(0.2, 0.7, 0.1, 1) both;
+      align-items: center;
+      gap: 16px;
+      padding: 12px var(--pad-x);
     }
 
-    /* === Hero ogo mark === */
-    .ogo-hero {
-      width: clamp(140px, 16vw, 240px);
-      height: auto;
-      color: var(--text);
-      display: block;
-      margin-bottom: clamp(8px, 1.5vh, 20px);
-      filter: drop-shadow(0 6px 30px rgba(0,0,0,0.35));
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--white);
+      font-size: 14px;
+      white-space: nowrap;
     }
-    .ogo-hero svg { display: block; width: 100%; height: auto; }
 
-    .eyebrow {
-      font-family: var(--font-mono);
-      font-size: clamp(11px, 0.95vw, 13px);
-      letter-spacing: 0.32em;
-      text-transform: uppercase;
-      color: var(--muted);
+    .contact-item i {
+      font-size: 24px;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .contact-divider {
+      width: 1px;
+      height: 24px;
+      background: rgba(255, 255, 255, 0.5);
+      flex-shrink: 0;
+    }
+
+    /* ── Navbar ── */
+    .navbar {
+      position: absolute;
+      top: 81px;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 var(--pad-x);
+      gap: 40px;
+    }
+
+    .nav-logo img {
+      height: 48px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    .btn-red {
       display: inline-flex;
       align-items: center;
-      gap: 14px;
-    }
-    .eyebrow::before {
-      content: "";
-      width: clamp(28px, 3vw, 56px);
-      height: 1px;
-      background: var(--rule);
-    }
-
-    .headline {
-      font-family: var(--font-display);
-      font-weight: 300;
-      font-size: clamp(2.4rem, 7.2vw, 7.5rem);
-      line-height: 1.02;
-      letter-spacing: -0.025em;
-      color: var(--text);
-      max-width: 16ch;
-    }
-    .headline .accent { color: var(--primary); font-style: normal; font-weight: 300; }
-    .headline .period { color: var(--primary); }
-
-    .rule {
-      width: clamp(120px, 18vw, 280px);
-      height: 1px;
-      background: var(--rule);
+      justify-content: center;
+      background: var(--red);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 32px;
+      border-radius: 4px;
+      white-space: nowrap;
+      border: none;
+      cursor: pointer;
     }
 
-    .kicker {
-      font-family: var(--font-mono);
-      font-size: clamp(11px, 0.95vw, 13px);
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--muted);
+    /* ── Hero content ── */
+    .hero-content {
+      position: absolute;
+      left: var(--pad-x);
+      top: 323px;
+      width: 651px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      z-index: 5;
     }
-    .kicker .em { color: var(--text); }
 
-    .right {
-      position: relative;
-      height: 100%;
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      color: var(--white);
+    }
+
+    .hero-headline {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 1;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      line-height: 1.5;
+      max-width: 421px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--white);
+      color: var(--black);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 32px;
+      border-radius: 4px;
+      white-space: nowrap;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-white-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      color: var(--white);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 32px;
+      border-radius: 4px;
+      white-space: nowrap;
+      border: 1px solid var(--white);
+      cursor: pointer;
+    }
+
+    /* ═══════════════════════════════════════
+       SECTION LABELS
+    ═══════════════════════════════════════ */
+    .section-label {
+      font-size: 18px;
+      color: var(--black);
+      font-weight: 400;
+    }
+
+    .section-title {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 36px;
+      letter-spacing: -0.5px;
+      color: var(--black);
+      white-space: nowrap;
+    }
+
+    /* ═══════════════════════════════════════
+       CAROUSEL SECTION
+    ═══════════════════════════════════════ */
+    .carousel-section {
+      padding: 60px var(--pad-x);
+      background: var(--white);
+    }
+
+    .carousel-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 48px;
+    }
+
+    .carousel-header-left {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .carousel-controls {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .carousel-btn {
+      width: 45px;
+      height: 45px;
+      border-radius: 4px;
       display: flex;
       align-items: center;
       justify-content: center;
-      animation: rise 1.4s cubic-bezier(0.2, 0.7, 0.1, 1) 0.15s both;
+      cursor: pointer;
+      transition: opacity 0.2s;
     }
 
-    /* Shared graphic sizing */
-    .graphic {
+    .carousel-btn:hover { opacity: 0.8; }
+
+    .carousel-btn--prev {
+      background: transparent;
+      border: 1px solid var(--red);
+    }
+
+    .carousel-btn--prev i { color: var(--red); }
+
+    .carousel-btn--next {
+      background: var(--red);
+      border: none;
+    }
+
+    .carousel-btn--next i { color: var(--white); }
+
+    .carousel-viewport {
+      overflow: hidden;
       width: 100%;
-      max-width: clamp(420px, 50vw, 820px);
-      height: auto;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 16px;
+      transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .carousel-card {
+      flex: 0 0 460px;
+      height: 460px;
+      border-radius: 12px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 64px;
+    }
+
+    .carousel-card__img-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+    }
+
+    .carousel-card__img {
+      width: 216px;
+      height: 216px;
+      object-fit: contain;
+    }
+
+    .carousel-card__body {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .carousel-card__title {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 36px;
+      letter-spacing: -0.5px;
+      color: var(--black);
+    }
+
+    .carousel-card__desc {
+      font-size: 18px;
+      color: var(--black);
+    }
+
+    /* ═══════════════════════════════════════
+       ONLINE ORDER SECTION
+    ═══════════════════════════════════════ */
+    .online-order {
+      padding: 80px var(--pad-x);
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .online-order__header {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .online-order__cards {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+    }
+
+    /* Brand card: 672×360 */
+    .brand-card {
+      width: 672px;
+      height: 360px;
+      background: var(--fog);
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 32px;
+    }
+
+    .brand-card__cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 238px;
+      overflow: hidden;
+      border-radius: 12px 12px 0 0;
+    }
+
+    .brand-card__cover img {
+      width: 100%;
+      height: 133%;
+      object-fit: cover;
+      object-position: top;
+      margin-top: -2.9%;
+    }
+
+    .brand-card__bottom {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+      width: 186px;
+    }
+
+    .brand-card__avatar {
+      position: absolute;
+      bottom: calc(100% - 134px + 32px);
+      width: 134px;
+      height: 134px;
+      border-radius: 8px;
+      border: 4px solid var(--fog);
+      overflow: hidden;
+      background: var(--fog);
+    }
+
+    .brand-card__avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .brand-card__cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--fog);
+      color: var(--red);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 32px;
+      border-radius: 4px;
+      border: 1px solid var(--red);
+      white-space: nowrap;
+      width: 100%;
+      cursor: pointer;
+      margin-top: 134px;
+    }
+
+    /* ═══════════════════════════════════════
+       DIVIDER LINE
+    ═══════════════════════════════════════ */
+    .hr-divider {
+      height: 1px;
+      background: var(--divider);
+      margin: 0 var(--pad-x);
+    }
+
+    /* ═══════════════════════════════════════
+       SERVICES SECTION
+    ═══════════════════════════════════════ */
+    .services-section {
+      padding: 80px var(--pad-x);
+      background: var(--white);
+    }
+
+    .services-header {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 48px;
+    }
+
+    .services-grid {
+      display: flex;
+      gap: 182px;
+    }
+
+    .service-card {
+      width: 506px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .service-icon {
+      width: 45px;
+      height: 45px;
+      background: var(--black);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .service-icon i {
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .service-body {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .service-title {
+      font-size: 24px;
+      color: var(--black);
+      font-weight: 400;
+    }
+
+    .service-desc {
+      font-size: 18px;
+      color: var(--black);
+      line-height: 1.5;
+    }
+
+    .btn-dark-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      color: var(--black);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 32px;
+      border-radius: 4px;
+      border: 1px solid var(--black);
+      white-space: nowrap;
+      cursor: pointer;
+      align-self: flex-start;
+    }
+
+    /* ═══════════════════════════════════════
+       DIVIDER IMAGE
+    ═══════════════════════════════════════ */
+    .divider-image {
+      height: 698px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .divider-image img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 199%;
+      object-fit: cover;
+      top: -2.23%;
+    }
+
+    .divider-image__overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.32);
+    }
+
+    /* ═══════════════════════════════════════
+       BRANDS SECTION
+    ═══════════════════════════════════════ */
+    .brands-section {
+      padding: 80px var(--pad-x);
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .brands-header {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .brands-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width: 100%;
+    }
+
+    .brand-logo-cell {
+      background: var(--white);
+      border: 1px solid var(--fog);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      height: 208px;
+    }
+
+    .brand-logo-cell img {
+      width: 176px;
+      height: 176px;
+      object-fit: contain;
+    }
+
+    /* ═══════════════════════════════════════
+       FINAL CTA SECTION
+    ═══════════════════════════════════════ */
+    .final-cta {
+      height: 698px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .final-cta__bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 137.54%;
+      object-fit: cover;
+      top: -35.25%;
+    }
+
+    .final-cta__overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.32);
+    }
+
+    .final-cta__content {
+      position: absolute;
+      left: var(--pad-x);
+      top: 50%;
+      transform: translateY(-50%);
+      width: 677px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 40px;
+      z-index: 5;
+    }
+
+    .final-cta__text {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      color: var(--white);
+    }
+
+    .final-cta__label {
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    .final-cta__headline {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 48px;
+      letter-spacing: -0.5px;
+      line-height: 1.05;
+    }
+
+    /* ═══════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════ */
+    .footer {
+      background: var(--black);
+      color: var(--white);
+      padding: 80px var(--pad-x);
+    }
+
+    .footer__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .footer__signet {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+    }
+
+    .footer__info {
+      display: flex;
+      gap: 219px;
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    .footer__col {
+      display: flex;
+      flex-direction: column;
+      gap: 42px;
+    }
+
+    .footer__col-block {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer__col-block--hours {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer__hours-row {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer__links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer__links a {
+      color: var(--white);
+    }
+
+    .footer__legal {
+      font-size: 20px;
+      font-weight: 400;
+      margin-top: 40px;
+    }
+
+    /* ═══════════════════════════════════════
+       HAMBURGER (hidden on desktop)
+    ═══════════════════════════════════════ */
+    .nav-hamburger {
       display: none;
-      filter: drop-shadow(0 0 40px rgba(89,250,167,0.08));
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
     }
-    [data-graphic="arrows"] .graphic--arrows { display: block; }
-    [data-graphic="ovals"]  .graphic--ovals  { display: block; filter: drop-shadow(0 0 40px rgba(255,191,128,0.10)); }
-    [data-graphic="star"]   .graphic--star   { display: block; }
+    .nav-hamburger i { font-size: 24px; color: var(--white); line-height: 1; }
 
-    /* === ARROWS variant === */
-    .graphic--arrows .stem { stroke-linecap: butt; }
-    .graphic--arrows .cap  { stroke-linecap: round; stroke-linejoin: round; }
-    .graphic--arrows .baseline { stroke-dasharray: 1200; stroke-dashoffset: 1200; animation: drawBase 2s ease-out 0.4s both; }
-    .graphic--arrows .arr  { transform-box: fill-box; transform-origin: bottom center; opacity: 0; animation: arrRise 0.9s cubic-bezier(0.2, 0.7, 0.1, 1) both; }
-    .graphic--arrows .arr:nth-of-type(1)  { animation-delay: 0.55s; }
-    .graphic--arrows .arr:nth-of-type(2)  { animation-delay: 0.62s; }
-    .graphic--arrows .arr:nth-of-type(3)  { animation-delay: 0.69s; }
-    .graphic--arrows .arr:nth-of-type(4)  { animation-delay: 0.76s; }
-    .graphic--arrows .arr:nth-of-type(5)  { animation-delay: 0.83s; }
-    .graphic--arrows .arr:nth-of-type(6)  { animation-delay: 0.90s; }
-    .graphic--arrows .arr:nth-of-type(7)  { animation-delay: 0.97s; }
-    .graphic--arrows .arr:nth-of-type(8)  { animation-delay: 1.04s; }
-    .graphic--arrows .arr:nth-of-type(9)  { animation-delay: 1.11s; }
-    .graphic--arrows .arr:nth-of-type(10) { animation-delay: 1.18s; }
-    .graphic--arrows .arr:nth-of-type(11) { animation-delay: 1.25s; }
-    .graphic--arrows .arr:nth-of-type(12) { animation-delay: 1.32s; }
-    .graphic--arrows .arr:nth-of-type(13) { animation-delay: 1.39s; }
-    .graphic--arrows .arr:nth-of-type(14) { animation-delay: 1.46s; }
-    .graphic--arrows .arr:nth-of-type(15) { animation-delay: 1.53s; }
+    /* ═══════════════════════════════════════
+       MOBILE — ≤ 768px
+    ═══════════════════════════════════════ */
+    @media (max-width: 768px) {
+      :root { --pad-x: 20px; }
 
-    /* === OVALS variant === */
-    .graphic--ovals .guide   { stroke-linecap: butt; }
-    .graphic--ovals .ring    { transform-box: fill-box; transform-origin: center; opacity: 0; animation: ringIn 1.2s cubic-bezier(0.2, 0.7, 0.1, 1) both; }
-    .graphic--ovals .ring:nth-of-type(1) { animation-delay: 0.45s; }
-    .graphic--ovals .ring:nth-of-type(2) { animation-delay: 0.65s; }
-    .graphic--ovals .ring:nth-of-type(3) { animation-delay: 0.85s; }
-    .graphic--ovals .cap     { stroke-linecap: round; stroke-linejoin: round; opacity: 0; animation: fadeIn 0.6s ease-out 1.1s both; }
-    .graphic--ovals .guide-a { stroke-dasharray: 220; stroke-dashoffset: 220; animation: drawBase 1.4s ease-out 0.2s both; }
+      /* Contact bar: hide on mobile */
+      .contact-bar { display: none; }
 
-    /* === STAR variant === */
-    .graphic--star .beam { stroke-linejoin: bevel; stroke-linecap: round; stroke-dasharray: 800; stroke-dashoffset: 800; animation: drawBase 1.6s ease-out both; }
-    .graphic--star .beam:nth-of-type(1) { animation-delay: 0.35s; }
-    .graphic--star .beam:nth-of-type(2) { animation-delay: 0.55s; }
-    .graphic--star .beam:nth-of-type(3) { animation-delay: 0.75s; }
-    .graphic--star .tick { opacity: 0; animation: fadeIn 0.5s ease-out 1.6s both; }
-
-    @keyframes drawBase { to { stroke-dashoffset: 0; } }
-    @keyframes arrRise  {
-      from { opacity: 0; transform: translateY(8px) scaleY(0.92); }
-      to   { opacity: 1; transform: translateY(0)   scaleY(1);    }
-    }
-    @keyframes ringIn  {
-      from { opacity: 0; transform: scaleX(0.86) scaleY(0.7); }
-      to   { opacity: 1; transform: scaleX(1)    scaleY(1);   }
-    }
-    @keyframes rise {
-      from { opacity: 0; transform: translateY(24px); filter: blur(6px); }
-      to   { opacity: 1; transform: translateY(0);     filter: blur(0);  }
-    }
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-    .footer-mark, .footer-meta {
-      animation: fadeIn 1.6s ease-out 0.1s both;
-    }
-
-    /* === Responsive === */
-    @media (max-width: 920px) {
-      .stage {
-        grid-template-columns: 1fr;
-        align-items: end;
+      /* Navbar: logo + hamburger */
+      .navbar {
+        top: 20px;
+        padding: 0 var(--pad-x);
+        gap: 0;
       }
-      .right {
-        position: absolute;
+      .nav-links {
+        display: none;
+        position: fixed;
         inset: 0;
-        z-index: -1;
-        opacity: 0.32;
-        align-items: flex-start;
-        justify-content: flex-end;
-        padding: calc(var(--frame-inset) + 24px);
+        background: rgba(0,0,0,0.92);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        z-index: 100;
       }
-      .graphic { max-width: min(80vw, 640px); }
-      .headline { font-size: clamp(2.2rem, 9vw, 5rem); max-width: 14ch; }
-    }
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: 22px; }
+      .nav-cta-desktop { display: none; }
+      .nav-hamburger { display: flex; z-index: 110; }
 
-    @media (max-width: 420px) {
-      :root { --frame-inset: 12px; }
-      .footer-mark { bottom: -8px; right: 8px; }
-      .footer-meta { bottom: -8px; left: 8px; }
-      .ogo-hero { width: 110px; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .left, .right, .footer-mark, .footer-meta,
-      .graphic--arrows .arr, .graphic--arrows .baseline,
-      .graphic--ovals .ring, .graphic--ovals .cap, .graphic--ovals .guide-a,
-      .graphic--star .beam, .graphic--star .tick {
-        animation: none !important;
+      /* Hero */
+      .hero-wrapper { height: 100svh; min-height: 560px; }
+      .hero-content {
+        top: auto;
+        bottom: 48px;
+        left: var(--pad-x);
+        right: var(--pad-x);
+        width: auto;
       }
-      .graphic--arrows .arr,
-      .graphic--ovals .ring, .graphic--ovals .cap,
-      .graphic--star .tick { opacity: 1; transform: none; }
-      .graphic--arrows .baseline,
-      .graphic--ovals .guide-a,
-      .graphic--star .beam { stroke-dashoffset: 0; }
-    }
+      .hero-headline { font-size: 32px; }
+      .hero-sub { font-size: 16px; max-width: 100%; }
+      .btn-white, .btn-white-outline, .btn-red { padding: 12px 20px; font-size: 13px; }
 
-    @media (min-width: 1600px) {
-      .headline { font-size: clamp(5.2rem, 6.4vw, 8.5rem); }
+      /* Carousel */
+      .carousel-section { padding: 48px var(--pad-x); }
+      .carousel-header { flex-direction: column; align-items: flex-start; gap: 16px; margin-bottom: 24px; }
+      .carousel-card { flex: 0 0 280px; height: 320px; padding: 24px; gap: 32px; }
+      .carousel-card__img { width: 140px; height: 140px; }
+      .carousel-card__title { font-size: 26px; }
+      .carousel-card__desc { font-size: 15px; }
+
+      /* Online order */
+      .online-order { padding: 48px var(--pad-x); gap: 32px; }
+      .online-order__cards { flex-direction: column; align-items: center; }
+      .brand-card {
+        width: 100%;
+        max-width: 480px;
+        height: 320px;
+      }
+      .brand-card__cover { height: 190px; }
+      .brand-card__avatar {
+        width: 100px;
+        height: 100px;
+        bottom: calc(100% - 100px + 24px);
+      }
+      .brand-card__cta { margin-top: 100px; padding: 10px 20px; font-size: 13px; }
+
+      /* Divider line */
+      .hr-divider { margin: 0; }
+
+      /* Services */
+      .services-section { padding: 48px var(--pad-x); }
+      .services-header { margin-bottom: 32px; }
+      .section-title { font-size: 28px; white-space: normal; }
+      .services-grid { flex-direction: column; gap: 48px; }
+      .service-card { width: 100%; }
+      .service-title { font-size: 20px; }
+      .service-desc { font-size: 16px; }
+
+      /* Divider image */
+      .divider-image { height: 360px; }
+      .divider-image img { height: 100%; top: 0; object-fit: cover; position: absolute; }
+
+      /* Brands */
+      .brands-section { padding: 48px var(--pad-x); gap: 32px; }
+      .brands-grid { grid-template-columns: repeat(2, 1fr); }
+      .brand-logo-cell { height: 140px; padding: 12px; }
+      .brand-logo-cell img { width: 110px; height: 110px; }
+
+      /* Final CTA */
+      .final-cta { height: auto; min-height: 480px; }
+      .final-cta__bg { height: 100%; top: 0; }
+      .final-cta__content {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 100%;
+        padding: 80px var(--pad-x);
+      }
+      .final-cta__headline { font-size: 30px; }
+      .final-cta__label { font-size: 16px; }
+
+      /* Footer */
+      .footer { padding: 48px var(--pad-x); }
+      .footer__info { flex-direction: column; gap: 40px; font-size: 16px; }
+      .footer__legal { font-size: 16px; margin-top: 24px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Frame -->
-  <div class="frame" aria-hidden="true"></div>
+  <!-- ═══════════════════════════════════════
+       HERO WRAPPER
+  ═══════════════════════════════════════ -->
+  <div class="hero-wrapper">
+    <img class="hero-bg" src="https://www.figma.com/api/mcp/asset/2234acca-dd91-49dd-a5e8-b957e375dcf2" alt="Bottazzi Srl — lavoratori in sicurezza" />
+    <div class="hero-overlay"></div>
 
-  <!-- Chrome: corner marks -->
-  <div class="chrome" aria-hidden="true">
-    <div class="footer-meta">aivc.com</div>
-    <div class="footer-mark">AIVC</div>
+    <!-- Contact bar -->
+    <div class="contact-bar">
+      <div class="contact-item">
+        <i class="ph ph-envelope"></i>
+        info@bottazzisrl.com
+      </div>
+      <div class="contact-divider"></div>
+      <div class="contact-item">
+        <i class="ph ph-phone"></i>
+        +39 0142 452805
+      </div>
+      <div class="contact-divider"></div>
+      <div class="contact-item">
+        <i class="ph ph-map-pin"></i>
+        Via Enrico Motta 52, 15033 Casale Monferrato (AL)
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-logo">
+        <img src="assets/main-logo.png" alt="Bottazzi Srl" />
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalogo.html">Catalogo</a></li>
+        <li><a href="personalizzazione.html">Personalizzazione</a></li>
+        <li><a href="consulenza.html">Consulenza</a></li>
+        <li><a href="azienda.html">Azienda</a></li>
+      </ul>
+      <button class="btn-red nav-cta-desktop">Contattaci</button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <i class="ph ph-list"></i>
+      </button>
+    </nav>
+
+    <!-- Hero content -->
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-headline">Sicurezza, di famiglia.<br>Dal 1983.</h1>
+        <p class="hero-sub">Equipaggiamo e proteggiamo chi lavora, con dispositivi di protezione e abbigliamento scelti uno a uno da produttori che conosciamo bene</p>
+      </div>
+      <div class="hero-buttons">
+        <a href="catalogo.html" class="btn-white">Esplora il catalogo</a>
+        <button class="btn-white-outline">Scopri l'azienda</button>
+      </div>
+    </div>
   </div>
 
-  <!-- Stage: left = wordmark + headline; right = randomly-picked graphic -->
-  <main class="stage">
-    <section class="left">
-      <!-- Authentic AIVC ogo asterisk (path from brand SVG) -->
-      <div class="ogo-hero" role="img" aria-label="AIVC">
-        <svg viewBox="0 0 158.947 150.467" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-          <path fill="currentColor" d="M77.2905 54.3636H81.7833L107.947 0.0323087L129.259 12.0612L96.5324 75.2854L129.278 138.436L107.958 150.467L81.7984 96.358H77.2841L51.0898 150.467L29.7609 138.408L58.1736 85.0571L0 87.4801V62.9981L58.1801 65.3349L29.7609 12.031L51.0834 0L77.2905 54.3636ZM158.945 62.3175L140.655 72.9959V77.4758L158.945 88.0939L151.389 111.387L141.008 104.499C129.52 96.7543 118.294 89.7954 118.294 75.3414C118.294 59.5757 128.176 54.1051 141.008 45.5331L151.387 39.0502L158.947 62.3196L158.945 62.3175Z"/>
-        </svg>
+  <!-- ═══════════════════════════════════════
+       CAROUSEL — Cerca per protezione
+  ═══════════════════════════════════════ -->
+  <section class="carousel-section">
+    <div class="carousel-header">
+      <div class="carousel-header-left">
+        <p class="section-label">I nostri prodotti</p>
+        <h2 class="section-title">Cerca per protezione</h2>
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-btn carousel-btn--prev" id="prevBtn" aria-label="Precedente">
+          <i class="ph ph-caret-left"></i>
+        </button>
+        <button class="carousel-btn carousel-btn--next" id="nextBtn" aria-label="Successivo">
+          <i class="ph ph-caret-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="carousel-viewport">
+      <div class="carousel-track" id="carouselTrack">
+
+        <!-- Capo -->
+        <div class="carousel-card" style="background: var(--orange);">
+          <div class="carousel-card__img-wrap">
+            <img class="carousel-card__img" src="https://www.figma.com/api/mcp/asset/34c3ef84-75ea-4d37-b834-a07e39c70df6" alt="Protezione Capo" />
+          </div>
+          <div class="carousel-card__body">
+            <p class="carousel-card__title">Capo</p>
+            <p class="carousel-card__desc">Elmetti, occhiali, udito e respirazione</p>
+          </div>
+        </div>
+
+        <!-- Corpo -->
+        <div class="carousel-card" style="background: var(--green);">
+          <div class="carousel-card__img-wrap">
+            <img class="carousel-card__img" src="https://www.figma.com/api/mcp/asset/64b7cf2c-6b3f-46e0-b57e-1862942f572e" alt="Protezione Corpo" />
+          </div>
+          <div class="carousel-card__body">
+            <p class="carousel-card__title">Corpo</p>
+            <p class="carousel-card__desc">Anticaduta, abbigliamento, multi-protezione</p>
+          </div>
+        </div>
+
+        <!-- Mani -->
+        <div class="carousel-card" style="background: var(--yellow);">
+          <div class="carousel-card__img-wrap">
+            <img class="carousel-card__img" src="https://www.figma.com/api/mcp/asset/58805010-8f29-4595-8aed-b8abdc4d8f39" alt="Protezione Mani" />
+          </div>
+          <div class="carousel-card__body">
+            <p class="carousel-card__title">Mani</p>
+            <p class="carousel-card__desc">Guanti per rischi chimici, meccanici o termici</p>
+          </div>
+        </div>
+
+        <!-- Piedi -->
+        <div class="carousel-card" style="background: var(--blue);">
+          <div class="carousel-card__img-wrap">
+            <img class="carousel-card__img" src="https://www.figma.com/api/mcp/asset/cebb4c49-16c6-444c-ad66-8ae5dc1aac1c" alt="Protezione Piedi" />
+          </div>
+          <div class="carousel-card__body">
+            <p class="carousel-card__title">Piedi</p>
+            <p class="carousel-card__desc">Scarpe e stivali da lavoro</p>
+          </div>
+        </div>
+
+        <!-- Sanitario -->
+        <div class="carousel-card" style="background: var(--fog);">
+          <div class="carousel-card__img-wrap">
+            <img class="carousel-card__img" src="https://www.figma.com/api/mcp/asset/31d94730-307d-411c-b76a-7aa664fbf8fc" alt="Protezione Sanitario" />
+          </div>
+          <div class="carousel-card__body">
+            <p class="carousel-card__title">Sanitario</p>
+            <p class="carousel-card__desc">Protezione per rischi biologici e chimici</p>
+          </div>
+        </div>
+
+        <!-- Alberghiero -->
+        <div class="carousel-card" style="background: var(--fog);">
+          <div class="carousel-card__img-wrap">
+            <img class="carousel-card__img" src="https://www.figma.com/api/mcp/asset/3cdd2243-4a79-484c-8a09-2313697fc8cb" alt="Alberghiero" />
+          </div>
+          <div class="carousel-card__body">
+            <p class="carousel-card__title">Alberghiero</p>
+            <p class="carousel-card__desc">Abbigliamento per la ristorazione</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       ONLINE ORDER
+  ═══════════════════════════════════════ -->
+  <section class="online-order">
+    <div class="online-order__header">
+      <p class="section-label">In evidenza</p>
+      <h2 class="section-title">Ordina online</h2>
+    </div>
+
+    <div class="online-order__cards">
+
+      <!-- Payper -->
+      <div class="brand-card">
+        <div class="brand-card__cover">
+          <img src="https://www.figma.com/api/mcp/asset/46daa55a-30f7-40df-aae7-dba64e66f9e7" alt="Payper cover" />
+        </div>
+        <div class="brand-card__bottom">
+          <div class="brand-card__avatar">
+            <img src="https://www.figma.com/api/mcp/asset/c966ae78-ae04-409f-9cbc-96fb057cbe5b" alt="Payper logo" />
+          </div>
+          <a href="https://www.payperwear.com/flex/FixedPages/Common/frame.php/L/IT/cl/MDE5Mjkz" target="_blank" rel="noopener noreferrer" class="brand-card__cta">Acquista Payper ↗</a>
+        </div>
       </div>
 
-      <span class="eyebrow">AIVC</span>
+      <!-- Mascot -->
+      <div class="brand-card">
+        <div class="brand-card__cover">
+          <img src="https://www.figma.com/api/mcp/asset/cb0792f6-3bd0-469c-b807-69cdf4a0fab6" alt="Mascot cover" />
+        </div>
+        <div class="brand-card__bottom">
+          <div class="brand-card__avatar">
+            <img src="https://www.figma.com/api/mcp/asset/9ad0e8c3-37e6-491e-b900-9ff0c3b1c9a6" alt="Mascot logo" />
+          </div>
+          <a href="#" class="brand-card__cta">Acquista Mascot ↗</a>
+        </div>
+      </div>
 
-      <h1 class="headline">
-        Execution is<br />
-        the new <em class="accent">alpha</em><span class="period">.</span>
-      </h1>
+    </div>
+  </section>
 
-      <div class="rule" aria-hidden="true"></div>
+  <!-- Divider line -->
+  <div class="hr-divider"></div>
 
-      <p class="kicker"><span class="em">Transform</span> &nbsp;·&nbsp; <span class="em">Build</span> &nbsp;·&nbsp; <span class="em">Accelerate</span></p>
-    </section>
+  <!-- ═══════════════════════════════════════
+       SERVICES
+  ═══════════════════════════════════════ -->
+  <section class="services-section">
+    <div class="services-header">
+      <p class="section-label">I nostri servizi</p>
+      <h2 class="section-title">Lavoriamo con te</h2>
+    </div>
 
-    <aside class="right">
+    <div class="services-grid">
 
-      <!-- ========== ARROWS variant ========== -->
-      <svg class="graphic graphic--arrows" viewBox="0 0 261 261" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-        <path class="baseline" d="M8.5 218.2 C 27.1 257.6, 55.1 257.6, 55.1 257.6 C 107.9 257.6, 151.1 167.5, 201.9 168.4 C 234.7 168.9, 251.2 207.8, 251.2 207.8"
-              fill="none" stroke="#274D39" stroke-width="0.9" stroke-miterlimit="10"/>
-        <g class="arr">
-          <line class="stem" x1="8.56"   y1="53.91"  x2="8.56"   y2="218.34" stroke="#274D39" stroke-width="1.1"/>
-          <polyline class="cap" points="3.38,58.48  8.56,53.91  13.73,58.48" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        </g>
-        <g class="arr">
-          <line class="stem" x1="26.46"  y1="79.06"  x2="26.46"  y2="243.50" stroke="#379765" stroke-width="1.1"/>
-          <polyline class="cap" points="21.28,83.63  26.46,79.06  31.62,83.63" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        </g>
-        <g class="arr">
-          <line class="stem" x1="43.75"  y1="90.82"  x2="43.75"  y2="255.26" stroke="#379765" stroke-width="1.1"/>
-          <polyline class="cap" points="38.57,95.03  43.75,90.46  48.92,95.03" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        </g>
-        <g class="arr">
-          <line class="stem" x1="61.04"  y1="92.74"  x2="61.04"  y2="257.18" stroke="#69E8A6" stroke-width="1.2"/>
-          <polyline class="cap" points="55.87,97.31  61.04,92.74  66.21,97.31" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        </g>
-        <g class="arr">
-          <line class="stem" x1="78.34"  y1="87.86"  x2="78.34"  y2="252.28" stroke="#379765" stroke-width="1.1"/>
-          <polyline class="cap" points="73.16,92.43  78.34,87.86  83.51,92.43" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        </g>
-        <g class="arr">
-          <line class="stem" x1="95.63"  y1="77.48"  x2="95.63"  y2="241.91" stroke="#379765" stroke-width="1.1"/>
-          <polyline class="cap" points="90.46,82.05  95.63,77.48  100.80,82.05" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        </g>
-        <g class="arr">
-          <line class="stem" x1="112.93" y1="63.46"  x2="112.93" y2="227.89" stroke="#274D39" stroke-width="1.0"/>
-          <polyline class="cap" points="107.76,68.03 112.93,63.46 118.10,68.03" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        </g>
-        <g class="arr">
-          <line class="stem" x1="130.22" y1="47.46"  x2="130.22" y2="211.90" stroke="#274D39" stroke-width="1.0"/>
-          <polyline class="cap" points="125.06,52.03 130.22,47.46 135.40,52.03" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        </g>
-        <g class="arr">
-          <line class="stem" x1="147.52" y1="31.53"  x2="147.52" y2="195.96" stroke="#274D39" stroke-width="1.0"/>
-          <polyline class="cap" points="142.35,36.10 147.52,31.53 152.69,36.10" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        </g>
-        <g class="arr">
-          <line class="stem" x1="164.81" y1="17.75"  x2="164.81" y2="182.18" stroke="#379765" stroke-width="1.1"/>
-          <polyline class="cap" points="159.64,22.08 164.81,17.51 169.99,22.08" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        </g>
-        <g class="arr">
-          <line class="stem" x1="182.10" y1="8.10"   x2="182.10" y2="172.53" stroke="#379765" stroke-width="1.1"/>
-          <polyline class="cap" points="176.94,12.79 182.10,8.22  187.28,12.79" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        </g>
-        <g class="arr">
-          <line class="stem" x1="199.41" y1="3.84"   x2="199.41" y2="168.28" stroke="#69E8A6" stroke-width="1.2"/>
-          <polyline class="cap" points="194.23,8.42  199.41,3.84  204.57,8.42"  fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        </g>
-        <g class="arr">
-          <line class="stem" x1="216.70" y1="6.98"   x2="216.70" y2="171.42" stroke="#379765" stroke-width="1.1"/>
-          <polyline class="cap" points="211.53,11.55 216.70,6.98  221.87,11.55" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        </g>
-        <g class="arr">
-          <line class="stem" x1="234.00" y1="18.54"  x2="234.00" y2="182.98" stroke="#379765" stroke-width="1.1"/>
-          <polyline class="cap" points="228.82,23.11 234.00,18.54 239.16,23.11" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        </g>
-        <g class="arr">
-          <line class="stem" x1="251.26" y1="43.22"  x2="251.26" y2="207.93" stroke="#274D39" stroke-width="1.0"/>
-          <polyline class="cap" points="246.09,47.78 251.26,43.22 256.43,47.78" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        </g>
-      </svg>
+      <!-- Personalizzazione -->
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="ph ph-paint-bucket"></i>
+        </div>
+        <div class="service-body">
+          <p class="service-title">Personalizzazione Capi</p>
+          <p class="service-desc">Ricamo o stampa del logo aziendale: mettiamo il tuo nome sui capi che indossate. Minimi di ordine bassi, anche per una sola persona.</p>
+        </div>
+        <button class="btn-dark-outline">Scopri di più</button>
+      </div>
 
-      <!-- ========== OVALS variant (orange) ========== -->
-      <svg class="graphic graphic--ovals" viewBox="0 0 261 261" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-        <line class="guide guide-a" x1="18.28"  y1="14.13" x2="18.28"  y2="203.41" stroke="#55391D" stroke-width="0.9"/>
-        <line class="guide guide-a" x1="243.39" y1="14.37" x2="243.39" y2="203.22" stroke="#55391D" stroke-width="0.9"/>
+      <!-- Consulenza -->
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="ph ph-chat-dots"></i>
+        </div>
+        <div class="service-body">
+          <p class="service-title">Consulenza DPI</p>
+          <p class="service-desc">Ascoltiamo cosa fanno le persone, leggiamo la valutazione dei rischi, e proponiamo la dotazione: categoria per categoria, taglia per taglia. Senza vendere nulla che non serva.</p>
+        </div>
+        <button class="btn-dark-outline">Come aiutiamo</button>
+      </div>
 
-        <path class="ring" d="M243.388 62.8824C243.388 69.3101 240.157 75.3826 234.43 80.8425C228.704 86.3113 220.439 91.2031 210.265 95.3135C189.916 103.526 161.835 108.595 130.843 108.595C99.8496 108.595 71.7687 103.526 51.4205 95.3135C41.2463 91.2119 32.981 86.3113 27.2547 80.8425C21.5284 75.3737 18.2969 69.3101 18.2969 62.8824C18.2969 56.4548 21.5284 50.3823 27.2547 44.9224C32.981 39.4535 41.2463 34.5618 51.4205 30.4513C71.7687 22.2392 99.8496 17.1699 130.843 17.1699C161.835 17.1699 189.916 22.2392 210.265 30.4513C220.439 34.5529 228.704 39.4535 234.43 44.9224C240.157 50.3912 243.388 56.4548 243.388 62.8824Z"
-              fill="none" stroke="#FFBF80" stroke-width="1.1" stroke-miterlimit="10"/>
+    </div>
+  </section>
 
-        <path class="ring" d="M243.371 133.107C243.371 139.534 240.139 145.607 234.413 151.067C228.686 156.536 220.421 161.427 210.247 165.538C189.899 173.75 161.818 178.819 130.825 178.819C99.8321 178.819 71.7511 173.75 51.4029 165.538C41.2288 161.436 32.9634 156.536 27.2371 151.067C21.5109 145.598 18.2793 139.534 18.2793 133.107C18.2793 126.679 21.5109 120.607 27.2371 115.147C32.9634 109.678 41.2288 104.786 51.4029 100.676C71.7511 92.4636 99.8321 87.3943 130.825 87.3943C161.818 87.3943 189.899 92.4636 210.247 100.676C220.421 104.777 228.686 109.678 234.413 115.147C240.139 120.616 243.371 126.679 243.371 133.107Z"
-              fill="none" stroke="#92673C" stroke-width="1.0" stroke-miterlimit="10"/>
+  <!-- ═══════════════════════════════════════
+       DIVIDER IMAGE
+  ═══════════════════════════════════════ -->
+  <div class="divider-image">
+    <img src="https://www.figma.com/api/mcp/asset/27f26011-e49e-4b06-afdd-e4027e23af62" alt="" />
+    <div class="divider-image__overlay"></div>
+  </div>
 
-        <path class="ring" d="M243.388 203.562C243.388 210.008 240.157 216.089 234.43 221.567C228.704 227.045 220.439 231.954 210.265 236.064C189.916 244.294 161.835 249.373 130.843 249.373C99.8496 249.373 71.7687 244.294 51.4205 236.064C41.2463 231.954 32.981 227.045 27.2547 221.567C21.5284 216.089 18.2969 210.008 18.2969 203.562C18.2969 197.117 21.5284 191.036 27.2547 185.558C32.981 180.08 41.2463 175.171 51.4205 171.06C71.7687 162.83 99.8496 157.752 130.843 157.752C161.835 157.752 189.916 162.83 210.265 171.06C220.439 175.171 228.704 180.08 234.43 185.558C240.157 191.036 243.388 197.117 243.388 203.562Z"
-              fill="none" stroke="#55391D" stroke-width="0.9" stroke-miterlimit="10"/>
+  <!-- ═══════════════════════════════════════
+       BRANDS / FORNITORI
+  ═══════════════════════════════════════ -->
+  <section class="brands-section">
+    <div class="brands-header">
+      <p class="section-label">I nostri marchi</p>
+      <h2 class="section-title">Fornitori, di fiducia</h2>
+    </div>
 
-        <polyline class="cap" points="13.11,18.49 18.28,13.92 23.46,18.49"   fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        <polyline class="cap" points="13.11,101.06 18.28,96.49 23.46,101.06" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        <polyline class="cap" points="13.11,170.58 18.28,166.01 23.46,170.58" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        <polyline class="cap" points="238.21,18.49 243.39,13.92 248.56,18.49" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        <polyline class="cap" points="238.21,101.06 243.39,96.49 248.56,101.06" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        <polyline class="cap" points="238.21,170.58 243.39,166.01 248.56,170.58" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-      </svg>
+    <div class="brands-grid">
+      <div class="brand-logo-cell"><img src="https://www.figma.com/api/mcp/asset/a03c8e0b-dd33-4eb3-83a2-162b8d16b9ee" alt="Delta Plus" /></div>
+      <div class="brand-logo-cell"><img src="https://www.figma.com/api/mcp/asset/77aa70db-d56f-4059-a0dc-08640d7dd461" alt="3M" /></div>
+      <div class="brand-logo-cell"><img src="https://www.figma.com/api/mcp/asset/a244c7a3-5277-489a-b3c0-540bd2b5d569" alt="Payper" /></div>
+      <div class="brand-logo-cell"><img src="https://www.figma.com/api/mcp/asset/5d9314a3-45d9-401d-82d5-d419f1c9dcee" alt="Tremme" /></div>
+      <div class="brand-logo-cell"><img src="https://www.figma.com/api/mcp/asset/12bf9062-ac46-4902-8941-60a4d7ec46d7" alt="Mascot" /></div>
+      <div class="brand-logo-cell"><img src="https://www.figma.com/api/mcp/asset/bcbdf5b1-d596-4987-91da-601d9914af5b" alt="Pezzol" /></div>
+      <div class="brand-logo-cell"><img src="https://www.figma.com/api/mcp/asset/99faa4d2-04a5-49d8-9e09-2397fdfee2f6" alt="Isacco" /></div>
+      <div class="brand-logo-cell"><img src="https://www.figma.com/api/mcp/asset/cafe2538-4a35-4ed5-9c12-fd9a022522ee" alt="Lotto" /></div>
+      <div class="brand-logo-cell"><img src="https://www.figma.com/api/mcp/asset/0230fe27-6d0c-4966-83d8-1b605d37f1b8" alt="Sparco" /></div>
+    </div>
+  </section>
 
-      <!-- ========== STAR variant (green triangle composition) ========== -->
-      <svg class="graphic graphic--star" viewBox="0 0 261 261" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-        <!-- Two crossing diagonals -->
-        <polyline class="beam" points="239.358,66.81 21.041,129.85 239.358,193.98" fill="none" stroke="#274D39" stroke-width="1.0"/>
-        <polyline class="beam" points="21.041,66.81 239.358,130.39 21.041,193.98" fill="none" stroke="#379765" stroke-width="1.1"/>
-        <!-- Upward-pointing triangle, bright green -->
-        <polyline class="beam" points="31.029,239.31 132.042,22.25 228.581,239.31" fill="none" stroke="#69E8A6" stroke-width="1.3"/>
+  <!-- ═══════════════════════════════════════
+       FINAL CTA
+  ═══════════════════════════════════════ -->
+  <div class="final-cta">
+    <img class="final-cta__bg" src="https://www.figma.com/api/mcp/asset/e33f1ee0-feae-46f0-acad-2deef32476f9" alt="" />
+    <div class="final-cta__overlay"></div>
+    <div class="final-cta__content">
+      <div class="final-cta__text">
+        <p class="final-cta__label">Pochi marchi, scelti bene</p>
+        <p class="final-cta__headline">Offriamo solo quello che ci convince, e che convince le persone che lo indossano</p>
+      </div>
+      <a href="catalogo.html" class="btn-white">Esplora il catalogo</a>
+    </div>
+  </div>
 
-        <!-- Edge ticks (white) -->
-        <polyline class="tick" points="126.86,7.79  132.04,12.36 137.21,7.79"  fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        <polyline class="tick" points="227.37,253.16 232.54,248.59 237.72,253.16" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        <polyline class="tick" points="21.49,253.16  26.67,248.59 31.84,253.16"  fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        <polyline class="tick" points="7.18,191.58  11.75,196.75 7.18,201.92"   fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        <polyline class="tick" points="7.18,124.68  11.75,129.85 7.18,135.03"   fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        <polyline class="tick" points="7.18,59.90   11.75,65.08  7.18,70.24"    fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        <polyline class="tick" points="253.77,191.58 249.20,196.75 253.77,201.92" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        <polyline class="tick" points="253.77,125.26 249.20,130.43 253.77,135.60" fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-        <polyline class="tick" points="253.77,58.93  249.20,64.10  253.77,69.27"  fill="none" stroke="#FFFFFF" stroke-width="0.9"/>
-      </svg>
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <img class="footer__signet" src="https://www.figma.com/api/mcp/asset/9aff42d2-5f2f-4309-9ad9-e65e3f3bfb2c" alt="Bottazzi Srl" />
 
-    </aside>
-  </main>
+      <div class="footer__info">
+        <!-- Column 1: Company -->
+        <div class="footer__col">
+          <div class="footer__col-block">
+            <p>Bottazzi Srl</p>
+            <p>P.IVA 01093750063</p>
+          </div>
+          <div class="footer__col-block">
+            <p>+39 0142 452805</p>
+            <p>info@bottazzisrl.com</p>
+          </div>
+        </div>
+
+        <!-- Column 2: Address + Hours -->
+        <div class="footer__col">
+          <div class="footer__col-block">
+            <p>Via Pier Enrico Motta, 52</p>
+            <p>15033, Casale Monferrato (AL)</p>
+          </div>
+          <div class="footer__col-block--hours">
+            <div class="footer__hours-row">
+              <p>Lun - Ven</p>
+              <p>8,30 - 12,00; 14,30 - 19,00</p>
+            </div>
+            <div class="footer__hours-row">
+              <p>Sabato</p>
+              <p>8,30 - 12,00</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3: Links -->
+        <div class="footer__links">
+          <a href="catalogo.html">Catalogo</a>
+          <a href="personalizzazione.html">Personalizzazione</a>
+          <a href="consulenza.html">Consulenza</a>
+          <a href="azienda.html">Azienda</a>
+        </div>
+      </div>
+
+      <p class="footer__legal">Termini e Condizioni, Privacy Policy</p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════
+       CAROUSEL JS
+  ═══════════════════════════════════════ -->
+  <script>
+    (function () {
+      /* ── Carousel ── */
+      const track = document.getElementById('carouselTrack');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const TOTAL = 6;
+      let currentIndex = 0;
+
+      function isMobile() { return window.innerWidth <= 768; }
+
+      function getStep() {
+        const card = track.querySelector('.carousel-card');
+        return card.offsetWidth + 16;
+      }
+
+      function getVisible() { return isMobile() ? 1 : 3; }
+
+      function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * getStep()}px)`;
+      }
+
+      nextBtn.addEventListener('click', function () {
+        const max = TOTAL - getVisible();
+        currentIndex = currentIndex >= max ? 0 : currentIndex + 1;
+        updateCarousel();
+      });
+
+      prevBtn.addEventListener('click', function () {
+        const max = TOTAL - getVisible();
+        currentIndex = currentIndex <= 0 ? max : currentIndex - 1;
+        updateCarousel();
+      });
+
+      window.addEventListener('resize', function () {
+        currentIndex = 0;
+        updateCarousel();
+      });
+
+      /* ── Hamburger menu ── */
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('navLinks');
+
+      hamburger.addEventListener('click', function () {
+        const isOpen = navLinks.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', isOpen);
+        hamburger.querySelector('i').className = isOpen ? 'ph ph-x' : 'ph ph-list';
+      });
+
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          navLinks.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          hamburger.querySelector('i').className = 'ph ph-list';
+        });
+      });
+    })();
+  </script>
 
 </body>
 </html>
