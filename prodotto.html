@@ -340,12 +340,14 @@
     /* Product card */
     .product-card {
       flex: 1;
-      border: 1px solid var(--concrete);
+      border: 1px solid var(--fog);
       border-radius: 12px;
       overflow: hidden;
       background: var(--white);
       display: flex;
       flex-direction: column;
+      padding: 16px;
+      gap: 16px;
       text-decoration: none;
       transition: box-shadow 0.2s;
     }
@@ -354,32 +356,27 @@
 
     .product-card__image {
       position: relative;
-      height: 320px;
+      height: 288px;
       overflow: hidden;
       flex-shrink: 0;
+      border-radius: 8px;
     }
 
     .product-card__image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-
-    .product-card__image-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.32);
+      border-radius: 8px;
     }
 
     .product-card__info {
-      padding: 16px;
       display: flex;
       flex-direction: column;
       gap: 16px;
     }
 
     .product-card__brand { font-size: 14px; color: var(--red); }
-    .product-card__name  { font-size: 20px; color: var(--black); }
+    .product-card__name  { font-size: 20px; font-weight: 600; color: var(--black); }
 
     .product-card__details {
       display: flex;
@@ -724,7 +721,6 @@
       <a href="prodotto.html" class="product-card">
         <div class="product-card__image">
           <img src="assets/product-image.png" alt="Stivale Lotto" />
-          <div class="product-card__image-overlay"></div>
         </div>
         <div class="product-card__info">
           <div>
@@ -741,7 +737,6 @@
       <a href="prodotto.html" class="product-card">
         <div class="product-card__image">
           <img src="assets/product-image.png" alt="Scarpa Pezzol" />
-          <div class="product-card__image-overlay"></div>
         </div>
         <div class="product-card__info">
           <div>
@@ -758,7 +753,6 @@
       <a href="prodotto.html" class="product-card">
         <div class="product-card__image">
           <img src="assets/product-image.png" alt="Guanti Delta Plus" />
-          <div class="product-card__image-overlay"></div>
         </div>
         <div class="product-card__info">
           <div>
