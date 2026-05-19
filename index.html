@@ -485,12 +485,18 @@
       display: flex;
       flex-direction: column;
       gap: 4px;
-      margin-bottom: 48px;
+    }
+
+    .services-divider {
+      height: 1px;
+      background: var(--divider);
+      margin: 40px 0 0;
     }
 
     .services-grid {
       display: flex;
       gap: 182px;
+      margin-top: 60px;
     }
 
     .service-card {
@@ -525,8 +531,8 @@
 
     .service-title {
       font-size: 24px;
+      font-weight: 600;
       color: var(--black);
-      font-weight: 400;
     }
 
     .service-desc {
@@ -1076,6 +1082,7 @@
       <p class="section-label">I nostri servizi</p>
       <h2 class="section-title">Lavoriamo con te</h2>
     </div>
+    <div class="services-divider"></div>
 
     <div class="services-grid">
 
