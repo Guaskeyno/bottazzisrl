@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>U-Power Carbon S3 SRC — Bottazzi Srl</title>
-  <meta name="description" content="Calzatura antinfortunistica U-Power Carbon S3 SRC. Leggera, puntale in alluminio, suola SRC." />
+  <title><!-- TMPL:TITLE -->U-Power Carbon S3 SRC<!-- /TMPL:TITLE --> — Bottazzi Srl</title>
+  <meta name="description" content="<!-- TMPL:META_DESC -->Calzatura antinfortunistica U-Power Carbon S3 SRC. Leggera, puntale in alluminio, suola SRC.<!-- /TMPL:META_DESC -->" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -665,6 +665,7 @@
        GALLERY
   ═══════════════════════════════════════ -->
   <div class="gallery">
+    <!-- TMPL:GALLERY -->
     <div class="gallery__main">
       <img src="assets/product-image.png" alt="U-Power Carbon S3 SRC" />
       <div class="gallery__main-overlay"></div>
@@ -677,6 +678,7 @@
       <div class="gallery__thumb"><img src="assets/product-image.png" alt="" /><div class="gallery__thumb-overlay"></div></div>
       <div class="gallery__thumb"><img src="assets/product-image.png" alt="" /><div class="gallery__thumb-overlay"></div></div>
     </div>
+    <!-- /TMPL:GALLERY -->
   </div>
 
   <!-- ═══════════════════════════════════════
@@ -684,14 +686,15 @@
   ═══════════════════════════════════════ -->
   <div class="product-info">
     <div class="product-info__header">
-      <h1 class="product-info__name">U-Power Carbon S3 SRC</h1>
-      <p class="product-info__desc">Calzatura antinfortunistica leggera, una delle nostre preferite per chi sta in piedi tutto il giorno. Puntale in alluminio (non magnetico, più leggero dell'acciaio), pianta larga, suola SRC che non scivola sul bagnato. Sempre tre taglie a magazzino sui modelli più richiesti.</p>
-      <a href="#" class="btn-dark-outline">Scheda tecnica ↗</a>
+      <h1 class="product-info__name"><!-- TMPL:NAME -->U-Power Carbon S3 SRC<!-- /TMPL:NAME --></h1>
+      <p class="product-info__desc"><!-- TMPL:DESC -->Calzatura antinfortunistica leggera, una delle nostre preferite per chi sta in piedi tutto il giorno. Puntale in alluminio (non magnetico, più leggero dell'acciaio), pianta larga, suola SRC che non scivola sul bagnato. Sempre tre taglie a magazzino sui modelli più richiesti.<!-- /TMPL:DESC --></p>
+      <!-- TMPL:DATASHEET --><a href="#" class="btn-dark-outline">Scheda tecnica ↗</a><!-- /TMPL:DATASHEET -->
     </div>
 
     <div class="perche">
       <h2 class="perche__title">Perché ci piace</h2>
       <div class="perche__list">
+        <!-- TMPL:BULLETS -->
         <div class="perche__item">
           <i class="ph-fill ph-check-circle"></i>
           <span class="perche__item-text">Leggera (sotto i 700g per piede)</span>
@@ -707,6 +710,7 @@
           <span class="perche__item-text">Pianta larga per maggiore comfort</span>
         </div>
         <div class="perche__divider"></div>
+        <!-- /TMPL:BULLETS -->
       </div>
     </div>
   </div>
@@ -720,7 +724,7 @@
       <h2 class="section-title">Potrebbero interessarti anche…</h2>
     </div>
     <div class="suggested__grid">
-
+      <!-- TMPL:SUGGESTED -->
       <a href="prodotto.html" class="product-card">
         <div class="product-card__image">
           <img src="assets/product-image.png" alt="Stivale Lotto" />
@@ -768,7 +772,7 @@
           </div>
         </div>
       </a>
-
+      <!-- /TMPL:SUGGESTED -->
     </div>
   </section>
 
