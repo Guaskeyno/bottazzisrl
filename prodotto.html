@@ -442,37 +442,17 @@
     ═══════════════════════════════════════ */
     .final-cta {
       margin-top: 80px;
-      height: 698px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .final-cta__bg {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 137.54%;
-      object-fit: cover;
-      top: -35.25%;
-    }
-
-    .final-cta__overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.32);
+      background: var(--red);
+      padding: 80px var(--pad-x);
     }
 
     .final-cta__content {
-      position: absolute;
-      left: var(--pad-x);
-      top: 50%;
-      transform: translateY(-50%);
       width: 677px;
+      max-width: 100%;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       gap: 40px;
-      z-index: 5;
     }
 
     .final-cta__text {
@@ -615,16 +595,8 @@
       .service-desc  { font-size: 16px; }
 
       /* Final CTA */
-      .final-cta { height: auto; min-height: 440px; margin-top: 60px; }
-      .final-cta__bg { height: 100%; top: 0; }
-      .final-cta__content {
-        position: relative;
-        top: auto;
-        left: auto;
-        transform: none;
-        width: 100%;
-        padding: 60px var(--pad-x);
-      }
+      .final-cta { margin-top: 60px; padding: 60px var(--pad-x); }
+      .final-cta__content { width: 100%; }
       .final-cta__headline { font-size: 30px; }
 
       /* Footer */
@@ -845,14 +817,12 @@
        FINAL CTA
   ═══════════════════════════════════════ -->
   <div class="final-cta">
-    <img class="final-cta__bg" src="assets/prodotto-cta.png" alt="" />
-    <div class="final-cta__overlay"></div>
     <div class="final-cta__content">
       <div class="final-cta__text">
         <p class="final-cta__label">Da quarant'anni, dietro al bancone</p>
         <p class="final-cta__headline">Pronto ad equipaggiare il tuo team?</p>
       </div>
-      <a href="catalogo.html" class="btn-white">Esplora il catalogo</a>
+      <a href="catalogo.html" class="btn-white">Contattaci</a>
     </div>
   </div>
 
@@ -891,8 +861,8 @@
         </div>
         <div class="footer__links">
           <a href="catalogo.html">Catalogo</a>
-          <a href="#">Personalizzazione</a>
-          <a href="#">Consulenza</a>
+          <a href="personalizzazione.html">Personalizzazione</a>
+          <a href="consulenza.html">Consulenza</a>
           <a href="azienda.html">Azienda</a>
         </div>
       </div>

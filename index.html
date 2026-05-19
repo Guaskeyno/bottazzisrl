@@ -619,37 +619,17 @@
        FINAL CTA SECTION
     ═══════════════════════════════════════ */
     .final-cta {
-      height: 698px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .final-cta__bg {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 137.54%;
-      object-fit: cover;
-      top: -35.25%;
-    }
-
-    .final-cta__overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.32);
+      background: var(--red);
+      padding: 80px var(--pad-x);
     }
 
     .final-cta__content {
-      position: absolute;
-      left: var(--pad-x);
-      top: 50%;
-      transform: translateY(-50%);
       width: 677px;
+      max-width: 100%;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       gap: 40px;
-      z-index: 5;
     }
 
     .final-cta__text {
@@ -845,16 +825,8 @@
       .brand-logo-cell img { width: 110px; height: 110px; }
 
       /* Final CTA */
-      .final-cta { height: auto; min-height: 480px; }
-      .final-cta__bg { height: 100%; top: 0; }
-      .final-cta__content {
-        position: relative;
-        top: auto;
-        left: auto;
-        transform: none;
-        width: 100%;
-        padding: 80px var(--pad-x);
-      }
+      .final-cta { padding: 60px var(--pad-x); }
+      .final-cta__content { width: 100%; }
       .final-cta__headline { font-size: 30px; }
       .final-cta__label { font-size: 16px; }
 
@@ -1130,14 +1102,12 @@
        FINAL CTA
   ═══════════════════════════════════════ -->
   <div class="final-cta">
-    <img class="final-cta__bg" src="assets/final image.png" alt="" />
-    <div class="final-cta__overlay"></div>
     <div class="final-cta__content">
       <div class="final-cta__text">
-        <p class="final-cta__label">Pochi marchi, scelti bene</p>
-        <p class="final-cta__headline">Offriamo solo quello che ci convince, e che convince le persone che lo indossano</p>
+        <p class="final-cta__label">Da quarant'anni, dietro al bancone</p>
+        <p class="final-cta__headline">Pronto ad equipaggiare il tuo team?</p>
       </div>
-      <a href="catalogo.html" class="btn-white">Esplora il catalogo</a>
+      <a href="catalogo.html" class="btn-white">Contattaci</a>
     </div>
   </div>
 
