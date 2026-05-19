@@ -10,7 +10,17 @@ Start the local dev server (defined in `.claude/launch.json`):
 npx serve -p 3000 .
 ```
 
-The site is then available at `http://localhost:3000`. There is no build step — the files are served as-is.
+The site is then available at `http://localhost:3000`. Files are served as-is; the only build step is the catalog generator below.
+
+## Catalog build
+
+Source of truth for products: `products.json` at the repo root. Whenever you edit it, rebuild:
+
+```bash
+node scripts/build-catalog.mjs
+```
+
+This rewrites the grid in `catalogo.html` (between `<!-- TMPL:PRODUCTS -->` markers) and generates one `prodotto-<slug>.html` per entry from the `prodotto.html` template (replacing the inner content of every `<!-- TMPL:NAME -->`/`<!-- TMPL:GALLERY -->`/etc. block). The original `prodotto.html` stays renderable as a design sample. Generated `prodotto-*.html` files are committed and deployed.
 
 ## Deployment
 
@@ -18,14 +28,15 @@ The site is deployed as a static site (Cloudflare Pages or similar). The `_heade
 
 ## Architecture
 
-This is a plain HTML/CSS/JS multi-page site — no framework, no bundler, no package.json.
+This is a plain HTML/CSS/JS multi-page site — no framework, no bundler, no package.json. A single Node script (`scripts/build-catalog.mjs`) generates the catalog grid and product detail pages from `products.json`.
 
 **Pages:**
 - `index.html` — Homepage
-- `catalogo.html` — Product catalog with sidebar filter
-- `prodotto.html` — Product detail page
+- `catalogo.html` — Product catalog with sidebar filter (grid auto-generated)
+- `prodotto.html` — Product detail template / design sample
+- `prodotto-<slug>.html` — One per product, generated from the template
 
-**Navigation flow:** `index.html` → `catalogo.html` → `prodotto.html` → `catalogo.html` (back link)
+**Navigation flow:** `index.html` → `catalogo.html` → `prodotto-<slug>.html` → `catalogo.html` (back link)
 
 All CSS is embedded in `<style>` blocks inside each HTML file. All JS is at the bottom of each file inside `<script>` tags. There are no shared partials — navbar, footer, and contact bar are duplicated across all three pages.
 
