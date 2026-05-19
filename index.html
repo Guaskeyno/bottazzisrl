@@ -563,15 +563,48 @@
       position: absolute;
       inset: 0;
       width: 100%;
-      height: 199%;
+      height: 137.54%;
       object-fit: cover;
-      top: -2.23%;
+      top: -35.25%;
     }
 
     .divider-image__overlay {
       position: absolute;
       inset: 0;
       background: rgba(0, 0, 0, 0.32);
+    }
+
+    .divider-image__content {
+      position: absolute;
+      left: var(--pad-x);
+      bottom: 80px;
+      width: 677px;
+      max-width: calc(100% - var(--pad-x) * 2);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 40px;
+      z-index: 5;
+    }
+
+    .divider-image__text {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      color: var(--white);
+    }
+
+    .divider-image__label {
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    .divider-image__headline {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 48px;
+      letter-spacing: -0.5px;
+      line-height: 1.05;
     }
 
     /* ═══════════════════════════════════════
@@ -815,8 +848,11 @@
       .service-desc { font-size: 16px; }
 
       /* Divider image */
-      .divider-image { height: 360px; }
-      .divider-image img { height: 100%; top: 0; object-fit: cover; position: absolute; }
+      .divider-image { height: auto; min-height: 480px; }
+      .divider-image img { height: 100%; top: 0; }
+      .divider-image__content { bottom: 48px; }
+      .divider-image__headline { font-size: 30px; }
+      .divider-image__label { font-size: 16px; }
 
       /* Brands */
       .brands-section { padding: 48px var(--pad-x); gap: 32px; }
@@ -1072,8 +1108,15 @@
        DIVIDER IMAGE
   ═══════════════════════════════════════ -->
   <div class="divider-image">
-    <img src="assets/divider image.png" alt="" />
+    <img src="assets/midsection-image.png" alt="" />
     <div class="divider-image__overlay"></div>
+    <div class="divider-image__content">
+      <div class="divider-image__text">
+        <p class="divider-image__label">Pochi marchi, scelti bene</p>
+        <p class="divider-image__headline">Offriamo solo quello che ci convince, e che convince le persone che lo indossano</p>
+      </div>
+      <a href="catalogo.html" class="btn-white">Esplora il catalogo</a>
+    </div>
   </div>
 
   <!-- ═══════════════════════════════════════
