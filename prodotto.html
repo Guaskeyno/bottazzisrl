@@ -81,9 +81,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 16px var(--pad-x);
+      padding: 32px var(--pad-x);
       gap: 40px;
-      border-bottom: 1px solid var(--fog);
     }
 
     .nav-logo img { height: 48px; width: auto; }
@@ -221,8 +220,8 @@
        PRODUCT INFO
     ═══════════════════════════════════════ */
     .product-info {
-      padding: 48px var(--pad-x) 0;
-      max-width: 932px;
+      padding: 40px var(--pad-x);
+      max-width: 720px;
       display: flex;
       flex-direction: column;
       gap: 48px;
@@ -283,18 +282,19 @@
     .perche__list {
       display: flex;
       flex-direction: column;
-      gap: 0;
+      gap: 16px;
     }
 
     .perche__item {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 12px;
-      padding: 16px 0;
-      border-bottom: 1px solid var(--concrete);
     }
 
-    .perche__item:first-child { padding-top: 0; }
+    .perche__divider {
+      height: 1px;
+      background: var(--concrete);
+    }
 
     .perche__item i {
       font-size: 24px;
@@ -696,14 +696,17 @@
           <i class="ph-fill ph-check-circle"></i>
           <span class="perche__item-text">Leggera (sotto i 700g per piede)</span>
         </div>
+        <div class="perche__divider"></div>
         <div class="perche__item">
           <i class="ph-fill ph-check-circle"></i>
           <span class="perche__item-text">Puntale non magnetico in alluminio</span>
         </div>
+        <div class="perche__divider"></div>
         <div class="perche__item">
           <i class="ph-fill ph-check-circle"></i>
           <span class="perche__item-text">Pianta larga per maggiore comfort</span>
         </div>
+        <div class="perche__divider"></div>
       </div>
     </div>
   </div>
