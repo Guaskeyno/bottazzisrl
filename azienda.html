@@ -79,6 +79,7 @@
       align-items: center;
       gap: 16px;
       padding: 12px var(--pad-x);
+      border-bottom: 1px solid var(--white);
     }
 
     .contact-item {
@@ -247,7 +248,7 @@
     ═══════════════════════════════════════ */
     .values-section {
       padding: 80px var(--pad-x);
-      background: var(--fog);
+      background: var(--white);
     }
 
     .values-header {
@@ -257,7 +258,8 @@
     .values-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 43px;
+      row-gap: 43px;
+      justify-content: space-between;
     }
 
     .value-card {
@@ -331,6 +333,7 @@
 
     .service-text__title {
       font-size: 24px;
+      font-weight: 600;
       color: var(--black);
     }
 
@@ -565,11 +568,11 @@
     <div class="values-grid">
       <div class="value-card">
         <p class="value-card__title">Selezione</p>
-        <p class="value-card__body">Scegliamo bene, una cosa alla volta. Non vendiamo tutto: portiamo a magazzino solo quello che ci convince: la selezione è il primo lavoro che facciamo per te</p>
+        <p class="value-card__body">La selezione è il primo lavoro che facciamo per te. Non vendiamo tutto: portiamo a magazzino solo quello che ci convince.</p>
       </div>
       <div class="value-card">
         <p class="value-card__title">Vicinanza</p>
-        <p class="value-card__body">Siamo a due passi: a Casale, in via Motta. Aperti dal lunedì al sabato. La vicinanza non è solo geografica: ai tuoi ordini cerchiamo sempre di rispondere in giornata</p>
+        <p class="value-card__body">Siamo a due passi: a Casale, in via Motta. Aperti dal lunedì al sabato mattina. La vicinanza non è solo geografica: ai tuoi ordini rispondiamo in giornata</p>
       </div>
       <div class="value-card">
         <p class="value-card__title">Parola</p>
