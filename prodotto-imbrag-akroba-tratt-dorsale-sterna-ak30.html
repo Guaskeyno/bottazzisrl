@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title><!-- TMPL:TITLE -->imbrag. Akroba tratt dorsale/sterna AK30<!-- /TMPL:TITLE --> — Bottazzi Srl</title>
+  <meta name="description" content="<!-- TMPL:META_DESC -->Dispositivo per il lavoro in altezza. Pensato per chi sale tutti i giorni. In bottega lo provi prima di prenderlo.<!-- /TMPL:META_DESC -->" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600&family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    img { display: block; }
+    a { text-decoration: none; }
+    ul { list-style: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+    :root {
+      --black:    #1e1e1e;
+      --white:    #ffffff;
+      --red:      #de3813;
+      --fog:      #f4f4f4;
+      --concrete: #c3b9b9;
+      --steel:    #5d5858;
+      --divider:  #d9d9d9;
+
+      --font-head: 'Sora', sans-serif;
+      --font-body: 'Geist', sans-serif;
+      --pad-x: 40px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-weight: 400;
+      color: var(--black);
+      background: var(--white);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ═══════════════════════════════════════
+       TOP CONTACT BAR (light)
+    ═══════════════════════════════════════ */
+    .top-bar {
+      background: var(--fog);
+      height: 49px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 0 var(--pad-x);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--black);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .contact-item i { font-size: 24px; flex-shrink: 0; line-height: 1; }
+
+    .contact-divider {
+      width: 1px;
+      height: 24px;
+      background: var(--concrete);
+      flex-shrink: 0;
+    }
+
+    /* ═══════════════════════════════════════
+       NAVBAR (light version)
+    ═══════════════════════════════════════ */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 32px var(--pad-x);
+      gap: 40px;
+    }
+
+    .nav-logo img { height: 48px; width: auto; }
+
+    .nav-links {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--black);
+      font-size: 16px;
+      font-weight: 400;
+      opacity: 0.5;
+      transition: opacity 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { opacity: 1; }
+
+    .btn-red {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--red);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 32px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    /* Hamburger */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav-hamburger i { font-size: 24px; color: var(--black); line-height: 1; }
+
+    /* ═══════════════════════════════════════
+       BACK LINK
+    ═══════════════════════════════════════ */
+    .back-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 24px var(--pad-x) 0;
+    }
+
+    .back-link__icon {
+      width: 45px;
+      height: 45px;
+      border: 1px solid var(--red);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .back-link__icon i { color: var(--red); font-size: 24px; line-height: 1; }
+
+    .back-link__text {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--black);
+    }
+
+    /* ═══════════════════════════════════════
+       GALLERY
+    ═══════════════════════════════════════ */
+    .gallery {
+      display: flex;
+      gap: 16px;
+      padding: 24px var(--pad-x) 0;
+      align-items: stretch;
+    }
+
+    .gallery__main {
+      flex: 0 0 585px;
+      height: 500px;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .gallery__main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery__main-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.32);
+      border-radius: 12px;
+    }
+
+    .gallery__grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .gallery__thumb {
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 1;
+    }
+
+    .gallery__thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery__thumb-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.32);
+      border-radius: 12px;
+    }
+
+    /* ═══════════════════════════════════════
+       PRODUCT INFO
+    ═══════════════════════════════════════ */
+    .product-info {
+      padding: 40px var(--pad-x);
+      max-width: 720px;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    .product-info__header {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .product-info__name {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 36px;
+      letter-spacing: -0.5px;
+      color: var(--black);
+    }
+
+    .product-info__desc {
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--black);
+    }
+
+    .btn-dark-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      color: var(--black);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 32px;
+      border-radius: 4px;
+      border: 1px solid var(--black);
+      white-space: nowrap;
+      cursor: pointer;
+      align-self: flex-start;
+    }
+
+    /* "Perché ci piace" checklist */
+    .perche {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .perche__title {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 30px;
+      letter-spacing: -0.5px;
+      color: var(--black);
+    }
+
+    .perche__list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .perche__item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .perche__divider {
+      height: 1px;
+      background: var(--concrete);
+    }
+
+    .perche__item i {
+      font-size: 24px;
+      line-height: 1;
+      flex-shrink: 0;
+      color: var(--red);
+    }
+
+    .perche__item-text {
+      font-size: 18px;
+      color: var(--black);
+    }
+
+    /* ═══════════════════════════════════════
+       SUGGESTED PRODUCTS
+    ═══════════════════════════════════════ */
+    .suggested {
+      padding: 80px var(--pad-x) 0;
+    }
+
+    .suggested__header {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 40px;
+    }
+
+    .section-label { font-size: 18px; color: var(--black); }
+
+    .section-title {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 36px;
+      letter-spacing: -0.5px;
+      color: var(--black);
+    }
+
+    .suggested__grid {
+      display: flex;
+      gap: 16px;
+    }
+
+    /* Product card */
+    .product-card {
+      flex: 1;
+      border: 1px solid var(--fog);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+      gap: 16px;
+      text-decoration: none;
+      transition: box-shadow 0.2s;
+    }
+
+    .product-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.10); }
+
+    .product-card__image {
+      position: relative;
+      height: 288px;
+      overflow: hidden;
+      flex-shrink: 0;
+      border-radius: 8px;
+    }
+
+    .product-card__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .product-card__info {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .product-card__brand { font-size: 14px; color: var(--red); }
+    .product-card__name  { font-size: 20px; font-weight: 600; color: var(--black); }
+
+    .product-card__details {
+      display: flex;
+      gap: 12px;
+      font-size: 16px;
+      color: var(--steel);
+    }
+
+    /* ═══════════════════════════════════════
+       SERVICES SECTION
+    ═══════════════════════════════════════ */
+    .services-section {
+      padding: 80px var(--pad-x) 0;
+    }
+
+    .services-header {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 48px;
+    }
+
+    .services-divider {
+      height: 1px;
+      background: var(--divider);
+      margin: 32px 0 48px;
+    }
+
+    .services-grid {
+      display: flex;
+      gap: 182px;
+    }
+
+    .service-card {
+      width: 506px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .service-icon {
+      width: 45px;
+      height: 45px;
+      background: var(--black);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .service-icon img { width: 24px; height: 24px; }
+
+    .service-body { display: flex; flex-direction: column; gap: 12px; }
+    .service-title { font-size: 24px; color: var(--black); }
+    .service-desc  { font-size: 18px; color: var(--black); line-height: 1.5; }
+
+    /* ═══════════════════════════════════════
+       FINAL CTA
+    ═══════════════════════════════════════ */
+    .final-cta {
+      margin-top: 80px;
+      background: var(--red);
+      padding: 80px var(--pad-x);
+    }
+
+    .final-cta__content {
+      width: 677px;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 40px;
+    }
+
+    .final-cta__text {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      color: var(--white);
+    }
+
+    .final-cta__label  { font-size: 18px; }
+    .final-cta__headline {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 48px;
+      letter-spacing: -0.5px;
+      line-height: 1.05;
+    }
+
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--white);
+      color: var(--black);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 32px;
+      border-radius: 4px;
+      white-space: nowrap;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* ═══════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════ */
+    .footer {
+      background: var(--black);
+      color: var(--white);
+      padding: 80px var(--pad-x);
+    }
+
+    .footer__inner { display: flex; flex-direction: column; gap: 32px; }
+    .footer__signet { width: 64px; height: 64px; object-fit: contain; }
+
+    .footer__info {
+      display: flex;
+      gap: 219px;
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    .footer__col { display: flex; flex-direction: column; gap: 42px; }
+    .footer__col-block { display: flex; flex-direction: column; gap: 8px; }
+    .footer__col-block--hours { display: flex; flex-direction: column; gap: 12px; }
+    .footer__hours-row { display: flex; flex-direction: column; gap: 8px; }
+    .footer__links { display: flex; flex-direction: column; gap: 8px; }
+    .footer__links a { color: var(--white); }
+    .footer__legal { font-size: 20px; margin-top: 40px; }
+
+    /* ═══════════════════════════════════════
+       MOBILE — ≤ 768px
+    ═══════════════════════════════════════ */
+    @media (max-width: 768px) {
+      :root { --pad-x: 20px; }
+
+      .top-bar { display: none; }
+
+      /* Navbar mobile */
+      .navbar { padding: 12px var(--pad-x); }
+      .nav-links {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.92);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        z-index: 100;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: 22px; color: rgba(255,255,255,0.6); }
+      .nav-links a.active,
+      .nav-links a:hover { color: var(--white); opacity: 1; }
+      .nav-cta-desktop { display: none; }
+      .nav-hamburger { display: flex; z-index: 110; }
+
+      /* Back link */
+      .back-link { padding: 16px var(--pad-x) 0; }
+      .back-link__text { font-size: 15px; }
+
+      /* Gallery: stack vertically */
+      .gallery {
+        flex-direction: column;
+        padding: 16px var(--pad-x) 0;
+      }
+      .gallery__main {
+        flex: none;
+        width: 100%;
+        height: 280px;
+      }
+      .gallery__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 8px;
+        height: 240px;
+      }
+      .gallery__thumb { aspect-ratio: 1; height: auto; }
+
+      /* Product info */
+      .product-info {
+        padding: 32px var(--pad-x) 0;
+        max-width: 100%;
+        gap: 32px;
+      }
+      .product-info__name { font-size: 26px; }
+      .product-info__desc { font-size: 16px; }
+      .perche__title { font-size: 22px; }
+      .perche__item-text { font-size: 16px; }
+
+      /* Suggested */
+      .suggested { padding: 60px var(--pad-x) 0; }
+      .section-title { font-size: 24px; }
+      .suggested__grid {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .product-card__image { height: 220px; }
+
+      /* Services */
+      .services-section { padding: 60px var(--pad-x) 0; }
+      .services-grid { flex-direction: column; gap: 48px; }
+      .service-card { width: 100%; }
+      .service-title { font-size: 20px; }
+      .service-desc  { font-size: 16px; }
+
+      /* Final CTA */
+      .final-cta { margin-top: 60px; padding: 60px var(--pad-x); }
+      .final-cta__content { width: 100%; }
+      .final-cta__headline { font-size: 30px; }
+
+      /* Footer */
+      .footer { padding: 48px var(--pad-x); }
+      .footer__info { flex-direction: column; gap: 40px; font-size: 16px; }
+      .footer__legal { font-size: 16px; margin-top: 24px; }
+    }
+
+    @media (min-width: 769px) and (max-width: 1100px) {
+      .gallery__main { flex: 0 0 340px; height: 380px; }
+      .suggested__grid { flex-wrap: wrap; }
+      .product-card { flex: 0 0 calc(50% - 8px); }
+      .services-grid { gap: 60px; }
+      .service-card { width: auto; flex: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       TOP BAR (light)
+  ═══════════════════════════════════════ -->
+  <div class="top-bar">
+    <div class="contact-item">
+      <i class="ph ph-envelope"></i>
+      info@bottazzisrl.com
+    </div>
+    <div class="contact-divider"></div>
+    <div class="contact-item contact-item--phone">
+      <i class="ph ph-phone"></i>
+      +39 0142 452805
+    </div>
+    <div class="contact-divider"></div>
+    <div class="contact-item">
+      <i class="ph ph-map-pin"></i>
+      Via Enrico Motta 52, 15033 Casale Monferrato (AL)
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR (light)
+  ═══════════════════════════════════════ -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <a href="index.html"><img src="assets/main-logo.png" alt="Bottazzi Srl" /></a>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="catalogo.html" class="active">Catalogo</a></li>
+      <li><a href="#">Personalizzazione</a></li>
+      <li><a href="#">Consulenza</a></li>
+      <li><a href="azienda.html">Azienda</a></li>
+    </ul>
+    <button class="btn-red nav-cta-desktop">Contattaci</button>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <i class="ph ph-list"></i>
+    </button>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       BACK LINK
+  ═══════════════════════════════════════ -->
+  <a class="back-link" href="catalogo.html">
+    <div class="back-link__icon">
+      <i class="ph ph-arrow-left"></i>
+    </div>
+    <span class="back-link__text">Torna al catalogo</span>
+  </a>
+
+  <!-- ═══════════════════════════════════════
+       GALLERY
+  ═══════════════════════════════════════ -->
+  <div class="gallery">
+    <!-- TMPL:GALLERY -->
+    <div class="gallery__main">
+      <img src="assets/product-placeholder.png" alt="imbrag. Akroba tratt dorsale/sterna AK30" />
+      <div class="gallery__main-overlay"></div>
+    </div>
+    <div class="gallery__grid">
+      <div class="gallery__thumb"><img src="assets/product-placeholder.png" alt="" /><div class="gallery__thumb-overlay"></div></div>
+      <div class="gallery__thumb"><img src="assets/product-placeholder.png" alt="" /><div class="gallery__thumb-overlay"></div></div>
+      <div class="gallery__thumb"><img src="assets/product-placeholder.png" alt="" /><div class="gallery__thumb-overlay"></div></div>
+      <div class="gallery__thumb"><img src="assets/product-placeholder.png" alt="" /><div class="gallery__thumb-overlay"></div></div>
+      <div class="gallery__thumb"><img src="assets/product-placeholder.png" alt="" /><div class="gallery__thumb-overlay"></div></div>
+      <div class="gallery__thumb"><img src="assets/product-placeholder.png" alt="" /><div class="gallery__thumb-overlay"></div></div>
+    </div>
+    <!-- /TMPL:GALLERY -->
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       PRODUCT INFO
+  ═══════════════════════════════════════ -->
+  <div class="product-info">
+    <div class="product-info__header">
+      <h1 class="product-info__name"><!-- TMPL:NAME -->imbrag. Akroba tratt dorsale/sterna AK30<!-- /TMPL:NAME --></h1>
+      <p class="product-info__desc"><!-- TMPL:DESC -->Dispositivo per il lavoro in altezza. Pensato per chi sale tutti i giorni. In bottega lo provi prima di prenderlo.<!-- /TMPL:DESC --></p>
+      <!-- TMPL:DATASHEET --><!-- /TMPL:DATASHEET -->
+    </div>
+
+    <div class="perche">
+      <h2 class="perche__title">Perché ci piace</h2>
+      <div class="perche__list">
+        <!-- TMPL:BULLETS -->
+        <div class="perche__item">
+          <i class="ph-fill ph-check-circle"></i>
+          <span class="perche__item-text">Pensata per tetti, ponteggi e pali</span>
+        </div>
+        <div class="perche__divider"></div>
+        <div class="perche__item">
+          <i class="ph-fill ph-check-circle"></i>
+          <span class="perche__item-text">Disponibile in più taglie da provare in bottega</span>
+        </div>
+        <div class="perche__divider"></div>
+        <div class="perche__item">
+          <i class="ph-fill ph-check-circle"></i>
+          <span class="perche__item-text">Ne teniamo qualche pezzo in scaffale</span>
+        </div>
+        <div class="perche__divider"></div>
+        <!-- /TMPL:BULLETS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SUGGESTED PRODUCTS
+  ═══════════════════════════════════════ -->
+  <section class="suggested">
+    <div class="suggested__header">
+      <p class="section-label">Prodotti suggeriti</p>
+      <h2 class="section-title">Potrebbero interessarti anche…</h2>
+    </div>
+    <div class="suggested__grid">
+      <!-- TMPL:SUGGESTED -->
+
+        <a href="prodotto-assorbitore-granchio-2mt-2funi-3mosch-ak351.html" class="product-card">
+          <div class="product-card__image">
+            <img src="assets/product-placeholder.png" alt="assorbitore Granchio 2mt 2funi+3mosch AK351" />
+          </div>
+          <div class="product-card__info">
+            <div class="product-card__name-block">
+              <p class="product-card__brand">Industrial Starter</p>
+              <p class="product-card__name">assorbitore Granchio 2mt 2funi+3mosch AK351</p>
+            </div>
+            <div class="product-card__details">
+              <span>Corpo</span>
+              <span>Anticaduta</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="prodotto-imbrag-dors-e-sternale-cerbero.html" class="product-card">
+          <div class="product-card__image">
+            <img src="assets/product-placeholder.png" alt="Imbrag. dors. e sternale CERBERO" />
+          </div>
+          <div class="product-card__info">
+            <div class="product-card__name-block">
+              <p class="product-card__brand">Cofra</p>
+              <p class="product-card__name">Imbrag. dors. e sternale CERBERO</p>
+            </div>
+            <div class="product-card__details">
+              <span>Corpo</span>
+              <span>Anticaduta</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="prodotto-imbrag-dorsale-har11-s-m-l-bor.html" class="product-card">
+          <div class="product-card__image">
+            <img src="assets/product-placeholder.png" alt="Imbrag. dorsale HAR11 S/M/L+BOR" />
+          </div>
+          <div class="product-card__info">
+            <div class="product-card__name-block">
+              <p class="product-card__brand">Delta Plus</p>
+              <p class="product-card__name">Imbrag. dorsale HAR11 S/M/L+BOR</p>
+            </div>
+            <div class="product-card__details">
+              <span>Corpo</span>
+              <span>Anticaduta</span>
+            </div>
+          </div>
+        </a>
+    <!-- /TMPL:SUGGESTED -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SERVICES
+  ═══════════════════════════════════════ -->
+  <section class="services-section">
+    <div class="services-header">
+      <p class="section-label">I nostri servizi</p>
+      <h2 class="section-title">Lavoriamo con te</h2>
+    </div>
+    <div class="services-divider"></div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="ph ph-paint-bucket"></i>
+        </div>
+        <div class="service-body">
+          <p class="service-title">Personalizzazione Capi</p>
+          <p class="service-desc">Ricamo o stampa del logo aziendale: mettiamo il tuo nome sui capi che indossate. Minimi di ordine bassi, anche per una sola persona.</p>
+        </div>
+        <button class="btn-dark-outline">Scopri di più</button>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="ph ph-chat-dots"></i>
+        </div>
+        <div class="service-body">
+          <p class="service-title">Consulenza DPI</p>
+          <p class="service-desc">Ascoltiamo cosa fanno le persone, leggiamo la valutazione dei rischi, e proponiamo la dotazione: categoria per categoria, taglia per taglia. Senza vendere nulla che non serva.</p>
+        </div>
+        <button class="btn-dark-outline">Come aiutiamo</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FINAL CTA
+  ═══════════════════════════════════════ -->
+  <div class="final-cta">
+    <div class="final-cta__content">
+      <div class="final-cta__text">
+        <p class="final-cta__label">Da quarant'anni, dietro al bancone</p>
+        <p class="final-cta__headline">Pronto ad equipaggiare il tuo team?</p>
+      </div>
+      <a href="catalogo.html" class="btn-white">Contattaci</a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <img class="footer__signet" src="assets/brand signet.png" alt="Bottazzi Srl" />
+      <div class="footer__info">
+        <div class="footer__col">
+          <div class="footer__col-block">
+            <p>Bottazzi Srl</p>
+            <p>P.IVA 01093750063</p>
+          </div>
+          <div class="footer__col-block">
+            <p>+39 0142 452805</p>
+            <p>info@bottazzisrl.com</p>
+          </div>
+        </div>
+        <div class="footer__col">
+          <div class="footer__col-block">
+            <p>Via Pier Enrico Motta, 52</p>
+            <p>15033, Casale Monferrato (AL)</p>
+          </div>
+          <div class="footer__col-block--hours">
+            <div class="footer__hours-row">
+              <p>Lun - Ven</p>
+              <p>8,30 - 12,00; 14,30 - 19,00</p>
+            </div>
+            <div class="footer__hours-row">
+              <p>Sabato</p>
+              <p>8,30 - 12,00</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer__links">
+          <a href="catalogo.html">Catalogo</a>
+          <a href="personalizzazione.html">Personalizzazione</a>
+          <a href="consulenza.html">Consulenza</a>
+          <a href="azienda.html">Azienda</a>
+        </div>
+      </div>
+      <p class="footer__legal">Termini e Condizioni, Privacy Policy</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const hamburger = document.getElementById('hamburger');
+      const navLinks  = document.getElementById('navLinks');
+
+      hamburger.addEventListener('click', function () {
+        const isOpen = navLinks.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', isOpen);
+        hamburger.querySelector('i').className = isOpen ? 'ph ph-x' : 'ph ph-list';
+      });
+
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          navLinks.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          hamburger.querySelector('i').className = 'ph ph-list';
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
