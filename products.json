@@ -107,15 +107,18 @@
     "category": "Capo",
     "subcategory": "Berretti",
     "filterSlug": "berretti",
-    "description": "Berretto pensato per chi lavora fuori col freddo. Comodo da portare per ore, senza dare fastidio sotto il casco. Ne teniamo qualche pezzo in scaffale.",
+    "description": "Questo caldo e confortevole berretto in acrilico è dotato di una luce frontale a LED rimovibile per una visibilità superiore in condizioni di scarsa luce. Il LED ricaricabile può essere caricato in una porta USB . Ne teniamo qualche pezzo in scaffale.",
     "bullets": [
       "Ne teniamo qualche pezzo in scaffale",
       "Lo provi quando passi in bottega",
       "Per le giornate fredde in cantiere"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://d11ak7fd9ypfb7.cloudfront.net/styles400px/B029NAR.jpg",
+    "gallery": [
+      "https://d11ak7fd9ypfb7.cloudfront.net/styles400px/B029NAR.jpg",
+      "https://d11ak7fd9ypfb7.cloudfront.net/styles400px/B029ORR.jpg"
+    ],
+    "datasheet": "https://documents.portwest.com/datasheet.php?style=B029&lang=IT&itemcol=B029ORR",
     "_supplier": "PORTWEST UC",
     "_source_description": "Berretto/cuffia tubolare c/led B029"
   },
@@ -147,15 +150,17 @@
     "category": "Capo",
     "subcategory": "Elmetti",
     "filterSlug": "elmetti",
-    "description": "Elmetto da cantiere. Lo proviamo insieme — una regolazione precisa fa la differenza per chi lo porta otto ore. In scorta sui modelli più richiesti.",
+    "description": "Elmetto da cantiere per lavori in quota con isolamento elettrico, in ABS, dotato di sottogola a 3 punti di fissaggio Lo proviamo insieme — una regolazione precisa fa la differenza per chi lo porta otto ore. In scorta sui modelli più richiesti.",
     "bullets": [
       "Per chi sta in cantiere tutti i giorni",
       "Comodo da portare per ore",
       "Lo provi in negozio prima dell'ordine"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://media.deltaplus.eu/m/344ee90528c0d3ee/Liferay_Product-GRANITE-PEAK-JA-eps.png",
+    "gallery": [
+      "https://media.deltaplus.eu/m/344ee90528c0d3ee/Liferay_Product-GRANITE-PEAK-JA-eps.png"
+    ],
+    "datasheet": "https://www.deltaplus.eu/o/commerce-media/accounts/429827639/attachments/64474189?download=true&locale=it_IT&siteKey=italie",
     "_supplier": "DELTA PLUS SRL",
     "_source_description": "Elmetto cantiere Granite PEAK"
   },
@@ -167,15 +172,18 @@
     "category": "Capo",
     "subcategory": "Elmetti",
     "filterSlug": "elmetti",
-    "description": "Elmetto da cantiere. Lo proviamo insieme — una regolazione precisa fa la differenza per chi lo porta otto ore. In scorta sui modelli più richiesti.",
+    "description": "Elmetto da cantiere. Lo proviamo insieme — una regolazione precisa fa la differenza per chi lo porta otto ore. Disponibile in casa su più colori .",
     "bullets": [
       "Regolazione da provare insieme",
       "Per chi sta in cantiere tutti i giorni",
       "Comodo da portare per ore"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://media.deltaplus.eu/m/622992ce550f61ca/Liferay_Product_Zoom-QUARTZ-UP-III-JA-eps.png",
+    "gallery": [
+      "https://media.deltaplus.eu/m/622992ce550f61ca/Liferay_Product_Zoom-QUARTZ-UP-III-JA-eps.png",
+      "https://media.deltaplus.eu/m/3b562c134c249b86/Liferay_Product_Zoom-QUARTZ-UP-III-BC-eps.png"
+    ],
+    "datasheet": "https://www.deltaplus.eu/o/commerce-media/accounts/429827639/attachments/224326195?download=true&locale=it_IT&siteKey=italie",
     "_supplier": "DELTA PLUS SRL",
     "_source_description": "Elmetto cantiere Quartz up 3"
   },
