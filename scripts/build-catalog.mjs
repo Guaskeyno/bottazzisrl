@@ -113,9 +113,21 @@ function bulletsHTML(p) {
     .join('\n') + '\n        ';
 }
 
+// Detect URLs the browser will treat as a direct download rather than
+// an inline preview, so we can label the CTA accordingly.
+//   - explicit ?download=true|1
+//   - bare .pdf file URL (most servers send content-disposition: attachment)
+function isDirectDownload(url) {
+  return /[?&]download=(?:true|1)\b/i.test(url)
+      || /\.pdf(?:[?#]|$)/i.test(url);
+}
+
 function datasheetHTML(p) {
   if (!p.datasheet) return ''; // hide link entirely if no PDF
-  return `<a href="${esc(p.datasheet)}" class="btn-dark-outline" target="_blank" rel="noopener">Scheda tecnica ↗</a>`;
+  const label = isDirectDownload(p.datasheet)
+    ? 'Scarica scheda tecnica ↓'
+    : 'Scheda tecnica ↗';
+  return `<a href="${esc(p.datasheet)}" class="btn-dark-outline" target="_blank" rel="noopener">${label}</a>`;
 }
 
 function suggestedFor(current) {
