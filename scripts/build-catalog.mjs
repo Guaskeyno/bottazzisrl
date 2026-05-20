@@ -173,6 +173,9 @@ function metaDesc(p) {
 }
 
 function productJsonLd(p, { canonical, imageUrl, desc }) {
+  // No `offers` block: Bottazzi sells in-store only, and products.json has no
+  // price field. Schema.org / Google guidelines warn that emitting an Offer
+  // without a price weakens product rich-result eligibility.
   const obj = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -182,16 +185,8 @@ function productJsonLd(p, { canonical, imageUrl, desc }) {
     image: imageUrl,
     category: [p.category, p.subcategory].filter(Boolean).join(' / '),
     url: canonical,
-    offers: {
-      '@type': 'Offer',
-      availability: 'https://schema.org/InStock',
-      priceCurrency: 'EUR',
-      url: canonical,
-      seller: { '@id': `${SITE_ORIGIN}/#business` },
-    },
   };
   if (p.brand) obj.brand = { '@type': 'Brand', name: p.brand };
-  // Drop undefined fields so the JSON stays tidy.
   for (const k of Object.keys(obj)) if (obj[k] === undefined) delete obj[k];
   return jsonScriptSafe(obj);
 }
