@@ -25,7 +25,9 @@ node    scripts/build-catalog.mjs    # products.json → catalogo.html + prodott
 
 `sync-from-xlsx.py` prints a diff summary before saving and keeps slugs stable (so URLs don't change when Davide tweaks a `Nome`). It also reports rows that are in `products.json` but missing from the xlsx — never silently deletes.
 
-`build-catalog.mjs` rewrites the grid in `catalogo.html` (between `<!-- TMPL:PRODUCTS -->` markers) and generates one `prodotto-<slug>.html` per entry from the `prodotto.html` template (filling in `<!-- TMPL:NAME -->` / `<!-- TMPL:GALLERY -->` / etc.). The original `prodotto.html` stays renderable as a design sample. Generated `prodotto-*.html` files are committed and deployed.
+`build-catalog.mjs` rewrites the grid in `catalogo.html` (between `<!-- TMPL:PRODUCTS -->` markers), generates one `prodotto-<slug>.html` per entry from the `prodotto.html` template (filling in `<!-- TMPL:NAME -->` / `<!-- TMPL:GALLERY -->` / `<!-- TMPL:CANONICAL_URL -->` / `<!-- TMPL:JSONLD_PRODUCT -->` / etc.), and regenerates `sitemap.xml` with all canonical URLs. The original `prodotto.html` stays renderable as a design sample. Generated `prodotto-*.html` and `sitemap.xml` are committed and deployed.
+
+SEO note: per-product pages emit a Product + BreadcrumbList JSON-LD block. The site origin is hard-coded as `SITE_ORIGIN` at the top of `build-catalog.mjs` — change there if the domain ever moves.
 
 ### Bootstrap-only scripts
 
