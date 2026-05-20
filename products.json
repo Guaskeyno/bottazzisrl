@@ -47,17 +47,37 @@
     "category": "Capo",
     "subcategory": "Berretti",
     "filterSlug": "berretti",
-    "description": "Per la testa, le orecchie, il collo — protezione semplice per chi sta fuori d'inverno. Si infila in un secondo, sta sotto l'elmetto. Lo trovi in negozio.",
+    "description": "Berretto refrigerante per chi lavora al caldo — bagni l'inserto, lo strizzi, ti raffredda la testa per qualche ora. Lo teniamo a magazzino per l'estate.",
     "bullets": [
-      "Per le giornate fredde in cantiere",
-      "Si infila sotto l'elmetto senza ingombro",
-      "Comodo da portare per ore"
+      "Bagni l'inserto, lo strizzi, ti raffredda la testa",
+      "Pensato per le giornate calde",
+      "In scaffale d'estate"
     ],
     "image": "assets/product-placeholder.png",
     "gallery": [],
     "datasheet": "",
     "_supplier": "INDUSTRIAL STARTER SPA",
     "_source_description": "Berretto refrigerante"
+  },
+  {
+    "sku": "0ELMACBE00",
+    "slug": "berretto-sottocasco-winter",
+    "brand": "Delta Plus",
+    "name": "Berretto sottocasco winter",
+    "category": "Capo",
+    "subcategory": "Berretti",
+    "filterSlug": "berretti",
+    "description": "Berretto pensato per chi lavora fuori col freddo. Comodo da portare per ore, senza dare fastidio sotto il casco. Ne teniamo qualche pezzo in scaffale.",
+    "bullets": [
+      "Comodo da portare per ore",
+      "Lascia il viso libero",
+      "Ne teniamo qualche pezzo in scaffale"
+    ],
+    "image": "assets/product-placeholder.png",
+    "gallery": [],
+    "datasheet": "",
+    "_supplier": "DELTA PLUS SRL",
+    "_source_description": "Berretto sottocasco winter"
   },
   {
     "sku": "0UPAC127BERR",
@@ -100,24 +120,24 @@
     "_source_description": "Berretto/cuffia tubolare c/led B029"
   },
   {
-    "sku": "0ELMACBE00",
-    "slug": "berretto-sottocasco-winter",
-    "brand": "Delta Plus",
-    "name": "Berretto sottocasco winter",
+    "sku": "0ABPCUTI01",
+    "slug": "cuffia-saldatore-in-tessuto-ignifugo-v1tcivs",
+    "brand": "Industrial Starter",
+    "name": "Cuffia saldatore in tessuto ignifugo V1TCIVS",
     "category": "Capo",
-    "subcategory": "Elmetti",
-    "filterSlug": "elmetti",
-    "description": "Elmetto da lavoro per il cantiere. Te lo facciamo provare prima dell'ordine, una taglia non vale l'altra. Ne teniamo qualche pezzo in scaffale.",
+    "subcategory": "Berretti",
+    "filterSlug": "berretti",
+    "description": "Cuffia in tessuto ignifugo per il saldatore — copre testa, collo e nuca dalle scintille. Te la facciamo provare in negozio. In scaffale tutto l'anno.",
     "bullets": [
-      "Lo provi in negozio prima dell'ordine",
-      "Pensato per il lavoro fuori al sole e alla pioggia",
-      "Ne teniamo qualche pezzo in scaffale"
+      "Tessuto ignifugo per il saldatore",
+      "Copre testa, collo e nuca dalle scintille",
+      "Te la facciamo provare in negozio"
     ],
     "image": "assets/product-placeholder.png",
     "gallery": [],
     "datasheet": "",
-    "_supplier": "DELTA PLUS SRL",
-    "_source_description": "Berretto sottocasco winter"
+    "_supplier": "INDUSTRIAL STARTER SPA",
+    "_source_description": "Cuffia saldatore in tessuto ignifugo V1TCIVS"
   },
   {
     "sku": "0ELMPE001GRA",
@@ -187,37 +207,17 @@
     "category": "Capo",
     "subcategory": "Elmetti",
     "filterSlug": "elmetti",
-    "description": "Protezione per la testa, semplice e affidabile. Pensato per chi sta fuori — sole, pioggia, polvere. Passa a provarlo in bottega.",
+    "description": "Frontalino refrigerante da mettere dentro l'elmetto nelle giornate calde. Si bagna, si strizza, ti tiene fresca la fronte. Ricambio veloce, lo trovi in negozio.",
     "bullets": [
-      "Lo provi in negozio prima dell'ordine",
-      "Pensato per il lavoro fuori al sole e alla pioggia",
-      "Ne teniamo qualche pezzo in scaffale"
+      "Si mette dentro l'elmetto in un attimo",
+      "Tiene fresca la fronte per qualche ora",
+      "Ricambio veloce, lo trovi in negozio"
     ],
     "image": "assets/product-placeholder.png",
     "gallery": [],
     "datasheet": "",
     "_supplier": "INDUSTRIAL STARTER SPA",
     "_source_description": "frontalino refrigerante per elmetto"
-  },
-  {
-    "sku": "0ELMAC0CC",
-    "slug": "occhiale-fuego-per-elmetto",
-    "brand": "Delta Plus",
-    "name": "Occhiale FUEGO per elmetto",
-    "category": "Capo",
-    "subcategory": "Elmetti",
-    "filterSlug": "elmetti",
-    "description": "Elmetto da cantiere. Lo proviamo insieme — una regolazione precisa fa la differenza per chi lo porta otto ore. In scorta sui modelli più richiesti.",
-    "bullets": [
-      "Pensato per il lavoro fuori al sole e alla pioggia",
-      "Ne teniamo qualche pezzo in scaffale",
-      "Regolazione da provare insieme"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "DELTA PLUS SRL",
-    "_source_description": "Occhiale FUEGO per elmetto"
   },
   {
     "sku": "0ELMPESOTT002",
@@ -227,37 +227,17 @@
     "category": "Capo",
     "subcategory": "Elmetti",
     "filterSlug": "elmetti",
-    "description": "Protezione per la testa, semplice e affidabile. Pensato per chi sta fuori — sole, pioggia, polvere. Passa a provarlo in bottega.",
+    "description": "Sottogola di ricambio per elmetto Granite — tiene il casco al posto giusto anche piegandosi. Cambio veloce, senza attrezzi. In scaffale insieme agli elmetti.",
     "bullets": [
-      "Comodo da portare per ore",
-      "Lo provi in negozio prima dell'ordine",
-      "Pensato per il lavoro fuori al sole e alla pioggia"
+      "Tiene il casco fermo anche piegandosi",
+      "Cambio senza attrezzi",
+      "Ricambio specifico per l'elmetto Granite"
     ],
     "image": "assets/product-placeholder.png",
     "gallery": [],
     "datasheet": "",
     "_supplier": "DELTA PLUS SRL",
     "_source_description": "Sottogola per elmetto Granite"
-  },
-  {
-    "sku": "0POCPC0VISBALBI",
-    "slug": "visiera-c-caschetto-balbi-2",
-    "brand": "Delta Plus",
-    "name": "Visiera c/caschetto balbi 2",
-    "category": "Capo",
-    "subcategory": "Elmetti",
-    "filterSlug": "elmetti",
-    "description": "Elmetto da cantiere. Lo proviamo insieme — una regolazione precisa fa la differenza per chi lo porta otto ore. In scorta sui modelli più richiesti.",
-    "bullets": [
-      "Per chi sta in cantiere tutti i giorni",
-      "Comodo da portare per ore",
-      "Lo provi in negozio prima dell'ordine"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "DELTA PLUS SRL",
-    "_source_description": "Visiera c/caschetto balbi 2"
   },
   {
     "sku": "0POCPCBELUNA",
@@ -278,6 +258,26 @@
     "datasheet": "",
     "_supplier": "INDUSTRIAL STARTER SPA",
     "_source_description": "Occhiale beluna lente verde T5"
+  },
+  {
+    "sku": "0ELMAC0CC",
+    "slug": "occhiale-fuego-per-elmetto",
+    "brand": "Delta Plus",
+    "name": "Occhiale FUEGO per elmetto",
+    "category": "Capo",
+    "subcategory": "Occhiali",
+    "filterSlug": "occhiali",
+    "description": "Occhiale che si aggancia all'elmetto FUEGO — protezione per gli occhi senza dover indossare due cose separate. Lo provi in negozio.",
+    "bullets": [
+      "Si aggancia direttamente all'elmetto FUEGO",
+      "Una sola cosa da indossare invece di due",
+      "Calzata da provare insieme"
+    ],
+    "image": "assets/product-placeholder.png",
+    "gallery": [],
+    "datasheet": "",
+    "_supplier": "DELTA PLUS SRL",
+    "_source_description": "Occhiale FUEGO per elmetto"
   },
   {
     "sku": "0POCPCGUNNER",
@@ -347,11 +347,11 @@
     "category": "Capo",
     "subcategory": "Occhiali",
     "filterSlug": "occhiali",
-    "description": "Protezione per gli occhi nei lavori con scintille, polveri o schegge. Comodi anche con la mascherina. Passa a provarli quando vuoi.",
+    "description": "Visiera APET da 250 micron, ricambio per gli occhiali CV12. Lente trasparente, sostituzione veloce. La teniamo a magazzino sui modelli più richiesti.",
     "bullets": [
-      "Pensati per chi lavora con scintille o schegge",
-      "Calzata da provare insieme",
-      "Per il lavoro in officina e cantiere"
+      "Lente trasparente in APET da 250 micron",
+      "Ricambio specifico per gli occhiali CV12",
+      "Sostituzione veloce"
     ],
     "image": "assets/product-placeholder.png",
     "gallery": [],
@@ -367,17 +367,37 @@
     "category": "Capo",
     "subcategory": "Occhiali",
     "filterSlug": "occhiali",
-    "description": "Occhiali pensati per chi sta in officina o in cantiere tutti i giorni. Calzata da provare in bottega — non tutte le facce sono uguali. Ne teniamo qualche modello in scaffale.",
+    "description": "Visiera APET Foam Top & Shield da 300 micron, per il modello CV16. Ricambio veloce, lente trasparente. La trovi in negozio.",
     "bullets": [
-      "Per il lavoro in officina e cantiere",
-      "Da provare prima di prenderne più paia",
-      "Comodi anche con la mascherina"
+      "Lente APET Foam Top & Shield da 300 micron",
+      "Ricambio specifico per il modello CV16",
+      "La trovi in negozio"
     ],
     "image": "assets/product-placeholder.png",
     "gallery": [],
     "datasheet": "",
     "_supplier": "PORTWEST UC",
     "_source_description": "Visiera APET Foam Top & Shield 300 micron CV16"
+  },
+  {
+    "sku": "0POCPC0VISBALBI",
+    "slug": "visiera-c-caschetto-balbi-2",
+    "brand": "Delta Plus",
+    "name": "Visiera c/caschetto balbi 2",
+    "category": "Capo",
+    "subcategory": "Occhiali",
+    "filterSlug": "occhiali",
+    "description": "Visiera con caschetto in un solo pezzo — protezione per faccia e testa nei lavori con schegge o spruzzi. Te la facciamo provare prima dell'ordine.",
+    "bullets": [
+      "Protegge faccia e testa in un pezzo solo",
+      "Per lavori con schegge o spruzzi",
+      "Te la facciamo provare prima dell'ordine"
+    ],
+    "image": "assets/product-placeholder.png",
+    "gallery": [],
+    "datasheet": "",
+    "_supplier": "DELTA PLUS SRL",
+    "_source_description": "Visiera c/caschetto balbi 2"
   },
   {
     "sku": "0RESFIDPI230A1",
@@ -387,11 +407,11 @@
     "category": "Capo",
     "subcategory": "Respirazione",
     "filterSlug": "respirazione",
-    "description": "Maschera per le vie respiratorie nei lavori sporchi. Te la mostriamo prima dell'ordine, e i ricambi li teniamo a magazzino.",
+    "description": "Filtro A1 di ricambio — codice 43405100. Per vapori organici, da abbinare alla semimaschera. Lo teniamo a magazzino tutto l'anno.",
     "bullets": [
-      "Comoda anche per turni lunghi",
-      "In scorta tutto l'anno",
-      "Per chi lavora con polveri o vapori"
+      "Classe A1 — per vapori organici",
+      "Codice 43405100",
+      "Da abbinare alla semimaschera"
     ],
     "image": "assets/product-placeholder.png",
     "gallery": [],
@@ -407,11 +427,11 @@
     "category": "Capo",
     "subcategory": "Respirazione",
     "filterSlug": "respirazione",
-    "description": "Per chi lavora a contatto con polveri, fumi o vapori. Comoda anche per turni lunghi. Ricambi disponibili in negozio.",
+    "description": "Filtro combinato A1P1 — codice 43403215. Per vapori organici più polveri. Ricambio veloce, in scorta in negozio.",
     "bullets": [
-      "In scorta tutto l'anno",
-      "Per chi lavora con polveri o vapori",
-      "Da provare prima di ordinare le confezioni"
+      "Combinato A1P1 — vapori organici più polveri",
+      "Codice 43403215",
+      "Ricambio in scorta in negozio"
     ],
     "image": "assets/product-placeholder.png",
     "gallery": [],
@@ -427,11 +447,11 @@
     "category": "Capo",
     "subcategory": "Respirazione",
     "filterSlug": "respirazione",
-    "description": "Protezione per le vie respiratorie nei lavori con polveri o vapori. Te la facciamo provare prima dell'ordine — la tenuta sul viso conta. In scorta tutto l'anno.",
+    "description": "Filtro combinato A1P1 — codice 43405127. Per vapori organici più polveri, formato 230. Lo teniamo a magazzino.",
     "bullets": [
-      "Ricambi disponibili in negozio",
-      "Si abbina a occhiali e visiera",
-      "Comoda anche per turni lunghi"
+      "Combinato A1P1 formato 230",
+      "Codice 43405127",
+      "In scorta a magazzino"
     ],
     "image": "assets/product-placeholder.png",
     "gallery": [],
@@ -447,11 +467,11 @@
     "category": "Capo",
     "subcategory": "Respirazione",
     "filterSlug": "respirazione",
-    "description": "Maschera per le vie respiratorie nei lavori sporchi. Te la mostriamo prima dell'ordine, e i ricambi li teniamo a magazzino.",
+    "description": "Filtro per linea aria (airline) — codice 43442033. Ricambio specifico per il sistema, da cambiare a scadenza. In scorta in negozio.",
     "bullets": [
-      "Ricambi disponibili in negozio",
-      "Si abbina a occhiali e visiera",
-      "Comoda anche per turni lunghi"
+      "Filtro per sistema airline",
+      "Codice 43442033",
+      "Cambio a scadenza, in scorta in negozio"
     ],
     "image": "assets/product-placeholder.png",
     "gallery": [],
@@ -467,11 +487,11 @@
     "category": "Capo",
     "subcategory": "Respirazione",
     "filterSlug": "respirazione",
-    "description": "Per chi lavora a contatto con polveri, fumi o vapori. Comoda anche per turni lunghi. Ricambi disponibili in negozio.",
+    "description": "Filtro B1 — codice 43405101. Per gas inorganici. Lo teniamo a magazzino sui modelli più richiesti.",
     "bullets": [
-      "Comoda anche per turni lunghi",
-      "In scorta tutto l'anno",
-      "Per chi lavora con polveri o vapori"
+      "Classe B1 — per gas inorganici",
+      "Codice 43405101",
+      "In scorta sui modelli più richiesti"
     ],
     "image": "assets/product-placeholder.png",
     "gallery": [],
@@ -487,11 +507,11 @@
     "category": "Capo",
     "subcategory": "Respirazione",
     "filterSlug": "respirazione",
-    "description": "Maschera per le vie respiratorie nei lavori sporchi. Te la mostriamo prima dell'ordine, e i ricambi li teniamo a magazzino.",
+    "description": "Filtro E1 — codice 43405102. Per gas acidi come l'anidride solforosa. Ricambio in scorta in negozio.",
     "bullets": [
-      "In scorta tutto l'anno",
-      "Per chi lavora con polveri o vapori",
-      "Da provare prima di ordinare le confezioni"
+      "Classe E1 — per gas acidi (es. anidride solforosa)",
+      "Codice 43405102",
+      "Ricambio in scorta in negozio"
     ],
     "image": "assets/product-placeholder.png",
     "gallery": [],
@@ -507,11 +527,11 @@
     "category": "Capo",
     "subcategory": "Respirazione",
     "filterSlug": "respirazione",
-    "description": "Per chi lavora a contatto con polveri, fumi o vapori. Comoda anche per turni lunghi. Ricambi disponibili in negozio.",
+    "description": "Filtro K1 — codice 43405103. Per l'ammoniaca. Lo teniamo a magazzino tutto l'anno.",
     "bullets": [
-      "Si abbina a occhiali e visiera",
-      "Comoda anche per turni lunghi",
-      "In scorta tutto l'anno"
+      "Classe K1 — per l'ammoniaca",
+      "Codice 43405103",
+      "Lo teniamo a magazzino tutto l'anno"
     ],
     "image": "assets/product-placeholder.png",
     "gallery": [],
@@ -587,11 +607,11 @@
     "category": "Capo",
     "subcategory": "Udito",
     "filterSlug": "udito",
-    "description": "Protezione per l'udito di tutti i giorni. Si regola sulla testa, non stringe. Passa a provarla quando vuoi.",
+    "description": "Tappi auricolari con archetto delta — pronti al collo quando entri ed esci dagli ambienti rumorosi. Lo provi in negozio, comodi anche per turni lunghi.",
     "bullets": [
-      "Pensati per officina, cantiere, generatori",
-      "Per chi lavora vicino a macchine rumorose",
-      "Si abbinano al casco senza scomporsi"
+      "Con archetto, pronti al collo quando servono",
+      "Per chi entra ed esce da ambienti rumorosi",
+      "Comodi anche per turni lunghi"
     ],
     "image": "assets/product-placeholder.png",
     "gallery": [],
@@ -607,11 +627,11 @@
     "category": "Capo",
     "subcategory": "Udito",
     "filterSlug": "udito",
-    "description": "Protezione per l'udito di tutti i giorni. Si regola sulla testa, non stringe. Passa a provarla quando vuoi.",
+    "description": "Tappi auricolari delta, box da 6 paia — protezione semplice per chi lavora con macchine rumorose. Confezioni più grandi a magazzino.",
     "bullets": [
-      "Pensati per officina, cantiere, generatori",
-      "Per chi lavora vicino a macchine rumorose",
-      "Si abbinano al casco senza scomporsi"
+      "Box da 6 paia",
+      "Per chi lavora con macchine rumorose",
+      "Confezioni più grandi a magazzino"
     ],
     "image": "assets/product-placeholder.png",
     "gallery": [],
@@ -627,11 +647,11 @@
     "category": "Capo",
     "subcategory": "Udito",
     "filterSlug": "udito",
-    "description": "Cuffia antirumore per chi lavora con macchine pesanti. Si abbina al casco, non scomoda. Ne teniamo qualche pezzo in scaffale.",
+    "description": "Tappi auricolari delta, confezione da 200 paia — per le squadre che lavorano vicino a macchine rumorose tutti i giorni. In scorta tutto l'anno.",
     "bullets": [
-      "Pensati per officina, cantiere, generatori",
-      "Per chi lavora vicino a macchine rumorose",
-      "Si abbinano al casco senza scomporsi"
+      "Confezione da 200 paia",
+      "Per le squadre che lavorano in officina",
+      "In scorta tutto l'anno"
     ],
     "image": "assets/product-placeholder.png",
     "gallery": [],
@@ -1260,6 +1280,26 @@
     "_source_description": "pantalone WORLD U-Power 4 way stretch 140 gr/m2"
   },
   {
+    "sku": "0GTIGO001202",
+    "slug": "guanti-lattice-ve920-venisette",
+    "brand": "Delta Plus",
+    "name": "Guanti lattice VE920 Venisette",
+    "category": "Mani",
+    "subcategory": "Rischio chimico",
+    "filterSlug": "rischio-chimico",
+    "description": "Guanto in lattice VE920 Venisette — calzata morbida, presa salda da bagnato. Lo teniamo a magazzino sui modelli più richiesti.",
+    "bullets": [
+      "Lattice — calzata morbida",
+      "Presa salda anche da bagnato",
+      "In scorta sui modelli più richiesti"
+    ],
+    "image": "assets/product-placeholder.png",
+    "gallery": [],
+    "datasheet": "",
+    "_supplier": "DELTA PLUS SRL",
+    "_source_description": "Guanti lattice VE920 Venisette"
+  },
+  {
     "sku": "0GTIGONEOVE509",
     "slug": "guanti-neoprene-ve509",
     "brand": "Delta Plus",
@@ -1387,11 +1427,11 @@
     "category": "Mani",
     "subcategory": "Rischio meccanico",
     "filterSlug": "rischio-meccanico",
-    "description": "Per chi maneggia lamiere, profili, vetri. Te lo facciamo provare prima dell'ordine. Disponibile in più taglie a magazzino.",
+    "description": "Guanto antitaglio pensato per chi lavora con la motosega. Calzata generosa per il movimento, da provare in bottega prima dell'ordine. In scorta sui modelli più richiesti.",
     "bullets": [
-      "Disponibile in più taglie a magazzino",
-      "Pensato per il lavoro di tutti i giorni",
-      "In scorta sui modelli più richiesti"
+      "Pensato per chi lavora con la motosega",
+      "Calzata generosa per il movimento",
+      "Da provare in bottega prima dell'ordine"
     ],
     "image": "assets/product-placeholder.png",
     "gallery": [],
@@ -1407,57 +1447,17 @@
     "category": "Mani",
     "subcategory": "Rischio meccanico",
     "filterSlug": "rischio-meccanico",
-    "description": "Per chi maneggia lamiere, profili, vetri. Te lo facciamo provare prima dell'ordine. Disponibile in più taglie a magazzino.",
+    "description": "Guanto driver in pelle di bovino bordato — calzata morbida che si fa al lavoro. Te lo facciamo provare prima dell'ordine, in scorta sui modelli più richiesti.",
     "bullets": [
-      "Disponibile in più taglie a magazzino",
-      "Pensato per il lavoro di tutti i giorni",
-      "In scorta sui modelli più richiesti"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "INDUSTRIAL STARTER SPA",
-    "_source_description": "Guanti f/bovino bordato driver (IS)"
-  },
-  {
-    "sku": "0GTIKV011MA00",
-    "slug": "guanti-in-tessuto-aramidico-cm-28",
-    "brand": "Industrial Starter",
-    "name": "Guanti in tessuto aramidico cm 28",
-    "category": "Mani",
-    "subcategory": "Rischio meccanico",
-    "filterSlug": "rischio-meccanico",
-    "description": "Per chi maneggia lamiere, profili, vetri. Te lo facciamo provare prima dell'ordine. Disponibile in più taglie a magazzino.",
-    "bullets": [
-      "Comodo anche per ore continue",
-      "Per chi maneggia lamiere, profili, vetri",
+      "Pelle di bovino, bordato",
+      "Calzata morbida che si fa al lavoro",
       "Te lo facciamo provare prima dell'ordine"
     ],
     "image": "assets/product-placeholder.png",
     "gallery": [],
     "datasheet": "",
     "_supplier": "INDUSTRIAL STARTER SPA",
-    "_source_description": "Guanti in tessuto aramidico cm 28"
-  },
-  {
-    "sku": "0GTIGO001202",
-    "slug": "guanti-lattice-ve920-venisette",
-    "brand": "Delta Plus",
-    "name": "Guanti lattice VE920 Venisette",
-    "category": "Mani",
-    "subcategory": "Rischio meccanico",
-    "filterSlug": "rischio-meccanico",
-    "description": "Per chi maneggia lamiere, profili, vetri. Te lo facciamo provare prima dell'ordine. Disponibile in più taglie a magazzino.",
-    "bullets": [
-      "Disponibile in più taglie a magazzino",
-      "Pensato per il lavoro di tutti i giorni",
-      "In scorta sui modelli più richiesti"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "DELTA PLUS SRL",
-    "_source_description": "Guanti lattice VE920 Venisette"
+    "_source_description": "Guanti f/bovino bordato driver (IS)"
   },
   {
     "sku": "0GTIATVE42",
@@ -1540,24 +1540,24 @@
     "_source_description": "Guanti venicut BGREEN BLU"
   },
   {
-    "sku": "0ABPCUTI01",
-    "slug": "cuffia-saldatore-in-tessuto-ignifugo-v1tcivs",
+    "sku": "0GTIKV011MA00",
+    "slug": "guanti-in-tessuto-aramidico-cm-28",
     "brand": "Industrial Starter",
-    "name": "Cuffia saldatore in tessuto ignifugo V1TCIVS",
+    "name": "Guanti in tessuto aramidico cm 28",
     "category": "Mani",
     "subcategory": "Rischio termico",
     "filterSlug": "rischio-termico",
-    "description": "Per le mani esposte al calore — saldatura, forni, lavorazioni a caldo. Te lo facciamo provare prima dell'ordine. Disponibile in più taglie.",
+    "description": "Guanto in tessuto aramidico da 28 cm — pensato per chi tocca superfici calde o lavora vicino a scintille. Te lo facciamo provare prima dell'ordine. Disponibile in più taglie.",
     "bullets": [
-      "Disponibile in più taglie a magazzino",
-      "Te lo facciamo provare quando passi",
-      "In scorta sui misti più richiesti"
+      "Tessuto aramidico da 28 cm",
+      "Per superfici calde o vicino alle scintille",
+      "Disponibile in più taglie"
     ],
     "image": "assets/product-placeholder.png",
     "gallery": [],
     "datasheet": "",
     "_supplier": "INDUSTRIAL STARTER SPA",
-    "_source_description": "Cuffia saldatore in tessuto ignifugo V1TCIVS"
+    "_source_description": "Guanti in tessuto aramidico cm 28"
   },
   {
     "sku": "0SCARLBABL00",
@@ -1687,11 +1687,11 @@
     "category": "Piedi",
     "subcategory": "Scarpe",
     "filterSlug": "scarpe",
-    "description": "Scarpa da cantiere comoda fin dal primo giorno. Te la facciamo provare quando passi. Disponibile in più misure.",
+    "description": "Zoccolo antinfortunistico — pensato per chi sta in piedi tutto il giorno e si toglie le scarpe spesso. Lo provi in negozio, una mezza misura cambia tutto.",
     "bullets": [
       "Per chi sta in piedi tutto il giorno",
-      "Tre taglie sempre a magazzino sui più richiesti",
-      "Una mezza misura cambia tutto — provala in bottega"
+      "Comodo da togliere e rimettere",
+      "Una mezza misura cambia tutto — provalo in bottega"
     ],
     "image": "assets/product-placeholder.png",
     "gallery": [],
@@ -1707,11 +1707,11 @@
     "category": "Piedi",
     "subcategory": "Stivali",
     "filterSlug": "stivali",
-    "description": "Stivale da lavoro per chi sta in mezzo all'acqua, al fango, alle lavorazioni umide. Lo proviamo insieme prima dell'ordine. In scorta sui modelli più richiesti.",
+    "description": "Gambale antitaglio per chi lavora con la motosega — si indossa sopra lo stivale, copre la gamba dalle scintille e dai tagli. Te lo facciamo provare prima dell'ordine.",
     "bullets": [
-      "Te lo facciamo vedere quando passi",
-      "Pensato per acqua, fango, terreno smosso",
-      "Per ambienti bagnati, fango, lavorazioni umide"
+      "Si indossa sopra lo stivale",
+      "Copre la gamba dalle scintille e dai tagli",
+      "Pensato per il lavoro con la motosega"
     ],
     "image": "assets/product-placeholder.png",
     "gallery": [],
@@ -1727,11 +1727,11 @@
     "category": "Piedi",
     "subcategory": "Stivali",
     "filterSlug": "stivali",
-    "description": "Stivale pensato per chi lavora con liquidi, terreno smosso, ambienti scivolosi. Comodo da portare tutto il giorno. In bottega lo provi prima di ordinare.",
+    "description": "Stivale da boscaiolo per chi taglia legna e lavora nel bosco — comodo per turni lunghi, suola pensata per il terreno smosso. In scorta sui modelli più richiesti.",
     "bullets": [
-      "In scorta nelle taglie più richieste",
-      "Te lo facciamo vedere quando passi",
-      "Pensato per acqua, fango, terreno smosso"
+      "Pensato per il lavoro nel bosco",
+      "Suola per il terreno smosso",
+      "Comodo per turni lunghi"
     ],
     "image": "assets/product-placeholder.png",
     "gallery": [],
