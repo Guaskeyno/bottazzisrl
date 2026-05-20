@@ -2159,51 +2159,43 @@
         });
       });
 
-      /* ── Filter Modal (mobile) — looked up lazily so the modal HTML (below the script) is in the DOM ── */
+      /* ── Filter Modal (mobile) ── */
       const filterModalBtn = document.getElementById('filterModalBtn');
-
-      function getFilterModal() { return document.getElementById('filterModal'); }
+      const filterModal    = document.getElementById('filterModal');
 
       function openFilterModal() {
-        var modal = getFilterModal();
-        if (!modal) return;
-        // Sync sidebar → modal state before opening
+        if (!filterModal) return;
         var sidebarCbs = document.querySelectorAll('.filter-sidebar input[type="checkbox"]');
         sidebarCbs.forEach(function (cb) {
-          var modalCb = modal.querySelector('[data-modal-filter="' + cb.dataset.filter + '"]');
+          var modalCb = filterModal.querySelector('[data-modal-filter="' + cb.dataset.filter + '"]');
           if (modalCb) modalCb.checked = cb.checked;
         });
-        modal.classList.add('open');
-        modal.setAttribute('aria-hidden', 'false');
+        filterModal.classList.add('open');
+        filterModal.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
       }
 
       function closeFilterModal() {
-        var modal = getFilterModal();
-        if (!modal) return;
-        modal.classList.remove('open');
-        modal.setAttribute('aria-hidden', 'true');
+        if (!filterModal) return;
+        filterModal.classList.remove('open');
+        filterModal.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
       }
 
-      if (filterModalBtn) filterModalBtn.addEventListener('click', openFilterModal);
+      function applyModalFilters() {
+        if (!filterModal) return;
+        var sidebarCbs = document.querySelectorAll('.filter-sidebar input[type="checkbox"]');
+        sidebarCbs.forEach(function (cb) {
+          var modalCb = filterModal.querySelector('[data-modal-filter="' + cb.dataset.filter + '"]');
+          if (modalCb) cb.checked = modalCb.checked;
+        });
+        applyFilters();
+        closeFilterModal();
+      }
 
-      // Close / apply listeners are attached via delegation so they work even though
-      // the modal element is parsed after this script block runs
-      document.addEventListener('click', function (e) {
-        if (e.target.closest('#filterModalClose')) closeFilterModal();
-        if (e.target.closest('#filterModalApply')) {
-          var modal = getFilterModal();
-          if (!modal) return;
-          var sidebarCbs = document.querySelectorAll('.filter-sidebar input[type="checkbox"]');
-          sidebarCbs.forEach(function (cb) {
-            var modalCb = modal.querySelector('[data-modal-filter="' + cb.dataset.filter + '"]');
-            if (modalCb) cb.checked = modalCb.checked;
-          });
-          applyFilters();
-          closeFilterModal();
-        }
-      });
+      if (filterModalBtn)                        filterModalBtn.addEventListener('click', openFilterModal);
+      document.getElementById('filterModalClose').addEventListener('click', closeFilterModal);
+      document.getElementById('filterModalApply').addEventListener('click', applyModalFilters);
 
       /* ── Filtering ── */
       const checkboxes   = document.querySelectorAll('.filter-sidebar input[type="checkbox"]');
