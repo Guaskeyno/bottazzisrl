@@ -2074,6 +2074,71 @@
     </div>
   </footer>
 
+  <!-- ═══════════════════════════════════════
+       FILTER MODAL (mobile)
+  ═══════════════════════════════════════ -->
+  <div class="filter-modal" id="filterModal" aria-hidden="true" role="dialog" aria-label="Filtra articoli">
+    <div class="filter-modal__header">
+      <button class="filter-modal__close" id="filterModalClose" aria-label="Chiudi filtri">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <div class="filter-modal__content">
+      <div class="filter-group">
+        <p class="filter-group__title">Capo</p>
+        <div class="filter-list">
+          <label class="filter-item"><input type="checkbox" data-modal-filter="elmetti"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Elmetti</span></label>
+          <label class="filter-item"><input type="checkbox" data-modal-filter="berretti"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Berretti</span></label>
+          <label class="filter-item"><input type="checkbox" data-modal-filter="occhiali"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Occhiali</span></label>
+          <label class="filter-item"><input type="checkbox" data-modal-filter="udito"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Udito</span></label>
+          <label class="filter-item"><input type="checkbox" data-modal-filter="respirazione"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Respirazione</span></label>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <p class="filter-group__title">Corpo</p>
+        <div class="filter-list">
+          <label class="filter-item"><input type="checkbox" data-modal-filter="anticaduta"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Anticaduta</span></label>
+          <label class="filter-item"><input type="checkbox" data-modal-filter="busto"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Busto</span></label>
+          <label class="filter-item"><input type="checkbox" data-modal-filter="alta-visibilita"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Alta visibilità</span></label>
+          <label class="filter-item"><input type="checkbox" data-modal-filter="multi-protezione"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Multi-protezione</span></label>
+          <label class="filter-item"><input type="checkbox" data-modal-filter="pantaloni"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Pantaloni</span></label>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <p class="filter-group__title">Mani</p>
+        <div class="filter-list">
+          <label class="filter-item"><input type="checkbox" data-modal-filter="rischio-chimico"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Rischio chimico</span></label>
+          <label class="filter-item"><input type="checkbox" data-modal-filter="rischio-meccanico"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Rischio meccanico</span></label>
+          <label class="filter-item"><input type="checkbox" data-modal-filter="rischio-termico"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Rischio termico</span></label>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <p class="filter-group__title">Piedi</p>
+        <div class="filter-list">
+          <label class="filter-item"><input type="checkbox" data-modal-filter="scarpe"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Scarpe</span></label>
+          <label class="filter-item"><input type="checkbox" data-modal-filter="stivali"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Stivali</span></label>
+        </div>
+      </div>
+
+      <div class="filter-divider"></div>
+
+      <div class="filter-group" style="margin-bottom:0">
+        <div class="filter-list">
+          <label class="filter-item"><input type="checkbox" data-modal-filter="alberghiero"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Alberghiero</span></label>
+          <label class="filter-item"><input type="checkbox" data-modal-filter="sanitario"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Sanitario</span></label>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-modal__footer">
+      <button class="filter-modal__apply" id="filterModalApply">Applica Filtri</button>
+    </div>
+  </div>
+
   <script>
     (function () {
       /* ── Hamburger ── */
@@ -2200,70 +2265,6 @@
     })();
   </script>
 
-  <!-- ═══════════════════════════════════════
-       FILTER MODAL (mobile)
-  ═══════════════════════════════════════ -->
-  <div class="filter-modal" id="filterModal" aria-hidden="true" role="dialog" aria-label="Filtra articoli">
-    <div class="filter-modal__header">
-      <button class="filter-modal__close" id="filterModalClose" aria-label="Chiudi filtri">
-        <i class="ph ph-x"></i>
-      </button>
-    </div>
-
-    <div class="filter-modal__content">
-      <div class="filter-group">
-        <p class="filter-group__title">Capo</p>
-        <div class="filter-list">
-          <label class="filter-item"><input type="checkbox" data-modal-filter="elmetti"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Elmetti</span></label>
-          <label class="filter-item"><input type="checkbox" data-modal-filter="berretti"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Berretti</span></label>
-          <label class="filter-item"><input type="checkbox" data-modal-filter="occhiali"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Occhiali</span></label>
-          <label class="filter-item"><input type="checkbox" data-modal-filter="udito"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Udito</span></label>
-          <label class="filter-item"><input type="checkbox" data-modal-filter="respirazione"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Respirazione</span></label>
-        </div>
-      </div>
-
-      <div class="filter-group">
-        <p class="filter-group__title">Corpo</p>
-        <div class="filter-list">
-          <label class="filter-item"><input type="checkbox" data-modal-filter="anticaduta"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Anticaduta</span></label>
-          <label class="filter-item"><input type="checkbox" data-modal-filter="busto"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Busto</span></label>
-          <label class="filter-item"><input type="checkbox" data-modal-filter="alta-visibilita"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Alta visibilità</span></label>
-          <label class="filter-item"><input type="checkbox" data-modal-filter="multi-protezione"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Multi-protezione</span></label>
-          <label class="filter-item"><input type="checkbox" data-modal-filter="pantaloni"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Pantaloni</span></label>
-        </div>
-      </div>
-
-      <div class="filter-group">
-        <p class="filter-group__title">Mani</p>
-        <div class="filter-list">
-          <label class="filter-item"><input type="checkbox" data-modal-filter="rischio-chimico"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Rischio chimico</span></label>
-          <label class="filter-item"><input type="checkbox" data-modal-filter="rischio-meccanico"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Rischio meccanico</span></label>
-          <label class="filter-item"><input type="checkbox" data-modal-filter="rischio-termico"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Rischio termico</span></label>
-        </div>
-      </div>
-
-      <div class="filter-group">
-        <p class="filter-group__title">Piedi</p>
-        <div class="filter-list">
-          <label class="filter-item"><input type="checkbox" data-modal-filter="scarpe"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Scarpe</span></label>
-          <label class="filter-item"><input type="checkbox" data-modal-filter="stivali"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Stivali</span></label>
-        </div>
-      </div>
-
-      <div class="filter-divider"></div>
-
-      <div class="filter-group" style="margin-bottom:0">
-        <div class="filter-list">
-          <label class="filter-item"><input type="checkbox" data-modal-filter="alberghiero"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Alberghiero</span></label>
-          <label class="filter-item"><input type="checkbox" data-modal-filter="sanitario"><span class="custom-checkbox"><i class="ph ph-check"></i></span><span class="filter-item__label">Sanitario</span></label>
-        </div>
-      </div>
-    </div>
-
-    <div class="filter-modal__footer">
-      <button class="filter-modal__apply" id="filterModalApply">Applica Filtri</button>
-    </div>
-  </div>
 
 </body>
 </html>
