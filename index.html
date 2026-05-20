@@ -779,7 +779,7 @@
        MOBILE — ≤ 768px
     ═══════════════════════════════════════ */
     @media (max-width: 768px) {
-      :root { --pad-x: 20px; }
+      :root { --pad-x: 24px; }
 
       /* Contact bar: hide on mobile */
       .contact-bar { display: none; }
@@ -807,25 +807,38 @@
       .nav-hamburger { display: flex; z-index: 110; }
 
       /* Hero */
-      .hero-wrapper { height: 100svh; min-height: 560px; }
+      .hero-wrapper { height: 716px; min-height: unset; }
       .hero-content {
         top: auto;
-        bottom: 48px;
+        bottom: 24px;
         left: var(--pad-x);
         right: var(--pad-x);
         width: auto;
+        gap: 40px;
       }
-      .hero-headline { font-size: 32px; }
-      .hero-sub { font-size: 16px; max-width: 100%; }
-      .btn-white, .btn-white-outline, .btn-red { padding: 12px 20px; font-size: 13px; }
+      .hero-headline { font-size: 48px; }
+      .hero-sub { font-size: 18px; max-width: 100%; }
+      .hero-buttons { flex-direction: column; gap: 12px; }
+      .btn-white, .btn-white-outline { width: 100%; justify-content: center; padding: 12px 32px; }
 
       /* Carousel */
       .carousel-section { padding: 48px var(--pad-x); }
-      .carousel-header { flex-direction: column; align-items: flex-start; gap: 16px; margin-bottom: 24px; }
-      .carousel-card { flex: 0 0 280px; height: 320px; padding: 24px; gap: 32px; }
-      .carousel-card__img { width: 140px; height: 140px; }
-      .carousel-card__title { font-size: 26px; }
-      .carousel-card__desc { font-size: 15px; }
+      .carousel-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+        margin-bottom: 24px;
+      }
+      .carousel-header-left { gap: 4px; }
+      .carousel-header-left .section-title { font-size: 30px; }
+      .carousel-controls {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .carousel-card { flex: 0 0 350px; height: 350px; padding: 24px; gap: 32px; }
+      .carousel-card__img { width: 150px; height: 150px; }
+      .carousel-card__title { font-size: 36px; }
+      .carousel-card__desc { font-size: 18px; }
 
       /* Online order */
       .online-order { padding: 48px var(--pad-x); gap: 32px; }
