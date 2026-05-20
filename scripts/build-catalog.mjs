@@ -125,8 +125,8 @@ function isDirectDownload(url) {
 function datasheetHTML(p) {
   if (!p.datasheet) return ''; // hide link entirely if no PDF
   const label = isDirectDownload(p.datasheet)
-    ? 'Scarica scheda tecnica ↓'
-    : 'Scheda tecnica ↗';
+    ? 'Scarica scheda tecnica <span class="arrow-glyph">↓</span>'
+    : 'Scheda tecnica <span class="arrow-glyph">↗</span>';
   return `<a href="${esc(p.datasheet)}" class="btn-dark-outline" target="_blank" rel="noopener">${label}</a>`;
 }
 
