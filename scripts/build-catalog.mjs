@@ -227,7 +227,6 @@ function buildProductPages() {
     html = replaceBlock(html, 'BRAND_SUFFIX',      esc(brandSfx));
     html = replaceBlock(html, 'META_DESC',         esc(desc));
     html = replaceBlock(html, 'CANONICAL_URL',     esc(canonical));
-    html = replaceBlock(html, 'IMAGE_URL',         esc(imageUrl));
     html = replaceBlock(html, 'GALLERY',           galleryHTML(p));
     html = replaceBlock(html, 'NAME',              esc(p.name));
     html = replaceBlock(html, 'DESC',              esc(p.description || p._source_description || ''));
