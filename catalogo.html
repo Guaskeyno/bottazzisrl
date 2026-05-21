@@ -293,6 +293,8 @@
       margin-bottom: 24px;
     }
 
+    .filter-bar { display: none; }
+
     /* ── Filter Modal ── */
     .filter-modal {
       display: none;
@@ -518,8 +520,20 @@
 
       .catalog-body { flex-direction: column; }
 
-      /* Mobile filter button */
-      .filter-modal-btn { display: flex; }
+      /* Mobile sticky filter bar */
+      .filter-bar {
+        display: block;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: var(--white);
+        margin-left: calc(-1 * var(--pad-x));
+        margin-right: calc(-1 * var(--pad-x));
+        padding: 12px var(--pad-x);
+        border-bottom: 1px solid var(--divider);
+        margin-bottom: 16px;
+      }
+      .filter-modal-btn { display: flex; margin-bottom: 0; }
 
       /* Hide sidebar on mobile — modal handles filtering */
       .filter-sidebar { display: none !important; }
@@ -638,8 +652,10 @@
       <h2 class="section-title" id="articoli-count-title">— articoli totali</h2>
     </div>
 
-    <!-- Mobile: Filtra Articoli button -->
-    <button class="filter-modal-btn" id="filterModalBtn">Filtra Articoli</button>
+    <!-- Mobile: Filtra Articoli sticky bar -->
+    <div class="filter-bar">
+      <button class="filter-modal-btn" id="filterModalBtn">Filtra Articoli</button>
+    </div>
 
     <div class="catalog-body">
 
