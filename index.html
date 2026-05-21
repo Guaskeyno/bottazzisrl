@@ -2,12 +2,41 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bottazzi Srl — Sicurezza sul lavoro dal 1983</title>
-  <meta name="description" content="Bottazzi Srl. Equipaggiamo e proteggiamo chi lavora con dispositivi di protezione e abbigliamento dal 1983." />
-  <meta property="og:title" content="Bottazzi Srl — Sicurezza sul lavoro dal 1983" />
-  <meta property="og:description" content="Equipaggiamo e proteggiamo chi lavora dal 1983." />
+
+  <title>Bottazzi Casale Monferrato — Antinfortunistica e DPI dal 1983</title>
+  <meta name="description" content="Bottazzi Srl a Casale Monferrato: antinfortunistica, DPI e abbigliamento da lavoro dal 1983. Punto di riferimento in Piemonte e Monferrato per la sicurezza sul lavoro." />
+  <meta name="keywords" content="bottazzi casale monferrato, antinfortunistica casale monferrato, DPI piemonte, abbigliamento da lavoro monferrato, dispositivi protezione individuale casale, sicurezza sul lavoro casale monferrato" />
+  <meta name="author" content="Bottazzi Srl" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://www.bottazzisrl.com/" />
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Bottazzi Srl" />
+  <meta property="og:locale" content="it_IT" />
+  <meta property="og:url" content="https://www.bottazzisrl.com/" />
+  <meta property="og:title" content="Bottazzi Casale Monferrato — Antinfortunistica e DPI dal 1983" />
+  <meta property="og:description" content="Antinfortunistica, DPI e abbigliamento da lavoro a Casale Monferrato. Tre generazioni di esperienza al servizio di aziende del Piemonte e del Monferrato." />
+  <meta property="og:image" content="https://www.bottazzisrl.com/assets/opengraph.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Bottazzi Srl — lavoratori in sicurezza" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bottazzi Casale Monferrato — Antinfortunistica e DPI dal 1983" />
+  <meta name="twitter:description" content="Antinfortunistica, DPI e abbigliamento da lavoro a Casale Monferrato dal 1983." />
+  <meta name="twitter:image" content="https://www.bottazzisrl.com/assets/opengraph.png" />
+
+  <!-- Geo -->
+  <meta name="geo.region" content="IT-AL" />
+  <meta name="geo.placename" content="Casale Monferrato" />
+  <meta name="geo.position" content="45.1359;8.4513" />
+  <meta name="ICBM" content="45.1359, 8.4513" />
+  <meta name="theme-color" content="#DE3813" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -361,6 +390,37 @@
       color: var(--black);
     }
 
+    /* ── Mobile category list (replaces carousel on small screens) ── */
+    .category-list {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      padding: 24px 0 0;
+    }
+
+    .category-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding: 12px;
+      border-radius: 8px;
+      width: 100%;
+    }
+
+    .category-row__img {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .category-row__title {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 24px;
+      color: var(--black);
+    }
+
     /* ═══════════════════════════════════════
        ONLINE ORDER SECTION
     ═══════════════════════════════════════ */
@@ -445,6 +505,8 @@
       height: 100%;
       object-fit: cover;
     }
+
+    .arrow-glyph { font-family: 'Geist', sans-serif; font-style: normal; }
 
     .brand-card__cta {
       display: inline-flex;
@@ -751,6 +813,11 @@
       gap: 8px;
     }
 
+    .footer a {
+      color: var(--white);
+      text-decoration: none;
+    }
+
     .footer__links a {
       color: var(--white);
     }
@@ -807,38 +874,28 @@
       .nav-hamburger { display: flex; z-index: 110; }
 
       /* Hero */
-      .hero-wrapper { height: 716px; min-height: unset; }
+      .hero-wrapper { height: 626px; min-height: unset; }
       .hero-content {
         top: auto;
-        bottom: 24px;
+        bottom: 48px;
         left: var(--pad-x);
         right: var(--pad-x);
         width: auto;
         gap: 40px;
       }
-      .hero-headline { font-size: 48px; }
-      .hero-sub { font-size: 18px; max-width: 100%; }
+      .hero-headline { font-size: 36px; line-height: 40px; }
+      .hero-sub { font-size: 18px; max-width: 100%; line-height: normal; }
       .hero-buttons { flex-direction: column; gap: 12px; }
       .btn-white, .btn-white-outline { width: 100%; justify-content: center; padding: 12px 32px; }
 
-      /* Carousel */
+      /* Carousel → category list on mobile */
       .carousel-section { padding: 48px var(--pad-x); }
-      .carousel-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 32px;
-        margin-bottom: 24px;
-      }
+      .carousel-header { margin-bottom: 0; }
       .carousel-header-left { gap: 4px; }
       .carousel-header-left .section-title { font-size: 30px; }
-      .carousel-controls {
-        width: 100%;
-        justify-content: space-between;
-      }
-      .carousel-card { flex: 0 0 350px; height: 350px; padding: 24px; gap: 32px; }
-      .carousel-card__img { width: 150px; height: 150px; }
-      .carousel-card__title { font-size: 36px; }
-      .carousel-card__desc { font-size: 18px; }
+      .carousel-controls { display: none; }
+      .carousel-viewport { display: none; }
+      .category-list { display: flex; }
 
       /* Online order */
       .online-order { padding: 48px var(--pad-x); gap: 32px; }
@@ -893,6 +950,90 @@
       .footer__legal { font-size: 16px; margin-top: 24px; }
     }
   </style>
+
+  <!-- JSON-LD: LocalBusiness (Casale Monferrato) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "@id": "https://www.bottazzisrl.com/#business",
+    "name": "Bottazzi Srl",
+    "alternateName": "Bottazzi Antinfortunistica",
+    "url": "https://www.bottazzisrl.com/",
+    "logo": "https://www.bottazzisrl.com/assets/main-logo.png",
+    "image": "https://www.bottazzisrl.com/assets/Hero%20Image.png",
+    "description": "Antinfortunistica, DPI e abbigliamento da lavoro a Casale Monferrato dal 1983. Vendita, consulenza e personalizzazione per aziende del Piemonte e del Monferrato.",
+    "foundingDate": "1983",
+    "telephone": "+39 0142 452805",
+    "email": "info@bottazzisrl.com",
+    "priceRange": "€€",
+    "currenciesAccepted": "EUR",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Via Pier Enrico Motta 52",
+      "addressLocality": "Casale Monferrato",
+      "addressRegion": "AL",
+      "postalCode": "15033",
+      "addressCountry": "IT"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 45.1359,
+      "longitude": 8.4513
+    },
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Piemonte" },
+      { "@type": "Place", "name": "Casale Monferrato" },
+      { "@type": "Place", "name": "Monferrato" },
+      { "@type": "AdministrativeArea", "name": "Alessandria" }
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:30",
+        "closes": "12:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "14:30",
+        "closes": "18:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:30",
+        "closes": "12:30"
+      }
+    ],
+    "knowsAbout": [
+      "Dispositivi di protezione individuale",
+      "DPI",
+      "Antinfortunistica",
+      "Abbigliamento da lavoro",
+      "Calzature antinfortunistiche",
+      "Guanti da lavoro",
+      "Elmetti da cantiere",
+      "Anticaduta",
+      "Personalizzazione capi da lavoro",
+      "Stampa e ricamo divise da lavoro"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.bottazzisrl.com/#website",
+    "url": "https://www.bottazzisrl.com/",
+    "name": "Bottazzi Srl",
+    "inLanguage": "it-IT",
+    "publisher": { "@id": "https://www.bottazzisrl.com/#business" }
+  }
+  </script>
 </head>
 <body>
 
@@ -933,7 +1074,7 @@
         <li><a href="consulenza.html">Consulenza</a></li>
         <li><a href="azienda.html">Azienda</a></li>
       </ul>
-      <button class="btn-red nav-cta-desktop">Contattaci</button>
+      <a href="mailto:info@bottazzisrl.com" class="btn-red nav-cta-desktop">Contattaci</a>
       <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
         <i class="ph ph-list"></i>
       </button>
@@ -947,7 +1088,7 @@
       </div>
       <div class="hero-buttons">
         <a href="catalogo.html" class="btn-white">Esplora il catalogo</a>
-        <button class="btn-white-outline">Scopri l'azienda</button>
+        <a href="azienda.html" class="btn-white-outline">Scopri l'azienda</a>
       </div>
     </div>
   </div>
@@ -1042,6 +1183,34 @@
 
       </div>
     </div>
+
+    <!-- Mobile-only: vertical category list (replaces swipe carousel) -->
+    <div class="category-list">
+      <a class="category-row" href="catalogo.html#capo" style="background: var(--orange);">
+        <img class="category-row__img" src="assets/capo-image.png" alt="Protezione Capo" />
+        <p class="category-row__title">Capo</p>
+      </a>
+      <a class="category-row" href="catalogo.html#corpo" style="background: var(--green);">
+        <img class="category-row__img" src="assets/corpo-image.png" alt="Protezione Corpo" />
+        <p class="category-row__title">Corpo</p>
+      </a>
+      <a class="category-row" href="catalogo.html#mani" style="background: var(--yellow);">
+        <img class="category-row__img" src="assets/mani-image.png" alt="Protezione Mani" />
+        <p class="category-row__title">Mani</p>
+      </a>
+      <a class="category-row" href="catalogo.html#piedi" style="background: var(--blue);">
+        <img class="category-row__img" src="assets/piedi-image.png" alt="Protezione Piedi" />
+        <p class="category-row__title">Piedi</p>
+      </a>
+      <a class="category-row" href="catalogo.html#alberghiero" style="background: var(--fog);">
+        <img class="category-row__img" src="assets/alberghiero-image.png" alt="Alberghiero" />
+        <p class="category-row__title">Alberghiero</p>
+      </a>
+      <a class="category-row" href="catalogo.html#sanitario" style="background: var(--fog);">
+        <img class="category-row__img" src="assets/sanitario-image.png" alt="Sanitario" />
+        <p class="category-row__title">Sanitario</p>
+      </a>
+    </div>
   </section>
 
   <!-- ═══════════════════════════════════════
@@ -1064,7 +1233,7 @@
           <div class="brand-card__avatar">
             <img src="assets/payper-avatar.png" alt="Payper logo" />
           </div>
-          <a href="https://www.payperwear.com/flex/FixedPages/Common/frame.php/L/IT/cl/MDE5Mjkz" target="_blank" rel="noopener noreferrer" class="brand-card__cta">Acquista Payper ↗</a>
+          <a href="https://www.payperwear.com/flex/FixedPages/Common/frame.php/L/IT/cl/MDE5Mjkz" target="_blank" rel="noopener noreferrer" class="brand-card__cta">Acquista Payper <span class="arrow-glyph">↗&#xFE0E;</span></a>
         </div>
       </div>
 
@@ -1077,7 +1246,7 @@
           <div class="brand-card__avatar">
             <img src="assets/mascot-avatar.png" alt="Mascot logo" />
           </div>
-          <a href="#" class="brand-card__cta">Acquista Mascot ↗</a>
+          <a href="#" class="brand-card__cta">Acquista Mascot <span class="arrow-glyph">↗&#xFE0E;</span></a>
         </div>
       </div>
 
@@ -1157,6 +1326,9 @@
       <div class="brand-logo-cell"><img src="assets/isacco-logo.png" alt="Isacco" /></div>
       <div class="brand-logo-cell"><img src="assets/lotto-logo.png" alt="Lotto" /></div>
       <div class="brand-logo-cell"><img src="assets/sparco-logo.png" alt="Sparco" /></div>
+      <div class="brand-logo-cell"><img src="assets/portwest-logo.png" alt="Portwest" /></div>
+      <div class="brand-logo-cell"><img src="assets/diadora-logo.png" alt="Diadora" /></div>
+      <div class="brand-logo-cell"><img src="assets/industrial-starter-logo.png" alt="Industrial Starter" /></div>
     </div>
   </section>
 
@@ -1235,6 +1407,7 @@
       const nextBtn = document.getElementById('nextBtn');
       const TOTAL = 6;
       let currentIndex = 0;
+      var currentTranslate = 0; // always mirrors the last translateX we set
 
       function isMobile() { return window.innerWidth <= 768; }
 
@@ -1246,7 +1419,8 @@
       function getVisible() { return isMobile() ? 1 : 3; }
 
       function updateCarousel() {
-        track.style.transform = `translateX(-${currentIndex * getStep()}px)`;
+        currentTranslate = -(currentIndex * getStep());
+        track.style.transform = 'translateX(' + currentTranslate + 'px)';
       }
 
       nextBtn.addEventListener('click', function () {
@@ -1265,6 +1439,52 @@
         currentIndex = 0;
         updateCarousel();
       });
+
+      /* ── Swipe (all touch devices — iPhone, iPad, Android) ── */
+      var touchStartX = 0;
+      var touchStartY = 0;
+      var dragStartTranslate = 0;
+      var isDragging = false;
+      var TRANSITION = 'transform 0.45s cubic-bezier(0.4, 0, 0.2, 1)';
+
+      track.addEventListener('touchstart', function (e) {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+        isDragging = false;
+        // Use our own tracked value — avoids getComputedStyle matrix3d
+        // parsing bugs on iOS Safari where index [4] ≠ translateX
+        dragStartTranslate = currentTranslate;
+        track.style.transition = 'none';
+        track.style.transform = 'translateX(' + dragStartTranslate + 'px)';
+      }, { passive: true });
+
+      track.addEventListener('touchmove', function (e) {
+        var dx = e.touches[0].clientX - touchStartX;
+        var dy = e.touches[0].clientY - touchStartY;
+        // Only hijack clearly horizontal swipes
+        if (!isDragging) {
+          if (Math.abs(dx) < 6) return;
+          if (Math.abs(dy) > Math.abs(dx)) return;
+          isDragging = true;
+        }
+        track.style.transform = 'translateX(' + (dragStartTranslate + dx) + 'px)';
+      }, { passive: true });
+
+      track.addEventListener('touchend', function (e) {
+        track.style.transition = TRANSITION;
+        var dx = e.changedTouches[0].clientX - touchStartX;
+        var dy = e.changedTouches[0].clientY - touchStartY;
+        if (isDragging && Math.abs(dx) >= 40 && Math.abs(dx) > Math.abs(dy)) {
+          var max = TOTAL - getVisible();
+          if (dx < 0) {
+            currentIndex = currentIndex >= max ? 0 : currentIndex + 1;
+          } else {
+            currentIndex = currentIndex <= 0 ? max : currentIndex - 1;
+          }
+        }
+        updateCarousel();
+        isDragging = false;
+      }, { passive: true });
 
       /* ── Hamburger menu ── */
       const hamburger = document.getElementById('hamburger');

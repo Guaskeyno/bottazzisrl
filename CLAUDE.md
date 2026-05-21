@@ -14,13 +14,28 @@ The site is then available at `http://localhost:3000`. Files are served as-is; t
 
 ## Catalog build
 
-Source of truth for products: `products.json` at the repo root. Whenever you edit it, rebuild:
+**Source of truth:** `prodotti.xlsx` at the repo root. This is the file Davide edits in Excel — descrizione, Perché 1/2/3, immagini, etc. `products.json` is the build input, regenerated from the xlsx.
+
+Standard workflow when Davide sends back an edited xlsx:
 
 ```bash
-node scripts/build-catalog.mjs
+python3 scripts/sync-from-xlsx.py    # prodotti.xlsx → products.json
+node    scripts/build-catalog.mjs    # products.json → catalogo.html + prodotto-*.html
 ```
 
-This rewrites the grid in `catalogo.html` (between `<!-- TMPL:PRODUCTS -->` markers) and generates one `prodotto-<slug>.html` per entry from the `prodotto.html` template (replacing the inner content of every `<!-- TMPL:NAME -->`/`<!-- TMPL:GALLERY -->`/etc. block). The original `prodotto.html` stays renderable as a design sample. Generated `prodotto-*.html` files are committed and deployed.
+`sync-from-xlsx.py` prints a diff summary before saving and keeps slugs stable (so URLs don't change when Davide tweaks a `Nome`). It also reports rows that are in `products.json` but missing from the xlsx — never silently deletes.
+
+`build-catalog.mjs` rewrites the grid in `catalogo.html` (between `<!-- TMPL:PRODUCTS -->` markers), generates one `prodotto-<slug>.html` per entry from the `prodotto.html` template (filling in `<!-- TMPL:NAME -->` / `<!-- TMPL:GALLERY -->` / `<!-- TMPL:CANONICAL_URL -->` / `<!-- TMPL:JSONLD_PRODUCT -->` / etc.), and regenerates `sitemap.xml` with all canonical URLs. The original `prodotto.html` stays renderable as a design sample. Generated `prodotto-*.html` and `sitemap.xml` are committed and deployed.
+
+SEO note: per-product pages emit a Product + BreadcrumbList JSON-LD block. The site origin is hard-coded as `SITE_ORIGIN` at the top of `build-catalog.mjs` — change there if the domain ever moves.
+
+### Bootstrap-only scripts
+
+These were used to seed the initial 89 products; you should not normally need them again.
+
+- `scripts/build-prodotti-xlsx.py` — exports `products.json` → `prodotti.xlsx`. **Destructive** if Davide has unsynced edits in the xlsx. Only re-run after a sync, or to regenerate the xlsx from scratch.
+- `scripts/fill-copy.py` — fills empty `description` / `bullets` in `products.json` from per-subcategory templates. Useful when seeding brand-new SKUs.
+- `scripts/apply-fixes.py` — SKU-keyed re-categorizations and bespoke overrides from the initial curation pass.
 
 ## Deployment
 
@@ -28,7 +43,7 @@ The site is deployed as a static site (Cloudflare Pages or similar). The `_heade
 
 ## Architecture
 
-This is a plain HTML/CSS/JS multi-page site — no framework, no bundler, no package.json. A single Node script (`scripts/build-catalog.mjs`) generates the catalog grid and product detail pages from `products.json`.
+This is a plain HTML/CSS/JS multi-page site — no framework, no bundler, no package.json. Product data lives in `prodotti.xlsx` (the human-facing review file); a Python script syncs it into `products.json` (build artifact); a Node script generates the catalog grid and product detail pages from there.
 
 **Pages:**
 - `index.html` — Homepage

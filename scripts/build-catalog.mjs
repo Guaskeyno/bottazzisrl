@@ -12,6 +12,7 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA_FILE     = join(ROOT, 'products.json');
 const CATALOG_FILE  = join(ROOT, 'catalogo.html');
 const TEMPLATE_FILE = join(ROOT, 'prodotto.html');
+const SITE_ORIGIN   = 'https://www.bottazzisrl.com';
 
 const products = JSON.parse(readFileSync(DATA_FILE, 'utf8'));
 
@@ -23,6 +24,21 @@ const esc = (s = '') =>
     .replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;')
     .replaceAll("'", '&#39;');
+
+// ── Absolute URL builder ────────────────────────────────────────
+function absUrl(path) {
+  if (!path) return '';
+  if (/^https?:\/\//i.test(path)) return path;
+  const clean = path.replace(/^\/+/, '');
+  return `${SITE_ORIGIN}/${clean}`;
+}
+
+// ── Encode a string safely inside <script type="application/ld+json"> ──
+// JSON-LD escapes `</` so `</script>` inside any string can't break out of
+// the <script> block. Browsers' JSON parser still accepts `<\/`.
+function jsonScriptSafe(obj) {
+  return JSON.stringify(obj).replace(/<\/(script)/gi, '<\\/$1');
+}
 
 // ── Replace a <!-- TMPL:NAME -->...<!-- /TMPL:NAME --> block ───
 function replaceBlock(html, name, newInner) {
@@ -113,9 +129,21 @@ function bulletsHTML(p) {
     .join('\n') + '\n        ';
 }
 
+// Detect URLs the browser will treat as a direct download rather than
+// an inline preview, so we can label the CTA accordingly.
+//   - explicit ?download=true|1
+//   - bare .pdf file URL (most servers send content-disposition: attachment)
+function isDirectDownload(url) {
+  return /[?&]download=(?:true|1)\b/i.test(url)
+      || /\.pdf(?:[?#]|$)/i.test(url);
+}
+
 function datasheetHTML(p) {
   if (!p.datasheet) return ''; // hide link entirely if no PDF
-  return `<a href="${esc(p.datasheet)}" class="btn-dark-outline" target="_blank" rel="noopener">Scheda tecnica ↗</a>`;
+  const label = isDirectDownload(p.datasheet)
+    ? 'Scarica scheda tecnica <span class="arrow-glyph">↓</span>'
+    : 'Scheda tecnica <span class="arrow-glyph">↗</span>';
+  return `<a href="${esc(p.datasheet)}" class="btn-dark-outline" target="_blank" rel="noopener">${label}</a>`;
 }
 
 function suggestedFor(current) {
@@ -144,6 +172,37 @@ function metaDesc(p) {
   return `${brand}${p.name} — ${p.subcategory}. Disponibile da Bottazzi Srl.`;
 }
 
+function productJsonLd(p, { canonical, imageUrl, desc }) {
+  // No `offers` block: Bottazzi sells in-store only, and products.json has no
+  // price field. Schema.org / Google guidelines warn that emitting an Offer
+  // without a price weakens product rich-result eligibility.
+  const obj = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: p.name,
+    description: desc,
+    sku: p.sku || undefined,
+    image: imageUrl,
+    category: [p.category, p.subcategory].filter(Boolean).join(' / '),
+    url: canonical,
+  };
+  if (p.brand) obj.brand = { '@type': 'Brand', name: p.brand };
+  for (const k of Object.keys(obj)) if (obj[k] === undefined) delete obj[k];
+  return jsonScriptSafe(obj);
+}
+
+function breadcrumbJsonLd(p, { canonical }) {
+  return jsonScriptSafe({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_ORIGIN}/` },
+      { '@type': 'ListItem', position: 2, name: 'Catalogo', item: `${SITE_ORIGIN}/catalogo.html` },
+      { '@type': 'ListItem', position: 3, name: p.name, item: canonical },
+    ],
+  });
+}
+
 function buildProductPages() {
   const template = readFileSync(TEMPLATE_FILE, 'utf8');
 
@@ -153,21 +212,56 @@ function buildProductPages() {
   }
 
   for (const p of products) {
+    const canonical = `${SITE_ORIGIN}/prodotto-${p.slug}.html`;
+    const imageUrl  = absUrl(p.gallery?.[0] || p.image || 'assets/product-placeholder.png');
+    const desc      = metaDesc(p);
+    const brandSfx  = p.brand ? ` ${p.brand}` : '';
+
     let html = template;
-    html = replaceBlock(html, 'TITLE',     esc(p.name));
-    html = replaceBlock(html, 'META_DESC', esc(metaDesc(p)));
-    html = replaceBlock(html, 'GALLERY',   galleryHTML(p));
-    html = replaceBlock(html, 'NAME',      esc(p.name));
-    html = replaceBlock(html, 'DESC',      esc(p.description || p._source_description || ''));
-    html = replaceBlock(html, 'DATASHEET', datasheetHTML(p));
-    html = replaceBlock(html, 'BULLETS',   bulletsHTML(p));
-    html = replaceBlock(html, 'SUGGESTED', suggestedHTML(p));
+    html = replaceBlock(html, 'TITLE',             esc(p.name));
+    html = replaceBlock(html, 'BRAND_SUFFIX',      esc(brandSfx));
+    html = replaceBlock(html, 'META_DESC',         esc(desc));
+    html = replaceBlock(html, 'CANONICAL_URL',     esc(canonical));
+    html = replaceBlock(html, 'GALLERY',           galleryHTML(p));
+    html = replaceBlock(html, 'NAME',              esc(p.name));
+    html = replaceBlock(html, 'DESC',              esc(p.description || p._source_description || ''));
+    html = replaceBlock(html, 'DATASHEET',         datasheetHTML(p));
+    html = replaceBlock(html, 'BULLETS',           bulletsHTML(p));
+    html = replaceBlock(html, 'SUGGESTED',         suggestedHTML(p));
+    html = replaceBlock(html, 'JSONLD_PRODUCT',    productJsonLd(p, { canonical, imageUrl, desc }));
+    html = replaceBlock(html, 'JSONLD_BREADCRUMB', breadcrumbJsonLd(p, { canonical }));
     writeFileSync(join(ROOT, `prodotto-${p.slug}.html`), html);
   }
   console.log(`  prodotto-<slug>.html — ${products.length} pages`);
 }
 
+// ── Sitemap ──────────────────────────────────────────────────────
+function buildSitemap() {
+  const today = new Date().toISOString().slice(0, 10);
+  const staticPages = [
+    { loc: `${SITE_ORIGIN}/`,                       priority: '1.0',  changefreq: 'weekly'  },
+    { loc: `${SITE_ORIGIN}/catalogo.html`,          priority: '0.9',  changefreq: 'weekly'  },
+    { loc: `${SITE_ORIGIN}/personalizzazione.html`, priority: '0.8',  changefreq: 'monthly' },
+    { loc: `${SITE_ORIGIN}/consulenza.html`,        priority: '0.8',  changefreq: 'monthly' },
+    { loc: `${SITE_ORIGIN}/azienda.html`,           priority: '0.7',  changefreq: 'monthly' },
+  ];
+  const productPages = products.map(p => ({
+    loc: `${SITE_ORIGIN}/prodotto-${p.slug}.html`,
+    priority: '0.6',
+    changefreq: 'monthly',
+  }));
+
+  const urls = [...staticPages, ...productPages]
+    .map(u => `  <url>\n    <loc>${u.loc}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>${u.changefreq}</changefreq>\n    <priority>${u.priority}</priority>\n  </url>`)
+    .join('\n');
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
+  writeFileSync(join(ROOT, 'sitemap.xml'), xml);
+  console.log(`  sitemap.xml — ${staticPages.length + productPages.length} URLs`);
+}
+
 console.log('Building catalog…');
 buildCatalog();
 buildProductPages();
+buildSitemap();
 console.log('Done.');
