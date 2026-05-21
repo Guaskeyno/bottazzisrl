@@ -143,7 +143,7 @@ def main():
             'filterSlug':  filter_slug,
             'description': cell(ws, r, header_cols['Descrizione']),
             'bullets':     bullets,
-            'image':       images[0] if images else 'assets/product-placeholder.png',
+            'image':       images[0] if images else 'assets/item-placeholder.png',
             'gallery':     images,
             'datasheet':   cell(ws, r, header_cols['Scheda tecnica']),
             '_supplier':   cell(ws, r, header_cols['— Fornitore']),

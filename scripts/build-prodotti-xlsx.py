@@ -129,7 +129,7 @@ def make_xlsx():
     for row_idx, p in enumerate(products, start=2):
         bullets = p.get('bullets') or []
         bullet_vals = [bullets[i] if i < len(bullets) else '' for i in range(3)]
-        images = p.get('gallery') or ([p['image']] if p.get('image') and p['image'] != 'assets/product-placeholder.png' else [])
+        images = p.get('gallery') or ([p['image']] if p.get('image') and p['image'] not in ('assets/product-placeholder.png', 'assets/item-placeholder.png') else [])
 
         row_data = {
             'sku':                 p.get('sku', '').strip(),

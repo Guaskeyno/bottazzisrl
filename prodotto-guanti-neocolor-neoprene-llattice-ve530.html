@@ -188,62 +188,49 @@
     }
 
     /* ═══════════════════════════════════════
-       GALLERY
+       GALLERY (adaptive: 1 image → full width;
+       2 images → side-by-side; 3+ → 2 hero + thumb row)
     ═══════════════════════════════════════ */
     .gallery {
       display: flex;
+      flex-wrap: wrap;
       gap: 16px;
       padding: 24px var(--pad-x) 0;
-      align-items: stretch;
     }
 
-    .gallery__main {
-      flex: 0 0 585px;
+    .gallery__item {
+      flex: 1 1 calc(50% - 8px);
       height: 500px;
       border-radius: 12px;
       overflow: hidden;
-      position: relative;
+      background: var(--fog);
     }
 
-    .gallery__main img {
+    .gallery__item img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
 
-    .gallery__main-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.32);
-      border-radius: 12px;
-    }
-
-    .gallery__grid {
-      flex: 1;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 1fr);
+    .gallery__thumbs {
+      flex: 1 1 100%;
+      display: flex;
+      flex-wrap: wrap;
       gap: 16px;
     }
 
     .gallery__thumb {
-      border-radius: 12px;
-      overflow: hidden;
-      position: relative;
+      flex: 0 0 calc((100% - 64px) / 5);
       aspect-ratio: 1;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--fog);
     }
 
     .gallery__thumb img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-    }
-
-    .gallery__thumb-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.32);
-      border-radius: 12px;
+      object-fit: contain;
     }
 
     /* ═══════════════════════════════════════
@@ -397,7 +384,7 @@
     .product-card__image img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       border-radius: 8px;
     }
 
@@ -416,55 +403,6 @@
       font-size: 16px;
       color: var(--steel);
     }
-
-    /* ═══════════════════════════════════════
-       SERVICES SECTION
-    ═══════════════════════════════════════ */
-    .services-section {
-      padding: 80px var(--pad-x) 0;
-    }
-
-    .services-header {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      margin-bottom: 48px;
-    }
-
-    .services-divider {
-      height: 1px;
-      background: var(--divider);
-      margin: 32px 0 48px;
-    }
-
-    .services-grid {
-      display: flex;
-      gap: 182px;
-    }
-
-    .service-card {
-      width: 506px;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-
-    .service-icon {
-      width: 45px;
-      height: 45px;
-      background: var(--black);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .service-icon img { width: 24px; height: 24px; }
-
-    .service-body { display: flex; flex-direction: column; gap: 12px; }
-    .service-title { font-size: 24px; color: var(--black); }
-    .service-desc  { font-size: 18px; color: var(--black); line-height: 1.5; }
 
     /* ═══════════════════════════════════════
        FINAL CTA
@@ -576,24 +514,18 @@
       .back-link { padding: 16px var(--pad-x) 0; }
       .back-link__text { font-size: 15px; }
 
-      /* Gallery: stack vertically */
+      /* Gallery: stack vertically on mobile */
       .gallery {
         flex-direction: column;
         padding: 16px var(--pad-x) 0;
       }
-      .gallery__main {
+      .gallery__item {
         flex: none;
         width: 100%;
         height: 280px;
       }
-      .gallery__grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 8px;
-        height: 240px;
-      }
-      .gallery__thumb { aspect-ratio: 1; height: auto; }
+      .gallery__thumbs { gap: 8px; }
+      .gallery__thumb { flex: 0 0 calc((100% - 16px) / 3); }
 
       /* Product info */
       .product-info {
@@ -615,13 +547,6 @@
       }
       .product-card__image { height: 220px; }
 
-      /* Services */
-      .services-section { padding: 60px var(--pad-x) 0; }
-      .services-grid { flex-direction: column; gap: 48px; }
-      .service-card { width: 100%; }
-      .service-title { font-size: 20px; }
-      .service-desc  { font-size: 16px; }
-
       /* Final CTA */
       .final-cta { margin-top: 60px; padding: 60px var(--pad-x); }
       .final-cta__content { width: 100%; }
@@ -634,11 +559,9 @@
     }
 
     @media (min-width: 769px) and (max-width: 1100px) {
-      .gallery__main { flex: 0 0 340px; height: 380px; }
+      .gallery__item { height: 400px; }
       .suggested__grid { flex-wrap: wrap; }
       .product-card { flex: 0 0 calc(50% - 8px); }
-      .services-grid { gap: 60px; }
-      .service-card { width: auto; flex: 1; }
     }
   </style>
 
@@ -705,18 +628,7 @@
   ═══════════════════════════════════════ -->
   <div class="gallery">
     <!-- TMPL:GALLERY -->
-    <div class="gallery__main">
-      <img src="https://media.deltaplus.eu/m/3c416997116f7dfe/Liferay_Product_Zoom-VE530V2.png" alt="Guanti NEOCOLOR Neoprene/lLattice VE530" />
-      <div class="gallery__main-overlay"></div>
-    </div>
-    <div class="gallery__grid">
-      <div class="gallery__thumb"><img src="https://media.deltaplus.eu/m/3c416997116f7dfe/Liferay_Product_Zoom-VE530V2.png" alt="" /><div class="gallery__thumb-overlay"></div></div>
-      <div class="gallery__thumb"><img src="https://media.deltaplus.eu/m/3c416997116f7dfe/Liferay_Product_Zoom-VE530V2.png" alt="" /><div class="gallery__thumb-overlay"></div></div>
-      <div class="gallery__thumb"><img src="https://media.deltaplus.eu/m/3c416997116f7dfe/Liferay_Product_Zoom-VE530V2.png" alt="" /><div class="gallery__thumb-overlay"></div></div>
-      <div class="gallery__thumb"><img src="https://media.deltaplus.eu/m/3c416997116f7dfe/Liferay_Product_Zoom-VE530V2.png" alt="" /><div class="gallery__thumb-overlay"></div></div>
-      <div class="gallery__thumb"><img src="https://media.deltaplus.eu/m/3c416997116f7dfe/Liferay_Product_Zoom-VE530V2.png" alt="" /><div class="gallery__thumb-overlay"></div></div>
-      <div class="gallery__thumb"><img src="https://media.deltaplus.eu/m/3c416997116f7dfe/Liferay_Product_Zoom-VE530V2.png" alt="" /><div class="gallery__thumb-overlay"></div></div>
-    </div>
+    <div class="gallery__item"><img src="https://media.deltaplus.eu/m/3c416997116f7dfe/Liferay_Product_Zoom-VE530V2.png" alt="Guanti NEOCOLOR Neoprene/lLattice VE530" /></div>
     <!-- /TMPL:GALLERY -->
   </div>
 

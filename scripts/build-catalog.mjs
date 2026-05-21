@@ -14,6 +14,8 @@ const CATALOG_FILE  = join(ROOT, 'catalogo.html');
 const TEMPLATE_FILE = join(ROOT, 'prodotto.html');
 const SITE_ORIGIN   = 'https://www.bottazzisrl.com';
 
+const PLACEHOLDER = 'assets/item-placeholder.png';
+
 const products = JSON.parse(readFileSync(DATA_FILE, 'utf8'));
 
 // ── HTML escaping ───────────────────────────────────────────────
@@ -69,7 +71,7 @@ function cardHTML(p, { withCategories = true } = {}) {
   return `
         <a href="prodotto-${esc(p.slug)}.html" class="product-card"${dataCats}>
           <div class="product-card__image">
-            <img src="${esc(p.image || 'assets/product-placeholder.png')}" alt="${esc(p.name)}" />
+            <img src="${esc(p.image && p.image !== 'assets/product-placeholder.png' ? p.image : PLACEHOLDER)}" alt="${esc(p.name)}" />
           </div>
           <div class="product-card__info">
             <div class="product-card__name-block">
@@ -94,24 +96,36 @@ function buildCatalog() {
 }
 
 // ── Per-product detail pages ───────────────────────────────────
+// Adaptive gallery: matches the redesign (node 32-1312).
+//   0 images → 1 hero (placeholder), full width
+//   1 image  → 1 hero, full width
+//   2 images → 2 side-by-side, equal width (the Figma layout)
+//   3+       → 2 hero side-by-side + thumbnail row of the rest
 function galleryHTML(p) {
-  const main = p.gallery?.[0] || p.image || 'assets/product-placeholder.png';
-  const thumbs = Array.from({ length: 6 }, (_, i) =>
-    p.gallery?.[i] || p.image || 'assets/product-placeholder.png'
-  );
-  return `
-    <div class="gallery__main">
-      <img src="${esc(main)}" alt="${esc(p.name)}" />
-      <div class="gallery__main-overlay"></div>
-    </div>
-    <div class="gallery__grid">${thumbs
-      .map(
-        src =>
-          `\n      <div class="gallery__thumb"><img src="${esc(src)}" alt="" /><div class="gallery__thumb-overlay"></div></div>`
-      )
-      .join('')}
-    </div>
-    `;
+  const alt = esc(p.name);
+  const images = (p.gallery && p.gallery.length)
+    ? p.gallery
+    : (p.image && p.image !== PLACEHOLDER && p.image !== 'assets/product-placeholder.png')
+      ? [p.image]
+      : [];
+
+  const item = src =>
+    `<div class="gallery__item"><img src="${esc(src)}" alt="${alt}" /></div>`;
+  const thumb = src =>
+    `<div class="gallery__thumb"><img src="${esc(src)}" alt="${alt}" /></div>`;
+
+  if (images.length === 0) {
+    return `\n    ${item(PLACEHOLDER)}\n    `;
+  }
+  if (images.length <= 2) {
+    return '\n    ' + images.map(item).join('\n    ') + '\n    ';
+  }
+  // 3+: 2 hero rows + the remainder as thumbs
+  const [a, b, ...rest] = images;
+  return `\n    ${item(a)}\n    ${item(b)}
+    <div class="gallery__thumbs">
+      ${rest.map(thumb).join('\n      ')}
+    </div>\n    `;
 }
 
 function bulletsHTML(p) {
