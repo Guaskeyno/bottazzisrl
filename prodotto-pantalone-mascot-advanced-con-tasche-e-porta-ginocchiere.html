@@ -188,46 +188,31 @@
     }
 
     /* ═══════════════════════════════════════
-       GALLERY (adaptive: 1 image → full width;
-       2 images → side-by-side; 3+ → 2 hero + thumb row)
+       GALLERY
+         • 0 or 1 image  → single full-width hero (`--full`)
+         • 2 images      → two side-by-side
+         • 3+ images     → keep hero size, wrap into more rows of 2
+                           (last odd item sits centered alone on its row)
     ═══════════════════════════════════════ */
     .gallery {
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
-      padding: 24px var(--pad-x) 0;
+      padding: 40px var(--pad-x) 0;
+      justify-content: center;
     }
 
     .gallery__item {
-      flex: 1 1 calc(50% - 8px);
+      flex: 0 1 calc(50% - 8px);
       height: 500px;
       border-radius: 12px;
       overflow: hidden;
       background: var(--white);
     }
 
+    .gallery__item--full { flex-basis: 100%; }
+
     .gallery__item img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    .gallery__thumbs {
-      flex: 1 1 100%;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    .gallery__thumb {
-      flex: 0 0 calc((100% - 64px) / 5);
-      aspect-ratio: 1;
-      border-radius: 8px;
-      overflow: hidden;
-      background: var(--white);
-    }
-
-    .gallery__thumb img {
       width: 100%;
       height: 100%;
       object-fit: contain;
@@ -517,15 +502,13 @@
       /* Gallery: stack vertically on mobile */
       .gallery {
         flex-direction: column;
-        padding: 16px var(--pad-x) 0;
+        padding: 24px var(--pad-x) 0;
       }
       .gallery__item {
         flex: none;
         width: 100%;
         height: 280px;
       }
-      .gallery__thumbs { gap: 8px; }
-      .gallery__thumb { flex: 0 0 calc((100% - 16px) / 3); }
 
       /* Product info */
       .product-info {
@@ -624,15 +607,6 @@
   </a>
 
   <!-- ═══════════════════════════════════════
-       GALLERY
-  ═══════════════════════════════════════ -->
-  <div class="gallery">
-    <!-- TMPL:GALLERY -->
-    <div class="gallery__item"><img src="https://productimage-1ccb8.kxcdn.com/17179-311-18_P01_1000pxweb.jpg" alt="Pantalone MASCOT® ADVANCED con tasche e porta ginocchiere" /></div>
-    <!-- /TMPL:GALLERY -->
-  </div>
-
-  <!-- ═══════════════════════════════════════
        PRODUCT INFO
   ═══════════════════════════════════════ -->
   <div class="product-info">
@@ -668,6 +642,15 @@ Efficace ventilazione nella zona del ginocchio tramite una cerniera sul lato del
         <!-- /TMPL:BULLETS -->
       </div>
     </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       GALLERY
+  ═══════════════════════════════════════ -->
+  <div class="gallery">
+    <!-- TMPL:GALLERY -->
+    <div class="gallery__item gallery__item--full"><img src="https://productimage-1ccb8.kxcdn.com/17179-311-18_P01_1000pxweb.jpg" alt="Pantalone MASCOT® ADVANCED con tasche e porta ginocchiere" /></div>
+    <!-- /TMPL:GALLERY -->
   </div>
 
   <!-- ═══════════════════════════════════════

@@ -96,11 +96,11 @@ function buildCatalog() {
 }
 
 // ── Per-product detail pages ───────────────────────────────────
-// Adaptive gallery: matches the redesign (node 32-1312).
-//   0 images → 1 hero (placeholder), full width
-//   1 image  → 1 hero, full width
-//   2 images → 2 side-by-side, equal width (the Figma layout)
-//   3+       → 2 hero side-by-side + thumbnail row of the rest
+// Gallery (matches the redesign — node 32-1312, second pass).
+//   0 or 1 image → one full-width hero (uses --full modifier)
+//   2 images     → two side-by-side, hero size
+//   3+ images    → keep hero size; wrap into more rows of 2
+//                  (odd-count last image sits centered alone on its row)
 function galleryHTML(p) {
   const alt = esc(p.name);
   const images = (p.gallery && p.gallery.length)
@@ -109,23 +109,16 @@ function galleryHTML(p) {
       ? [p.image]
       : [];
 
-  const item = src =>
-    `<div class="gallery__item"><img src="${esc(src)}" alt="${alt}" /></div>`;
-  const thumb = src =>
-    `<div class="gallery__thumb"><img src="${esc(src)}" alt="${alt}" /></div>`;
+  const item = (src, mod = '') =>
+    `<div class="gallery__item${mod}"><img src="${esc(src)}" alt="${alt}" /></div>`;
 
   if (images.length === 0) {
-    return `\n    ${item(PLACEHOLDER)}\n    `;
+    return `\n    ${item(PLACEHOLDER, ' gallery__item--full')}\n    `;
   }
-  if (images.length <= 2) {
-    return '\n    ' + images.map(item).join('\n    ') + '\n    ';
+  if (images.length === 1) {
+    return `\n    ${item(images[0], ' gallery__item--full')}\n    `;
   }
-  // 3+: 2 hero rows + the remainder as thumbs
-  const [a, b, ...rest] = images;
-  return `\n    ${item(a)}\n    ${item(b)}
-    <div class="gallery__thumbs">
-      ${rest.map(thumb).join('\n      ')}
-    </div>\n    `;
+  return '\n    ' + images.map(src => item(src)).join('\n    ') + '\n    ';
 }
 
 function bulletsHTML(p) {
