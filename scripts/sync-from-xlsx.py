@@ -9,15 +9,22 @@ Workflow:
     3. Run the catalog build: node scripts/build-catalog.mjs
     4. Commit and deploy.
 
+Flags:
+    --prune   Also remove products that exist in products.json but NOT
+              in prodotti.xlsx. Use when Davide's xlsx is the complete
+              catalog (the default mode keeps orphans, in case rows were
+              deleted by accident).
+
 Safety:
     - Products are matched by Codice (SKU). Slugs (URL paths) are kept
       stable: changing the Nome in the xlsx does NOT change the slug.
     - Rows present in the xlsx but absent from products.json are added.
-    - Products present in products.json but absent from the xlsx are
-      kept (and reported), never silently removed.
-    - The script prints a summary diff before saving so you can sanity-
-      check what's about to land.
+    - Without --prune, products in products.json but missing from the
+      xlsx are kept (and reported), never silently removed.
+    - The script prints a summary before saving so you can sanity-check
+      what's about to land.
 """
+import argparse
 import json
 import re
 import sys
@@ -76,6 +83,13 @@ def cell(ws, row, col):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    parser.add_argument(
+        '--prune', action='store_true',
+        help='Remove products from products.json that are not present in prodotti.xlsx.',
+    )
+    args = parser.parse_args()
+
     if not XLSX_FILE.exists():
         sys.exit(f'Missing {XLSX_FILE.name}. Run build-prodotti-xlsx.py first.')
 
@@ -171,6 +185,10 @@ def main():
 
     removed_in_xlsx = [p for p in existing if p['sku'].strip() not in seen_skus]
 
+    if args.prune and removed_in_xlsx:
+        keep = {p['sku'].strip() for p in existing} - {p['sku'].strip() for p in removed_in_xlsx}
+        existing = [p for p in existing if p['sku'].strip() in keep]
+
     # Re-sort for stable diffs
     existing.sort(
         key=lambda p: (CATEGORY_ORDER.index(p['category']), p['subcategory'], p['name'].lower())
@@ -181,7 +199,8 @@ def main():
     print(f'  Aggiornati:  {len(updated)}')
     print(f'  Aggiunti:    {len(added)}')
     print(f'  Invariati:   {len(unchanged)}')
-    print(f'  Non in xlsx: {len(removed_in_xlsx)} (mantenuti in products.json)')
+    pruned_label = 'rimossi (--prune)' if args.prune else 'mantenuti in products.json'
+    print(f'  Non in xlsx: {len(removed_in_xlsx)} ({pruned_label})')
 
     if updated:
         print('\nModifiche (max 20 mostrate):')
@@ -196,7 +215,8 @@ def main():
             print(f'  + {sku}  {name}')
 
     if removed_in_xlsx:
-        print('\nIn products.json ma non in xlsx (controlla se vanno rimossi):')
+        verb = 'Rimossi' if args.prune else 'In products.json ma non in xlsx (controlla se vanno rimossi)'
+        print(f'\n{verb}:')
         for p in removed_in_xlsx:
             print(f'  - {p["sku"]}  {p["name"]}')
 

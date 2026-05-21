@@ -1,105 +1,5 @@
 [
   {
-    "sku": "0IMPBERRFLUO",
-    "slug": "berretto-fluo-in-pvc-con-visiera",
-    "brand": "Portwest",
-    "name": "Berretto FLUO IN PVC con visiera",
-    "category": "Capo",
-    "subcategory": "Berretti",
-    "filterSlug": "berretti",
-    "description": "Copricapo da lavoro per le giornate fredde. Si lava in lavatrice, non rovina. Te ne mostriamo qualcuno quando passi.",
-    "bullets": [
-      "Comodo da portare per ore",
-      "Lascia il viso libero",
-      "Ne teniamo qualche pezzo in scaffale"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "PORTWEST UC",
-    "_source_description": "Berretto FLUO IN PVC con visiera"
-  },
-  {
-    "sku": "0ABLBEPA000",
-    "slug": "berretto-passamontagna-baltic",
-    "brand": "Delta Plus",
-    "name": "Berretto Passamontagna BALTIC",
-    "category": "Capo",
-    "subcategory": "Berretti",
-    "filterSlug": "berretti",
-    "description": "Copricapo da lavoro per le giornate fredde. Si lava in lavatrice, non rovina. Te ne mostriamo qualcuno quando passi.",
-    "bullets": [
-      "Ne teniamo qualche pezzo in scaffale",
-      "Lo provi quando passi in bottega",
-      "Per le giornate fredde in cantiere"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "DELTA PLUS SRL",
-    "_source_description": "Berretto Passamontagna BALTIC"
-  },
-  {
-    "sku": "0ABLRE6594BE00",
-    "slug": "berretto-refrigerante",
-    "brand": "Industrial Starter",
-    "name": "Berretto refrigerante",
-    "category": "Capo",
-    "subcategory": "Berretti",
-    "filterSlug": "berretti",
-    "description": "Berretto refrigerante per chi lavora al caldo — bagni l'inserto, lo strizzi, ti raffredda la testa per qualche ora. Lo teniamo a magazzino per l'estate.",
-    "bullets": [
-      "Bagni l'inserto, lo strizzi, ti raffredda la testa",
-      "Pensato per le giornate calde",
-      "In scaffale d'estate"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "INDUSTRIAL STARTER SPA",
-    "_source_description": "Berretto refrigerante"
-  },
-  {
-    "sku": "0ELMACBE00",
-    "slug": "berretto-sottocasco-winter",
-    "brand": "Delta Plus",
-    "name": "Berretto sottocasco winter",
-    "category": "Capo",
-    "subcategory": "Berretti",
-    "filterSlug": "berretti",
-    "description": "Berretto pensato per chi lavora fuori col freddo. Comodo da portare per ore, senza dare fastidio sotto il casco. Ne teniamo qualche pezzo in scaffale.",
-    "bullets": [
-      "Comodo da portare per ore",
-      "Lascia il viso libero",
-      "Ne teniamo qualche pezzo in scaffale"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "DELTA PLUS SRL",
-    "_source_description": "Berretto sottocasco winter"
-  },
-  {
-    "sku": "0UPAC127BERR",
-    "slug": "berretto-cuffia-one-int-thinsulate-u-power",
-    "brand": "U-Group",
-    "name": "Berretto/cuffia ONE int.Thinsulate ® U-POWER",
-    "category": "Capo",
-    "subcategory": "Berretti",
-    "filterSlug": "berretti",
-    "description": "Per la testa, le orecchie, il collo — protezione semplice per chi sta fuori d'inverno. Si infila in un secondo, sta sotto l'elmetto. Lo trovi in negozio.",
-    "bullets": [
-      "Si infila sotto l'elmetto senza ingombro",
-      "Comodo da portare per ore",
-      "Lascia il viso libero"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "UGROUP S.R.L.",
-    "_source_description": "Berretto/cuffia ONE int.Thinsulate ® U-POWER"
-  },
-  {
     "sku": "0ABLBELA002",
     "slug": "berretto-cuffia-tubolare-c-led-b029",
     "brand": "Portwest",
@@ -123,26 +23,6 @@
     "_source_description": "Berretto/cuffia tubolare c/led B029"
   },
   {
-    "sku": "0ABPCUTI01",
-    "slug": "cuffia-saldatore-in-tessuto-ignifugo-v1tcivs",
-    "brand": "Industrial Starter",
-    "name": "Cuffia saldatore in tessuto ignifugo V1TCIVS",
-    "category": "Capo",
-    "subcategory": "Berretti",
-    "filterSlug": "berretti",
-    "description": "Cuffia in tessuto ignifugo per il saldatore — copre testa, collo e nuca dalle scintille. Te la facciamo provare in negozio. In scaffale tutto l'anno.",
-    "bullets": [
-      "Tessuto ignifugo per il saldatore",
-      "Copre testa, collo e nuca dalle scintille",
-      "Te la facciamo provare in negozio"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "INDUSTRIAL STARTER SPA",
-    "_source_description": "Cuffia saldatore in tessuto ignifugo V1TCIVS"
-  },
-  {
     "sku": "0ELMPE001GRA",
     "slug": "elmetto-cantiere-granite-peak",
     "brand": "Delta Plus",
@@ -160,7 +40,7 @@
     "gallery": [
       "https://media.deltaplus.eu/m/344ee90528c0d3ee/Liferay_Product-GRANITE-PEAK-JA-eps.png"
     ],
-    "datasheet": "https://www.deltaplus.eu/o/commerce-media/accounts/429827639/attachments/64474189?download=true&locale=it_IT&siteKey=italie",
+    "datasheet": "https://www.deltaplus.eu/it/p/granite-peak",
     "_supplier": "DELTA PLUS SRL",
     "_source_description": "Elmetto cantiere Granite PEAK"
   },
@@ -183,89 +63,31 @@
       "https://media.deltaplus.eu/m/622992ce550f61ca/Liferay_Product_Zoom-QUARTZ-UP-III-JA-eps.png",
       "https://media.deltaplus.eu/m/3b562c134c249b86/Liferay_Product_Zoom-QUARTZ-UP-III-BC-eps.png"
     ],
-    "datasheet": "https://www.deltaplus.eu/o/commerce-media/accounts/429827639/attachments/224326195?download=true&locale=it_IT&siteKey=italie",
+    "datasheet": "https://www.deltaplus.eu/o/commerce-media/accounts/-1/attachments/64409695?download=true&locale=it_IT&siteKey=italie",
     "_supplier": "DELTA PLUS SRL",
     "_source_description": "Elmetto cantiere Quartz up 3"
   },
   {
-    "sku": "0ELMPE001ZIR",
-    "slug": "elmetto-cantiere-zircon-1",
+    "sku": "0ELMPESOTT000",
     "brand": "Delta Plus",
-    "name": "Elmetto cantiere Zircon 1",
+    "name": "Sottogola per elmetto a 4punti (DINAMIC JUGALPHA)",
     "category": "Capo",
     "subcategory": "Elmetti",
     "filterSlug": "elmetti",
-    "description": "Elmetto da lavoro per il cantiere. Te lo facciamo provare prima dell'ordine, una taglia non vale l'altra. Ne teniamo qualche pezzo in scaffale.",
-    "bullets": [
-      "Lo provi in negozio prima dell'ordine",
-      "Pensato per il lavoro fuori al sole e alla pioggia",
-      "Ne teniamo qualche pezzo in scaffale"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "DELTA PLUS SRL",
-    "_source_description": "Elmetto cantiere Zircon 1"
-  },
-  {
-    "sku": "0ABLRE6521ELFR",
-    "slug": "frontalino-refrigerante-per-elmetto",
-    "brand": "Industrial Starter",
-    "name": "frontalino refrigerante per elmetto",
-    "category": "Capo",
-    "subcategory": "Elmetti",
-    "filterSlug": "elmetti",
-    "description": "Frontalino refrigerante da mettere dentro l'elmetto nelle giornate calde. Si bagna, si strizza, ti tiene fresca la fronte. Ricambio veloce, lo trovi in negozio.",
-    "bullets": [
-      "Si mette dentro l'elmetto in un attimo",
-      "Tiene fresca la fronte per qualche ora",
-      "Ricambio veloce, lo trovi in negozio"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "INDUSTRIAL STARTER SPA",
-    "_source_description": "frontalino refrigerante per elmetto"
-  },
-  {
-    "sku": "0ELMPESOTT002",
-    "slug": "sottogola-per-elmetto-granite",
-    "brand": "Delta Plus",
-    "name": "Sottogola per elmetto Granite",
-    "category": "Capo",
-    "subcategory": "Elmetti",
-    "filterSlug": "elmetti",
-    "description": "Sottogola di ricambio per elmetto Granite — tiene il casco al posto giusto anche piegandosi. Cambio veloce, senza attrezzi. In scaffale insieme agli elmetti.",
+    "description": "Sottogola a 4 punti di fissaggio per gli elmetti Quartz, per mantenere l'elmetto nella giusta posizioneiene il casco al posto giusto anche piegandosi. Cambio veloce, senza attrezzi. In scaffale insieme agli elmetti.",
     "bullets": [
       "Tiene il casco fermo anche piegandosi",
       "Cambio senza attrezzi",
-      "Ricambio specifico per l'elmetto Granite"
+      "Ricambio specifico per l'elmetto Quartz III"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://media.deltaplus.eu/m/22873601ee4d9422/Liferay_Product_Zoom-DYNAMIC-JUGALPHA-eps.png",
+    "gallery": [
+      "https://media.deltaplus.eu/m/22873601ee4d9422/Liferay_Product_Zoom-DYNAMIC-JUGALPHA-eps.png"
+    ],
+    "datasheet": "https://www.deltaplus.eu/o/commerce-media/accounts/-1/attachments/64446094?download=true&locale=it_IT&siteKey=italie",
     "_supplier": "DELTA PLUS SRL",
-    "_source_description": "Sottogola per elmetto Granite"
-  },
-  {
-    "sku": "0POCPCBELUNA",
-    "slug": "occhiale-beluna-lente-verde-t5",
-    "brand": "Industrial Starter",
-    "name": "Occhiale beluna lente verde T5",
-    "category": "Capo",
-    "subcategory": "Occhiali",
-    "filterSlug": "occhiali",
-    "description": "Occhiali da lavoro per officina e cantiere. Te li facciamo provare prima dell'ordine — la calzata fa la differenza. In scorta sui modelli più richiesti.",
-    "bullets": [
-      "Calzata da provare insieme",
-      "Per il lavoro in officina e cantiere",
-      "Da provare prima di prenderne più paia"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "INDUSTRIAL STARTER SPA",
-    "_source_description": "Occhiale beluna lente verde T5"
+    "_source_description": "Sottogola per elmetto Granite",
+    "slug": "sottogola-per-elmetto-a-4punti-dinamic-jugalpha"
   },
   {
     "sku": "0ELMAC0CC",
@@ -275,15 +97,17 @@
     "category": "Capo",
     "subcategory": "Occhiali",
     "filterSlug": "occhiali",
-    "description": "Occhiale che si aggancia all'elmetto FUEGO — protezione per gli occhi senza dover indossare due cose separate. Lo provi in negozio.",
+    "description": "Occhiale che si aggancia all'elmetto QUARTZ III — protezione per gli occhi senza dover indossare due cose separate. Lo provi in negozio.",
     "bullets": [
-      "Si aggancia direttamente all'elmetto FUEGO",
-      "Una sola cosa da indossare invece di due",
-      "Calzata da provare insieme"
+      "Si aggancia direttamente all'elmetto",
+      "Una sola cosa da indossare invece di due"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://media.deltaplus.eu/m/f2c015c3b8d05f5/Liferay_Product_Zoom-FUEGO-eps.png",
+    "gallery": [
+      "https://media.deltaplus.eu/m/f2c015c3b8d05f5/Liferay_Product_Zoom-FUEGO-eps.png",
+      "https://media.deltaplus.eu/m/f2c015c3b8d05f5/Liferay_Product_Zoom-FUEGO-eps.png"
+    ],
+    "datasheet": "https://www.deltaplus.eu/o/commerce-media/accounts/-1/attachments/63119162?download=true&locale=it_IT&siteKey=italie",
     "_supplier": "DELTA PLUS SRL",
     "_source_description": "Occhiale FUEGO per elmetto"
   },
@@ -299,11 +123,15 @@
     "bullets": [
       "Comodi anche con la mascherina",
       "Ne teniamo i modelli più richiesti in scaffale",
-      "Pensati per chi lavora con scintille o schegge"
+      "Peso:33 g\nArea d'uso:lavori all’aperto, lavori meccanici con rischio di abbagliamento, agricoltura, edilizia, raffinerie."
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://cofrasafety.website/upload/q_75,w_320,o_webp/https://cofrasafety.biz/assets/3eff1ead-8ed3-4ce0-9577-eb92a3f2ecd2?timestamp=2023-11-",
+    "gallery": [
+      "https://cofrasafety.website/upload/q_75,w_320,o_webp/https://cofrasafety.biz/assets/3eff1ead-8ed3-4ce0-9577-eb92a3f2ecd2?timestamp=2023-11-",
+      "30T15:31:06.495Z&imageformat=image/jpeg",
+      "https://cofrasafety.website/upload/q_75,w_320,o_webp/https://cofrasafety.biz/assets/9232ee09-e504-4a32-9cd7-580c29d9c243?timestamp=2025-01-09T09:24:59.967Z&imageformat=image/jpeg"
+    ],
+    "datasheet": "https://cofrasafety.biz/assets/14fd23e9-d856-4a2f-ad1f-f2578175dbf8?download",
     "_supplier": "COFRA SRL",
     "_source_description": "Occhiale GUNNER balistico"
   },
@@ -317,75 +145,38 @@
     "filterSlug": "occhiali",
     "description": "Occhiali pensati per chi sta in officina o in cantiere tutti i giorni. Calzata da provare in bottega — non tutte le facce sono uguali. Ne teniamo qualche modello in scaffale.",
     "bullets": [
-      "Pensati per chi lavora con scintille o schegge",
-      "Calzata da provare insieme",
-      "Per il lavoro in officina e cantiere"
+      "Peso:29 g\nArea d'uso:lavori all’aperto in presenza di luce solare particolarmente intensa e con rischio di abbagliamento, edilizia, raccolta rifiuti, agricoltura, pesca.\nPlus:\n• DESIGN AVVOLGENTE\n• LENTI REVO",
+      "Calzata da provare insieme"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://cofrasafety.website/upload/q_100,w_2048,o_webp/https://cofrasafety.biz/assets/8081b550-430c-452a-ace3-42e584187366?timestamp=2024-02-26T11:38:53.472Z&imageformat=image/jpeg",
+    "gallery": [
+      "https://cofrasafety.website/upload/q_100,w_2048,o_webp/https://cofrasafety.biz/assets/8081b550-430c-452a-ace3-42e584187366?timestamp=2024-02-26T11:38:53.472Z&imageformat=image/jpeg"
+    ],
+    "datasheet": "https://cofrasafety.biz/assets/3c902b86-5a97-47be-9e95-a171e64c680b?download",
     "_supplier": "COFRA SRL",
     "_source_description": "Occhiale REVOLUX idrofobico"
   },
   {
-    "sku": "0POCPCVETRO",
-    "slug": "occhiale-vetro-trasparente-temperato",
+    "sku": "OCCHIALI SKYLER lente PC specchio blu",
     "brand": "Industrial Starter",
-    "name": "Occhiale vetro trasparente temperato",
+    "name": "OCCHIALI SKYLER lente PC specchio blu",
     "category": "Capo",
     "subcategory": "Occhiali",
     "filterSlug": "occhiali",
-    "description": "Protezione per gli occhi nei lavori con scintille, polveri o schegge. Comodi anche con la mascherina. Passa a provarli quando vuoi.",
+    "description": "Skyler™ - Occhiali di sicurezza Full Frame futuristici, aste nere co-iniettate (policarbonato + TPR), lenti a specchio blu con trattamento antigraffio/antiappannamento/UV400, ponte nasale in TPR morbido regolabile, curva base 6, visione periferica migliorata, confezione al dettaglio individuale, peso: 36,4 gr.. Passa a provarli quando vuoi.",
     "bullets": [
-      "Pensati per chi lavora con scintille o schegge",
-      "Calzata da provare insieme",
-      "Per il lavoro in officina e cantiere"
+      "• Lente monopezzo in stile futuristico\n• I nostri futuristici occhiali di sicurezza Skyler offrono visioni periferiche migliorate per adattarsi a tutti i portatori.\n• Aste avvolgenti a doppio colpo (PC co-iniettato +TPR) per una vestibilità prolungata e un aspetto superiore",
+      "Calzata da provare insieme"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
+    "image": "https://us.pipglobal.com/archive/pim/600/37/Skyler-glasses-2.jpg",
+    "gallery": [
+      "https://us.pipglobal.com/archive/pim/600/37/Skyler-glasses-2.jpg",
+      "https://us.pipglobal.com/archive/pim/600/37/Skyler-Pack-det.jpg"
+    ],
     "datasheet": "",
     "_supplier": "INDUSTRIAL STARTER SPA",
-    "_source_description": "Occhiale vetro trasparente temperato"
-  },
-  {
-    "sku": "0POCPC0VISCV12",
-    "slug": "visiera-apet-da-250-micron-per-occhiali-cv12",
-    "brand": "Portwest",
-    "name": "Visiera APET da 250 micron per occhiali CV12",
-    "category": "Capo",
-    "subcategory": "Occhiali",
-    "filterSlug": "occhiali",
-    "description": "Visiera APET da 250 micron, ricambio per gli occhiali CV12. Lente trasparente, sostituzione veloce. La teniamo a magazzino sui modelli più richiesti.",
-    "bullets": [
-      "Lente trasparente in APET da 250 micron",
-      "Ricambio specifico per gli occhiali CV12",
-      "Sostituzione veloce"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "PORTWEST UC",
-    "_source_description": "Visiera APET da 250 micron per occhiali CV12"
-  },
-  {
-    "sku": "0POCPC0VISCV16",
-    "slug": "visiera-apet-foam-top-shield-300-micron-cv16",
-    "brand": "Portwest",
-    "name": "Visiera APET Foam Top & Shield 300 micron CV16",
-    "category": "Capo",
-    "subcategory": "Occhiali",
-    "filterSlug": "occhiali",
-    "description": "Visiera APET Foam Top & Shield da 300 micron, per il modello CV16. Ricambio veloce, lente trasparente. La trovi in negozio.",
-    "bullets": [
-      "Lente APET Foam Top & Shield da 300 micron",
-      "Ricambio specifico per il modello CV16",
-      "La trovi in negozio"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "PORTWEST UC",
-    "_source_description": "Visiera APET Foam Top & Shield 300 micron CV16"
+    "_source_description": "Occhiale vetro trasparente temperato",
+    "slug": "occhiali-skyler-lente-pc-specchio-blu"
   },
   {
     "sku": "0POCPC0VISBALBI",
@@ -395,15 +186,17 @@
     "category": "Capo",
     "subcategory": "Occhiali",
     "filterSlug": "occhiali",
-    "description": "Visiera con caschetto in un solo pezzo — protezione per faccia e testa nei lavori con schegge o spruzzi. Te la facciamo provare prima dell'ordine.",
+    "description": "Visiera con mezzo caschetto  — protezione per faccia e testa nei lavori con schegge o spruzzi. Te la facciamo provare prima dell'ordine.",
     "bullets": [
       "Protegge faccia e testa in un pezzo solo",
       "Per lavori con schegge o spruzzi",
       "Te la facciamo provare prima dell'ordine"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://media.deltaplus.eu/m/13c3c3be75a5c00b/Liferay_Product-BALBI2-eps.png",
+    "gallery": [
+      "https://media.deltaplus.eu/m/13c3c3be75a5c00b/Liferay_Product-BALBI2-eps.png"
+    ],
+    "datasheet": "https://www.deltaplus.eu/o/commerce-media/accounts/-1/attachments/304849657?download=true&locale=it_IT&siteKey=italie",
     "_supplier": "DELTA PLUS SRL",
     "_source_description": "Visiera c/caschetto balbi 2"
   },
@@ -411,14 +204,14 @@
     "sku": "0RESFIDPI230A1",
     "slug": "filtro-a1-antig-230-43405100",
     "brand": "D.P.I.",
-    "name": "Filtro A1 Antig 230 (43405100)",
+    "name": "Filtro A1 Antig 230",
     "category": "Capo",
     "subcategory": "Respirazione",
     "filterSlug": "respirazione",
-    "description": "Filtro A1 di ricambio — codice 43405100. Per vapori organici, da abbinare alla semimaschera. Lo teniamo a magazzino tutto l'anno.",
+    "description": "Filtro A1 di ricambio — . Per vapori organici, da abbinare alla semimaschera. Lo teniamo a magazzino tutto l'anno.",
     "bullets": [
       "Classe A1 — per vapori organici",
-      "Codice 43405100",
+      "Da abbinare alla semimaschera",
       "Da abbinare alla semimaschera"
     ],
     "image": "assets/product-placeholder.png",
@@ -428,37 +221,17 @@
     "_source_description": "Filtro A1 Antig 230 (43405100)"
   },
   {
-    "sku": "0RESFIDPI200A1P1COMB",
-    "slug": "filtro-a1p1-comb-200-43403215",
-    "brand": "D.P.I.",
-    "name": "Filtro A1P1 Comb 200 (43403215)",
-    "category": "Capo",
-    "subcategory": "Respirazione",
-    "filterSlug": "respirazione",
-    "description": "Filtro combinato A1P1 — codice 43403215. Per vapori organici più polveri. Ricambio veloce, in scorta in negozio.",
-    "bullets": [
-      "Combinato A1P1 — vapori organici più polveri",
-      "Codice 43403215",
-      "Ricambio in scorta in negozio"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "D.P.I. SRL",
-    "_source_description": "Filtro A1P1 Comb 200 (43403215)"
-  },
-  {
     "sku": "0RESFIDPI230COMB",
     "slug": "filtro-a1p1-comb-230-43405127",
     "brand": "D.P.I.",
-    "name": "Filtro A1P1 Comb 230 (43405127)",
+    "name": "Filtro A1P1 Comb 230",
     "category": "Capo",
     "subcategory": "Respirazione",
     "filterSlug": "respirazione",
-    "description": "Filtro combinato A1P1 — codice 43405127. Per vapori organici più polveri, formato 230. Lo teniamo a magazzino.",
+    "description": "Filtro combinato A1P1 — . Per vapori organici più polveri, formato 230. Lo teniamo a magazzino.",
     "bullets": [
       "Combinato A1P1 formato 230",
-      "Codice 43405127",
+      "Da abbinare alla semimaschera",
       "In scorta a magazzino"
     ],
     "image": "assets/product-placeholder.png",
@@ -468,84 +241,24 @@
     "_source_description": "Filtro A1P1 Comb 230 (43405127)"
   },
   {
-    "sku": "0RESFIDPIAIRLINE",
-    "slug": "filtro-airline-43442033",
+    "sku": "00RESFIDPI230P3",
     "brand": "D.P.I.",
-    "name": "Filtro airline (43442033)",
+    "name": "Filtro P3R  Antipolvere 230",
     "category": "Capo",
     "subcategory": "Respirazione",
     "filterSlug": "respirazione",
-    "description": "Filtro per linea aria (airline) — codice 43442033. Ricambio specifico per il sistema, da cambiare a scadenza. In scorta in negozio.",
+    "description": "Filtro P3 —Per polveri sottili, formato 230. Ricambio in scorta in negozio.",
     "bullets": [
-      "Filtro per sistema airline",
-      "Codice 43442033",
-      "Cambio a scadenza, in scorta in negozio"
+      "Classe P3- polveri sottili es amianto",
+      "Da abbinare alla semimaschera",
+      "scorta in magazzino"
     ],
     "image": "assets/product-placeholder.png",
     "gallery": [],
     "datasheet": "",
     "_supplier": "D.P.I. SRL",
-    "_source_description": "Filtro airline (43442033)"
-  },
-  {
-    "sku": "0RESFIDPI230B1",
-    "slug": "filtro-b1-antig-230-43405101",
-    "brand": "D.P.I.",
-    "name": "Filtro B1 Antig 230 (43405101)",
-    "category": "Capo",
-    "subcategory": "Respirazione",
-    "filterSlug": "respirazione",
-    "description": "Filtro B1 — codice 43405101. Per gas inorganici. Lo teniamo a magazzino sui modelli più richiesti.",
-    "bullets": [
-      "Classe B1 — per gas inorganici",
-      "Codice 43405101",
-      "In scorta sui modelli più richiesti"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "D.P.I. SRL",
-    "_source_description": "Filtro B1 Antig 230 (43405101)"
-  },
-  {
-    "sku": "0RESFIDPI230E1",
-    "slug": "filtro-e1-antig-230-43405102",
-    "brand": "D.P.I.",
-    "name": "Filtro E1 Antig 230 (43405102)",
-    "category": "Capo",
-    "subcategory": "Respirazione",
-    "filterSlug": "respirazione",
-    "description": "Filtro E1 — codice 43405102. Per gas acidi come l'anidride solforosa. Ricambio in scorta in negozio.",
-    "bullets": [
-      "Classe E1 — per gas acidi (es. anidride solforosa)",
-      "Codice 43405102",
-      "Ricambio in scorta in negozio"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "D.P.I. SRL",
-    "_source_description": "Filtro E1 Antig 230 (43405102)"
-  },
-  {
-    "sku": "0RESFIDPI230K1",
-    "slug": "filtro-k1-antig-230-43405103",
-    "brand": "D.P.I.",
-    "name": "Filtro K1 Antig 230 (43405103)",
-    "category": "Capo",
-    "subcategory": "Respirazione",
-    "filterSlug": "respirazione",
-    "description": "Filtro K1 — codice 43405103. Per l'ammoniaca. Lo teniamo a magazzino tutto l'anno.",
-    "bullets": [
-      "Classe K1 — per l'ammoniaca",
-      "Codice 43405103",
-      "Lo teniamo a magazzino tutto l'anno"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "D.P.I. SRL",
-    "_source_description": "Filtro K1 Antig 230 (43405103)"
+    "_source_description": "Filtro E1 Antig 230 (43405102)",
+    "slug": "filtro-p3r-antipolvere-230"
   },
   {
     "sku": "0RESGODPIC701",
@@ -557,15 +270,59 @@
     "filterSlug": "respirazione",
     "description": "Maschera per le vie respiratorie nei lavori sporchi. Te la mostriamo prima dell'ordine, e i ricambi li teniamo a magazzino.",
     "bullets": [
-      "Per chi lavora con polveri o vapori",
-      "Da provare prima di ordinare le confezioni",
-      "Ricambi disponibili in negozio"
+      "Maschera pieno facciale che permette l'uso di occhiali da vista per chi ne ha bisogno",
+      "Ampia scelta di filtri compatibili per tutte le esigenze",
+      "sempre disponibile in negozio"
+    ],
+    "image": "https://www.dpisekur.com/wp-content/uploads/2023/04/433350000.jpg",
+    "gallery": [
+      "https://www.dpisekur.com/wp-content/uploads/2023/04/433350000.jpg"
+    ],
+    "datasheet": "https://www.dpisekur.com/wp-content/uploads/2023/03/Scheda-tecnica-C701.pdf",
+    "_supplier": "D.P.I. SRL",
+    "_source_description": "Pienofacciale C701"
+  },
+  {
+    "sku": "0RESDPIRA42010600",
+    "brand": "D.P.I.",
+    "name": "Raccordo compl. filtro 230 att. Filettato",
+    "category": "Capo",
+    "subcategory": "Respirazione",
+    "filterSlug": "respirazione",
+    "description": "Raccordo per pemettere alle maschere pienofacciali attacco dirin di diventare compatibili coi filtri 230",
+    "bullets": [
+      "permette di usare lo stesso filtro su più tipi di maschera",
+      "Da abbinare alla maschera pienofacciale",
+      "Lo teniamo a magazzino tutto l'anno"
     ],
     "image": "assets/product-placeholder.png",
     "gallery": [],
     "datasheet": "",
     "_supplier": "D.P.I. SRL",
-    "_source_description": "Pienofacciale C701"
+    "_source_description": "Filtro K1 Antig 230 (43405103)",
+    "slug": "raccordo-compl-filtro-230-att-filettato"
+  },
+  {
+    "sku": "0RESGODPIPOLI2000",
+    "brand": "D.P.I.",
+    "name": "Semimaschera Polimask 2000 Gamma DPI",
+    "category": "Capo",
+    "subcategory": "Respirazione",
+    "filterSlug": "respirazione",
+    "description": "La Polimask 2000 mod. GAMMA è una semimaschera  in EPD di taglia universale conforme alla norma UNI EN 140. Modello con un raccordo filettato per un filtro Sèkur Serie 230.",
+    "bullets": [
+      "Semimaschera comoda e confortevole",
+      "Ampia scelta di filtri compatibili per tutte le esigenze",
+      "sempre disponibile in negozio"
+    ],
+    "image": "https://www.dpisekur.com/wp-content/uploads/2023/04/43362112.jpg",
+    "gallery": [
+      "https://www.dpisekur.com/wp-content/uploads/2023/04/43362112.jpg"
+    ],
+    "datasheet": "https://www.dpisekur.com/wp-content/uploads/2023/04/Scheda-tecnica-Polimask-2000_Gamma.pdf",
+    "_supplier": "",
+    "_source_description": "",
+    "slug": "semimaschera-polimask-2000-gamma-dpi"
   },
   {
     "sku": "0PUDCUSOUND",
@@ -575,17 +332,41 @@
     "category": "Capo",
     "subcategory": "Udito",
     "filterSlug": "udito",
-    "description": "Protezione per l'udito di tutti i giorni. Si regola sulla testa, non stringe. Passa a provarla quando vuoi.",
+    "description": "Protezione per l'udito di tutti i giorni.Cuffie leggere, comode ed economiche\nProtezione SNR 28 dB\nArchetto regolabile per una facile vestibilità e un maggiore comfort\nL'archetto equalizza la pressione e assicura che i cuscini rimangano in posizione\nPressione minima sulla parte superiore della testa grazie alla fascia comfort\nI morbidi e ampi cuscini si adattano comodamente alle orecchie Passa a provarla quando vuoi.",
     "bullets": [
       "Per chi lavora vicino a macchine rumorose",
-      "Si abbinano al casco senza scomporsi",
+      "sempre disponibile in negozio",
       "Comodi anche per turni lunghi"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://eu.pipglobal.com/archive/pim/1200/12/263-NP220.jpg",
+    "gallery": [
+      "https://eu.pipglobal.com/archive/pim/1200/12/263-NP220.jpg"
+    ],
+    "datasheet": "https://eu.pipglobal.com/it/dynamic-spec-sheet-API.php?pID=P114140",
     "_supplier": "INDUSTRIAL STARTER SPA",
     "_source_description": "Cuffia antirumore CLASSIC SNR 29"
+  },
+  {
+    "sku": "0PUDCUINTERNB",
+    "brand": "Delta Plus",
+    "name": "Cuffia antirumore INTERLAGOSNB DIETRO NUCA",
+    "category": "Capo",
+    "subcategory": "Udito",
+    "filterSlug": "udito",
+    "description": "Cuffie antirumore con archetto al collo e fascia di sostegno in tessuto, che offrono regolabilità e compattezzai. Lo provi in negozio, comodi anche per turni lunghi.",
+    "bullets": [
+      "Comode da usare con l'elmetto",
+      "Per chi entra ed esce da ambienti rumorosi",
+      "Comodi anche per turni lunghi"
+    ],
+    "image": "https://media.deltaplus.eu/m/30cbfee6b3e4b0b5/Liferay_Product-INTERLAGOS-NB-eps.png",
+    "gallery": [
+      "https://media.deltaplus.eu/m/30cbfee6b3e4b0b5/Liferay_Product-INTERLAGOS-NB-eps.png"
+    ],
+    "datasheet": "https://www.deltaplus.eu/o/commerce-media/accounts/-1/attachments/61440439?download=true&locale=it_IT&siteKey=italie",
+    "_supplier": "DELTA PLUS SRL",
+    "_source_description": "Tappi auric. c/archetto delta",
+    "slug": "cuffia-antirumore-interlagosnb-dietro-nuca"
   },
   {
     "sku": "0PUDCUMAGNY",
@@ -595,97 +376,41 @@
     "category": "Capo",
     "subcategory": "Udito",
     "filterSlug": "udito",
-    "description": "Cuffia antirumore per chi lavora con macchine pesanti. Si abbina al casco, non scomoda. Ne teniamo qualche pezzo in scaffale.",
+    "description": "Cuffie antirumore ad alte prestazioni con archetto rinforzato in metallo. Ne teniamo qualche pezzo in scaffale.",
     "bullets": [
       "Comodi anche per turni lunghi",
       "Da provare prima di ordinarli in più paia",
       "In scorta sui modelli più richiesti"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://media.deltaplus.eu/m/4fe780ac4e3e99bb/Liferay_Product-MAGNY-COURS2-eps.png",
+    "gallery": [
+      "https://media.deltaplus.eu/m/4fe780ac4e3e99bb/Liferay_Product-MAGNY-COURS2-eps.png"
+    ],
+    "datasheet": "https://www.deltaplus.eu/o/commerce-media/accounts/-1/attachments/61380236?download=true&locale=it_IT&siteKey=italie",
     "_supplier": "DELTA PLUS SRL",
     "_source_description": "Cuffia antirumore Magnycours2 SNR 33"
   },
   {
-    "sku": "0PUDARC00",
-    "slug": "tappi-auric-c-archetto-delta",
-    "brand": "Delta Plus",
-    "name": "Tappi auric. c/archetto delta",
-    "category": "Capo",
-    "subcategory": "Udito",
-    "filterSlug": "udito",
-    "description": "Tappi auricolari con archetto delta — pronti al collo quando entri ed esci dagli ambienti rumorosi. Lo provi in negozio, comodi anche per turni lunghi.",
-    "bullets": [
-      "Con archetto, pronti al collo quando servono",
-      "Per chi entra ed esce da ambienti rumorosi",
-      "Comodi anche per turni lunghi"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "DELTA PLUS SRL",
-    "_source_description": "Tappi auric. c/archetto delta"
-  },
-  {
-    "sku": "0PUDDELTA006",
-    "slug": "tappi-auric-delta-box-6pp-blu",
-    "brand": "Delta Plus",
-    "name": "Tappi auric. delta box 6pp blu",
-    "category": "Capo",
-    "subcategory": "Udito",
-    "filterSlug": "udito",
-    "description": "Tappi auricolari delta, box da 6 paia — protezione semplice per chi lavora con macchine rumorose. Confezioni più grandi a magazzino.",
-    "bullets": [
-      "Box da 6 paia",
-      "Per chi lavora con macchine rumorose",
-      "Confezioni più grandi a magazzino"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "DELTA PLUS SRL",
-    "_source_description": "Tappi auric. delta box 6pp blu"
-  },
-  {
-    "sku": "0PUDDELTA00",
-    "slug": "tappi-auric-delta-box-pp200",
-    "brand": "Delta Plus",
-    "name": "Tappi auric. delta box pp200",
-    "category": "Capo",
-    "subcategory": "Udito",
-    "filterSlug": "udito",
-    "description": "Tappi auricolari delta, confezione da 200 paia — per le squadre che lavorano vicino a macchine rumorose tutti i giorni. In scorta tutto l'anno.",
-    "bullets": [
-      "Confezione da 200 paia",
-      "Per le squadre che lavorano in officina",
-      "In scorta tutto l'anno"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "DELTA PLUS SRL",
-    "_source_description": "Tappi auric. delta box pp200"
-  },
-  {
-    "sku": "0ABL2809PCAHVGB",
-    "slug": "giubbino-in-alta-visibilita-standard-invernale",
+    "sku": "0ABL280PCAHVGB",
     "brand": "",
-    "name": "Giubbino in alta visibilità standard INVERNALE",
+    "name": "Giubbino in alta visibilità standard",
     "category": "Corpo",
     "subcategory": "Alta visibilità",
     "filterSlug": "alta-visibilita",
-    "description": "Indumento ad alta visibilità per chi sta in mezzo al traffico o ai mezzi pesanti. Pensato per giornate intere. Ne teniamo qualche pezzo in scorta tutto l'anno.",
+    "description": "Indumento ad alta visibilità per chi sta in mezzo al traffico o ai mezzi pesanti. Ne teniamo qualche pezzo in scorta tutto l'anno.",
     "bullets": [
       "Si lava in lavatrice senza problemi",
-      "Comodo per giornate intere",
       "Disponibile in più taglie a magazzino"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
+    "image": "https://www.peployal.it/b2b/foto/AVC05204-08.jpg",
+    "gallery": [
+      "https://www.peployal.it/b2b/foto/AVC05204-08.jpg",
+      "https://www.peployal.it/b2b/foto/AVC05204-04.jpg"
+    ],
     "datasheet": "",
     "_supplier": "GRUPPO P E P LOYAL SPA",
-    "_source_description": "Giubbino in alta visibilità standard INVERNALE"
+    "_source_description": "Giubbino in alta visibilità standard INVERNALE",
+    "slug": "giubbino-in-alta-visibilita-standard"
   },
   {
     "sku": "0ESKGBSF9004AV",
@@ -695,15 +420,17 @@
     "category": "Corpo",
     "subcategory": "Alta visibilità",
     "filterSlug": "alta-visibilita",
-    "description": "Indumento ad alta visibilità per chi sta in mezzo al traffico o ai mezzi pesanti. Pensato per giornate intere. Ne teniamo qualche pezzo in scorta tutto l'anno.",
+    "description": "Giubbotto in soft shell ad alta visibilità per chi sta in mezzo al traffico o ai mezzi pesanti. Pensato per giornate intere. Ne teniamo qualche pezzo in scorta tutto l'anno.",
     "bullets": [
       "Visibile di giorno e con i fari",
       "Si lava in lavatrice senza problemi",
       "Comodo per giornate intere"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://www.payperwear.com/flex/AppData/Redational/ppw2025/img/15607/ca/h/01014.jpg",
+    "gallery": [
+      "https://www.payperwear.com/flex/AppData/Redational/ppw2025/img/15607/ca/h/01014.jpg"
+    ],
+    "datasheet": "https://www.payperwear.com/flex/Extensions/PassaportoDigitale/pages/dpServeFile.php/L/IT/ID/15607",
     "_supplier": "INDUSTRIAL WEAR SRL",
     "_source_description": "Giubbino SHINE in soft shell alta visibi"
   },
@@ -721,9 +448,11 @@
       "Visibile di giorno e con i fari",
       "Si lava in lavatrice senza problemi"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://www.payperwear.com/flex/AppData/Redational/ppw2025/img/5342/ca/h/01014.jpg",
+    "gallery": [
+      "https://www.payperwear.com/flex/AppData/Redational/ppw2025/img/5342/ca/h/01014.jpg"
+    ],
+    "datasheet": "https://www.payperwear.com/flex/Extensions/PassaportoDigitale/pages/dpServeFile.php/L/IT/ID/5342",
     "_supplier": "INDUSTRIAL WEAR SRL",
     "_source_description": "Polo GUARD manica corta in alta visibilità"
   },
@@ -741,51 +470,55 @@
       "Lo provi in negozio prima dell'ordine",
       "Per chi lavora in strada o nel traffico"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://www.payperwear.com/flex/AppData/Redational/ppw2025/img/953/ca/h/01006.jpg",
+    "gallery": [
+      "https://www.payperwear.com/flex/AppData/Redational/ppw2025/img/953/ca/h/01006.jpg"
+    ],
+    "datasheet": "https://www.payperwear.com/flex/Extensions/PassaportoDigitale/pages/dpServeFile.php/L/IT/ID/953",
     "_supplier": "INDUSTRIAL WEAR SRL",
     "_source_description": "T-shirt ALTA VISIBILTA' Avenue"
   },
   {
-    "sku": "0ABL280PCAHVTU",
-    "slug": "tuta-zip-in-alta-visibilita",
-    "brand": "",
-    "name": "Tuta zip in alta visibilità",
-    "category": "Corpo",
-    "subcategory": "Alta visibilità",
-    "filterSlug": "alta-visibilita",
-    "description": "Capo ad alta visibilità per chi lavora in strada, in cantiere, ai magazzini. Si lava in lavatrice senza problemi. Disponibile in più taglie a magazzino.",
-    "bullets": [
-      "Comodo per giornate intere",
-      "Disponibile in più taglie a magazzino",
-      "Lo provi in negozio prima dell'ordine"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "GRUPPO P E P LOYAL SPA",
-    "_source_description": "Tuta zip in alta visibilità"
-  },
-  {
-    "sku": "0PCAISAK3510",
-    "slug": "assorbitore-granchio-2mt-2funi-3mosch-ak351",
-    "brand": "Industrial Starter",
-    "name": "assorbitore Granchio 2mt 2funi+3mosch AK351",
+    "sku": "0PCADEAN213200CDD",
+    "brand": "Delta Plus",
+    "name": "assorbitore AN213200ZDD  2mt  2funi+3mosch",
     "category": "Corpo",
     "subcategory": "Anticaduta",
     "filterSlug": "anticaduta",
-    "description": "Sistema anticaduta per chi lavora in quota — tetti, ponteggi, pali. La proviamo insieme prima di consegnarla, una taglia non vale l'altra. Ne teniamo qualche pezzo in scaffale.",
+    "description": "Dispositivo per il lavoro in altezza. Pensato per chi sale tutti i giorni. In bottega lo provi prima di prenderlo.",
     "bullets": [
-      "Regolazione precisa sul corpo",
-      "Per chi lavora in quota tutti i giorni",
-      "La proviamo insieme prima di consegnarla"
+      "Ne teniamo qualche pezzo in scaffale",
+      "Regolazione precisa sul corpo"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "INDUSTRIAL STARTER SPA",
-    "_source_description": "assorbitore Granchio 2mt 2funi+3mosch AK351"
+    "image": "https://media.deltaplus.eu/m/6890d87c51d09cfe/Liferay_Product-AN213200ZDD-eps.png",
+    "gallery": [
+      "https://media.deltaplus.eu/m/6890d87c51d09cfe/Liferay_Product-AN213200ZDD-eps.png"
+    ],
+    "datasheet": "https://www.deltaplus.eu/o/commerce-media/accounts/-1/attachments/66565818?download=true&locale=it_IT&siteKey=italie",
+    "_supplier": "DELTA PLUS SRL",
+    "_source_description": "Moschettone Akrobat twistlok ak9426",
+    "slug": "assorbitore-an213200zdd-2mt-2funi-3mosch"
+  },
+  {
+    "sku": "0PCALO047150AD",
+    "brand": "Delta Plus",
+    "name": "Fune mt 1,5 con 2 moschettoni (LO047150AD)",
+    "category": "Corpo",
+    "subcategory": "Anticaduta",
+    "filterSlug": "anticaduta",
+    "description": "Dispositivo per il lavoro in altezza. Pensato per chi sale tutti i giorni. In bottega lo provi prima di prenderlo.",
+    "bullets": [
+      "La proviamo insieme prima di consegnarla",
+      "Pensata per tetti, ponteggi"
+    ],
+    "image": "https://media.deltaplus.eu/m/37e2bb074847b196/Liferay_Product-LO047150AD-eps.png",
+    "gallery": [
+      "https://media.deltaplus.eu/m/37e2bb074847b196/Liferay_Product-LO047150AD-eps.png"
+    ],
+    "datasheet": "https://www.deltaplus.eu/o/commerce-media/accounts/-1/attachments/66574625?download=true&locale=it_IT&siteKey=italie",
+    "_supplier": "DELTA PLUS SRL",
+    "_source_description": "Moschettone Akrobat acciaio AK9427",
+    "slug": "fune-mt-1-5-con-2-moschettoni-lo047150ad"
   },
   {
     "sku": "0PCAISAK30.",
@@ -797,135 +530,38 @@
     "filterSlug": "anticaduta",
     "description": "Dispositivo per il lavoro in altezza. Pensato per chi sale tutti i giorni. In bottega lo provi prima di prenderlo.",
     "bullets": [
-      "Pensata per tetti, ponteggi e pali",
-      "Disponibile in più taglie da provare in bottega",
+      "Pensata per tetti, ponteggi",
       "Ne teniamo qualche pezzo in scaffale"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://eu.pipglobal.com/archive/pim/1200/31/AK30-_image.jpg",
+    "gallery": [
+      "https://eu.pipglobal.com/archive/pim/1200/31/AK30-_image.jpg"
+    ],
+    "datasheet": "https://eu.pipglobal.com/it/dynamic-spec-sheet-API.php?pID=P205919",
     "_supplier": "INDUSTRIAL STARTER SPA",
     "_source_description": "imbrag. Akroba tratt dorsale/sterna AK30"
   },
   {
-    "sku": "0PCACOCERBERO",
-    "slug": "imbrag-dors-e-sternale-cerbero",
-    "brand": "Cofra",
-    "name": "Imbrag. dors. e sternale CERBERO",
-    "category": "Corpo",
-    "subcategory": "Anticaduta",
-    "filterSlug": "anticaduta",
-    "description": "Sistema anticaduta per chi lavora in quota — tetti, ponteggi, pali. La proviamo insieme prima di consegnarla, una taglia non vale l'altra. Ne teniamo qualche pezzo in scaffale.",
-    "bullets": [
-      "Disponibile in più taglie da provare in bottega",
-      "Ne teniamo qualche pezzo in scaffale",
-      "Regolazione precisa sul corpo"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "COFRA SRL",
-    "_source_description": "Imbrag. dors. e sternale CERBERO"
-  },
-  {
-    "sku": "0PCADEHAR11",
-    "slug": "imbrag-dorsale-har11-s-m-l-bor",
+    "sku": "0PCADEHAR12",
     "brand": "Delta Plus",
-    "name": "Imbrag. dorsale HAR11 S/M/L+BOR",
+    "name": "Imbrag. dorsale HAR12 S/M/L oppure XL/XXL +BOR",
     "category": "Corpo",
     "subcategory": "Anticaduta",
     "filterSlug": "anticaduta",
     "description": "Sistema anticaduta per chi lavora in quota — tetti, ponteggi, pali. La proviamo insieme prima di consegnarla, una taglia non vale l'altra. Ne teniamo qualche pezzo in scaffale.",
     "bullets": [
       "La proviamo insieme prima di consegnarla",
-      "Pensata per tetti, ponteggi e pali",
-      "Disponibile in più taglie da provare in bottega"
+      "Pensata per tetti, ponteggi",
+      "sempre disponibile in negozio"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://media.deltaplus.eu/m/9612c942b2bb205/Liferay_Product-HAR12-eps.png",
+    "gallery": [
+      "https://media.deltaplus.eu/m/9612c942b2bb205/Liferay_Product-HAR12-eps.png"
+    ],
+    "datasheet": "https://www.deltaplus.eu/o/commerce-media/accounts/-1/attachments/66743523?download=true&locale=it_IT&siteKey=italie",
     "_supplier": "DELTA PLUS SRL",
-    "_source_description": "Imbrag. dorsale HAR11 S/M/L+BOR"
-  },
-  {
-    "sku": "0PCAISAK9427",
-    "slug": "moschettone-akrobat-acciaio-ak9427",
-    "brand": "Industrial Starter",
-    "name": "Moschettone Akrobat acciaio AK9427",
-    "category": "Corpo",
-    "subcategory": "Anticaduta",
-    "filterSlug": "anticaduta",
-    "description": "Dispositivo per il lavoro in altezza. Pensato per chi sale tutti i giorni. In bottega lo provi prima di prenderlo.",
-    "bullets": [
-      "La proviamo insieme prima di consegnarla",
-      "Pensata per tetti, ponteggi e pali",
-      "Disponibile in più taglie da provare in bottega"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "INDUSTRIAL STARTER SPA",
-    "_source_description": "Moschettone Akrobat acciaio AK9427"
-  },
-  {
-    "sku": "0PCAISAK9426",
-    "slug": "moschettone-akrobat-twistlok-ak9426",
-    "brand": "Industrial Starter",
-    "name": "Moschettone Akrobat twistlok ak9426",
-    "category": "Corpo",
-    "subcategory": "Anticaduta",
-    "filterSlug": "anticaduta",
-    "description": "Dispositivo per il lavoro in altezza. Pensato per chi sale tutti i giorni. In bottega lo provi prima di prenderlo.",
-    "bullets": [
-      "Disponibile in più taglie da provare in bottega",
-      "Ne teniamo qualche pezzo in scaffale",
-      "Regolazione precisa sul corpo"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "INDUSTRIAL STARTER SPA",
-    "_source_description": "Moschettone Akrobat twistlok ak9426"
-  },
-  {
-    "sku": "0PCADEAM025",
-    "slug": "moschettone-am025-twistlok",
-    "brand": "Delta Plus",
-    "name": "Moschettone AM025 twistlok",
-    "category": "Corpo",
-    "subcategory": "Anticaduta",
-    "filterSlug": "anticaduta",
-    "description": "Per il lavoro in quota di tutti i giorni. Te lo facciamo provare prima dell'ordine — la regolazione sul corpo fa la differenza. Disponibile in più taglie.",
-    "bullets": [
-      "Disponibile in più taglie da provare in bottega",
-      "Ne teniamo qualche pezzo in scaffale",
-      "Regolazione precisa sul corpo"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "DELTA PLUS SRL",
-    "_source_description": "Moschettone AM025 twistlok"
-  },
-  {
-    "sku": "0UPEY212FELP",
-    "slug": "felpa-jupiter",
-    "brand": "U-Group",
-    "name": "FELPA JUPITER",
-    "category": "Corpo",
-    "subcategory": "Busto",
-    "filterSlug": "busto",
-    "description": "Capo da lavoro per officina, cantiere, magazzino. Tessuto che regge i lavaggi, taglio comodo. Disponibile in più taglie a magazzino.",
-    "bullets": [
-      "Regge i lavaggi industriali",
-      "Taglio che lascia muoversi",
-      "Comodo per giornate intere"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "UGROUP S.R.L.",
-    "_source_description": "FELPA JUPITER"
+    "_source_description": "Imbrag. dorsale HAR11 S/M/L+BOR",
+    "slug": "imbrag-dorsale-har12-s-m-l-oppure-xl-xxl-bor"
   },
   {
     "sku": "0UPFU188GILE",
@@ -935,15 +571,17 @@
     "category": "Corpo",
     "subcategory": "Busto",
     "filterSlug": "busto",
-    "description": "Capo da lavoro per officina, cantiere, magazzino. Tessuto che regge i lavaggi, taglio comodo. Disponibile in più taglie a magazzino.",
+    "description": "Capo da lavoro per officina, cantiere, magazzino. Tessuto che regge i lavaggi, taglio comodo. Disponibile in più taglie e più colori a magazzino.\nAnche versione lady",
     "bullets": [
-      "Regge i lavaggi industriali",
       "Taglio che lascia muoversi",
       "Comodo per giornate intere"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://pim.u-powergroup.it/assets/medium_UNIVERSE_DB_04bcb69db5.jpg",
+    "gallery": [
+      "https://pim.u-powergroup.it/assets/medium_UNIVERSE_DB_04bcb69db5.jpg",
+      "https://pim.u-powergroup.it/assets/medium_gilet_da_lavoro_upower_modello_universe_colore_black_carbon_0_135c1ee4b0.jpg"
+    ],
+    "datasheet": "https://bff.u-powergroup.it/bff/documents/products/it-it/universe-bc/sheet?lang=it",
     "_supplier": "UGROUP S.R.L.",
     "_source_description": "gilet UNIVERSE in soft shell U-POWER"
   },
@@ -955,15 +593,17 @@
     "category": "Corpo",
     "subcategory": "Busto",
     "filterSlug": "busto",
-    "description": "Capo da lavoro per officina, cantiere, magazzino. Tessuto che regge i lavaggi, taglio comodo. Disponibile in più taglie a magazzino.",
+    "description": "Capo da lavoro per officina, cantiere, magazzino. Tessuto che regge i lavaggi, taglio comodo. Disponibile in più taglie a magazzino.\nAnche versione lady",
     "bullets": [
       "Comodo per giornate intere",
       "Per chi indossa la divisa otto ore al giorno",
       "Disponibile in più taglie a magazzino"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://pim.u-powergroup.it/assets/medium_felpa_da_lavoro_upower_modello_rainbow_colore_orange_fluo_0_1e37fcf682.jpg",
+    "gallery": [
+      "https://pim.u-powergroup.it/assets/medium_felpa_da_lavoro_upower_modello_rainbow_colore_orange_fluo_0_1e37fcf682.jpg"
+    ],
+    "datasheet": "https://bff.u-powergroup.it/bff/documents/products/it-it/rainbow-of/sheet?lang=it",
     "_supplier": "UGROUP S.R.L.",
     "_source_description": "giubbino RAINBOW in POLIESTERE l U-POWER 310 gr/m2"
   },
@@ -975,15 +615,16 @@
     "category": "Corpo",
     "subcategory": "Busto",
     "filterSlug": "busto",
-    "description": "Per chi indossa la divisa otto ore al giorno. Comodo, lavabile, pensato per il mestiere. Passa a provarlo quando vuoi.",
+    "description": "Un moderno bomber 3 in 1 alta visibilità ricco di funzioni intelligenti tra cui una tasca sul petto per smartphone, passanti per radio e un pannello inferiore a contrasto per la protezione dallo sporco. Incorporando un maglione con zip staccabile, questa giacca è adattabile a tutte le condizioni atmosferiche. Questo capo è completamente impermeabile e presenta cappuccio ripiegabile con coulisse, 7 tasche, polsini regolabili e zip frontale a doppio cursore per un facile accesso.",
     "bullets": [
       "Comodo per giornate intere",
-      "Per chi indossa la divisa otto ore al giorno",
       "Disponibile in più taglie a magazzino"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://d11ak7fd9ypfb7.cloudfront.net/styles400px/S365YBR.jpg",
+    "gallery": [
+      "https://d11ak7fd9ypfb7.cloudfront.net/styles400px/S365YBR.jpg"
+    ],
+    "datasheet": "https://documents.portwest.com/datasheet.php?style=S365&lang=IT&itemcol=S365YBR",
     "_supplier": "PORTWEST UC",
     "_source_description": "Giubbino S365 bicolore in AV"
   },
@@ -995,97 +636,20 @@
     "category": "Corpo",
     "subcategory": "Busto",
     "filterSlug": "busto",
-    "description": "Capo da lavoro per officina, cantiere, magazzino. Tessuto che regge i lavaggi, taglio comodo. Disponibile in più taglie a magazzino.",
+    "description": "Giacca in Softshell con membrana U-Tex che rende il tessuto idrorepellente, traspirante e antivento. Giacca molto comoda e resistente con una fodera interna in morbido micro-ﬂeece ﬂuo. Disponibile in più taglie e colori a magazzino.\nAnche versione lady",
     "bullets": [
       "Comodo per giornate intere",
       "Per chi indossa la divisa otto ore al giorno",
       "Disponibile in più taglie a magazzino"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://pim.u-powergroup.it/assets/medium_giacca_da_lavoro_upower_modello_space_colore_black_carbon_0_7184771256.jpg",
+    "gallery": [
+      "https://pim.u-powergroup.it/assets/medium_giacca_da_lavoro_upower_modello_space_colore_black_carbon_0_7184771256.jpg",
+      "https://pim.u-powergroup.it/assets/medium_SPACE_DB_d98e78cc65.jpg"
+    ],
+    "datasheet": "https://bff.u-powergroup.it/bff/documents/products/it-it/space-db/sheet?lang=it",
     "_supplier": "UGROUP S.R.L.",
     "_source_description": "giubbino SPACE in soft shell U-POWER 320 gr/m2"
-  },
-  {
-    "sku": "0UPFU213GIUB",
-    "slug": "giubbino-spock",
-    "brand": "U-Group",
-    "name": "giubbino SPOCK",
-    "category": "Corpo",
-    "subcategory": "Busto",
-    "filterSlug": "busto",
-    "description": "Abbigliamento da lavoro pensato per durare. Te lo facciamo provare prima dell'ordine. Ne teniamo qualche pezzo in scaffale tutto l'anno.",
-    "bullets": [
-      "Per chi indossa la divisa otto ore al giorno",
-      "Disponibile in più taglie a magazzino",
-      "Te lo facciamo provare prima dell'ordine"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "UGROUP S.R.L.",
-    "_source_description": "giubbino SPOCK"
-  },
-  {
-    "sku": "0UPEY144POLO",
-    "slug": "polo-live-m-lunga-u-power-185-gr-m2",
-    "brand": "U-Group",
-    "name": "polo LIVE m/lunga U-POWER 185 gr/m2",
-    "category": "Corpo",
-    "subcategory": "Busto",
-    "filterSlug": "busto",
-    "description": "Abbigliamento da lavoro pensato per durare. Te lo facciamo provare prima dell'ordine. Ne teniamo qualche pezzo in scaffale tutto l'anno.",
-    "bullets": [
-      "Disponibile in più taglie a magazzino",
-      "Te lo facciamo provare prima dell'ordine",
-      "Regge i lavaggi industriali"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "UGROUP S.R.L.",
-    "_source_description": "polo LIVE m/lunga U-POWER 185 gr/m2"
-  },
-  {
-    "sku": "0UPEY195TS",
-    "slug": "t-shirt-fluo-slim-fit",
-    "brand": "U-Group",
-    "name": "T-SHIRT FLUO SLIM FIT",
-    "category": "Corpo",
-    "subcategory": "Busto",
-    "filterSlug": "busto",
-    "description": "Capo da lavoro per officina, cantiere, magazzino. Tessuto che regge i lavaggi, taglio comodo. Disponibile in più taglie a magazzino.",
-    "bullets": [
-      "Te lo facciamo provare prima dell'ordine",
-      "Regge i lavaggi industriali",
-      "Taglio che lascia muoversi"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "UGROUP S.R.L.",
-    "_source_description": "T-SHIRT FLUO SLIM FIT"
-  },
-  {
-    "sku": "0ABPTUTMON56",
-    "slug": "tuta-monouso-al10-easy-plp",
-    "brand": "",
-    "name": "Tuta monouso AL10 EASY PLP",
-    "category": "Corpo",
-    "subcategory": "Multi-protezione",
-    "filterSlug": "multi-protezione",
-    "description": "Tuta integrale per lavori sporchi — verniciatura, bonifiche, ambienti polverosi. Si indossa sopra l'abbigliamento da lavoro. In scorta sui modelli più richiesti.",
-    "bullets": [
-      "In scorta sui modelli più richiesti",
-      "Per ambienti polverosi o sporchi",
-      "Si indossa sopra l'abbigliamento da lavoro"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "BONETTI SAS DI BONETTI E. E C.",
-    "_source_description": "Tuta monouso AL10 EASY PLP"
   },
   {
     "sku": "0ABPTUTMON56B",
@@ -1101,31 +665,13 @@
       "Si indossa sopra l'abbigliamento da lavoro",
       "Pensata per turni continui"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://www.payperwear.com/flex/AppData/Redational/ppw2025/img/19410/ca/h/00000.jpg",
+    "gallery": [
+      "https://www.payperwear.com/flex/AppData/Redational/ppw2025/img/19410/ca/h/00000.jpg"
+    ],
+    "datasheet": "https://www.payperwear.com/flex/Extensions/PassaportoDigitale/pages/dpServeFile.php/L/IT/ID/19410",
     "_supplier": "INDUSTRIAL WEAR SRL",
     "_source_description": "Tuta monouso GIONNY CAT III 56/B (PAYPER)"
-  },
-  {
-    "sku": "0ABPTUTMONLIFEBG",
-    "slug": "tuta-monouso-lifeguard-bodyguard-101401-bg",
-    "brand": "",
-    "name": "Tuta monouso LIFEGUARD bodyguard 101401-BG",
-    "category": "Corpo",
-    "subcategory": "Multi-protezione",
-    "filterSlug": "multi-protezione",
-    "description": "Tuta integrale per lavori sporchi — verniciatura, bonifiche, ambienti polverosi. Si indossa sopra l'abbigliamento da lavoro. In scorta sui modelli più richiesti.",
-    "bullets": [
-      "Si indossa sopra l'abbigliamento da lavoro",
-      "Pensata per turni continui",
-      "Disponibile in più taglie"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "RAYS SPA",
-    "_source_description": "Tuta monouso LIFEGUARD bodyguard 101401-BG"
   },
   {
     "sku": "0ABLPACTJ07",
@@ -1141,8 +687,10 @@
       "Te lo facciamo provare quando passi",
       "Per chi si muove tutto il giorno"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
+    "image": "https://cofrasafety.website/upload/q_100,w_2048,o_webp/https://cofrasafety.biz/assets/7315883e-cbdb-4823-a3b7-ff3810de0168?timestamp=2024-04-24T11:07:32.385Z&imageformat=image/jpeg",
+    "gallery": [
+      "https://cofrasafety.website/upload/q_100,w_2048,o_webp/https://cofrasafety.biz/assets/7315883e-cbdb-4823-a3b7-ff3810de0168?timestamp=2024-04-24T11:07:32.385Z&imageformat=image/jpeg"
+    ],
     "datasheet": "",
     "_supplier": "COFRA SRL",
     "_source_description": "Bermuda jeans HAVANA elasticizzato"
@@ -1155,15 +703,19 @@
     "category": "Corpo",
     "subcategory": "Pantaloni",
     "filterSlug": "pantaloni",
-    "description": "Per il lavoro in cantiere, in officina, in magazzino. Regge i lavaggi industriali. Te ne mostriamo qualcuno quando passi.",
+    "description": "Per il lavoro in cantiere, in officina, in magazzino. Regge i lavaggi industriali. Te ne mostriamo qualcuno quando passi.\nAnche versione lady",
     "bullets": [
       "Comodo per cantiere, officina, magazzino",
-      "Te lo facciamo provare quando passi",
+      "Te lo facciamo provare quando passi, disponibili più colori",
       "Per chi si muove tutto il giorno"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://pim.u-powergroup.it/assets/medium_bermuda_da_lavoro_upower_modello_mercury_colore_black_carbon_0_d291da5a5e.jpg",
+    "gallery": [
+      "https://pim.u-powergroup.it/assets/medium_bermuda_da_lavoro_upower_modello_mercury_colore_black_carbon_0_d291da5a5e.jpg",
+      "https://pim.u-powergroup.it/assets/medium_bermuda_da_lavoro_upower_modello_mercury_colore_deep_blue_0_b5450102bc.jpg",
+      "https://pim.u-powergroup.it/assets/medium_bermuda_da_lavoro_upower_modello_mercury_colore_asphalt_grey_green_prospettiva_73ee4b9997.jpg"
+    ],
+    "datasheet": "https://bff.u-powergroup.it/bff/documents/products/it-it/mercury-rl/sheet?lang=it",
     "_supplier": "UGROUP S.R.L.",
     "_source_description": "bermuda MERCURY U-Power"
   },
@@ -1175,15 +727,19 @@
     "category": "Corpo",
     "subcategory": "Pantaloni",
     "filterSlug": "pantaloni",
-    "description": "Pantalone da lavoro pensato per chi si muove tutto il giorno. Te lo facciamo provare prima dell'ordine — sulle taglie non si scherza. Ne teniamo le più richieste in scaffale.",
+    "description": "Pantalone da lavoro tecnico pesante pensato per chi si muove tutto il giorno. Te lo facciamo provare prima dell'ordine — sulle taglie non si scherza. Ne teniamo le più richieste in scaffale.\nAnche versione lady",
     "bullets": [
       "Per chi si muove tutto il giorno",
       "Disponibile in più taglie a magazzino",
       "Da provare prima di ordinarli per la squadra"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://pim.u-powergroup.it/assets/medium_pantalone_da_lavoro_upower_modello_atom_colore_black_carbon_0_8166437004.jpg",
+    "gallery": [
+      "https://pim.u-powergroup.it/assets/medium_pantalone_da_lavoro_upower_modello_atom_colore_black_carbon_0_8166437004.jpg",
+      "https://pim.u-powergroup.it/assets/medium_pantalone_da_lavoro_upower_modello_atom_colore_deep_blu_0_f5afc39c36.jpg",
+      "https://pim.u-powergroup.it/assets/medium_pantalone_da_lavoro_upower_modello_atom_lady_colore_grey_fucsia_0_e1e88b0824.jpg"
+    ],
+    "datasheet": "https://bff.u-powergroup.it/bff/documents/products/it-it/atom-bc/sheet?lang=it",
     "_supplier": "UGROUP S.R.L.",
     "_source_description": "pantalone ATOM U-Power 4 way stretch 260 gr/m2"
   },
@@ -1201,31 +757,13 @@
       "Da provare prima di ordinarli per la squadra",
       "Regge i lavaggi industriali"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
+    "image": "https://cofrasafety.website/upload/q_100,w_2048,o_webp/https://cofrasafety.biz/assets/d79bd1b6-6928-4286-ba74-0b9327771e2e?timestamp=2025-05-21T08:24:52.644Z&imageformat=image/jpeg",
+    "gallery": [
+      "https://cofrasafety.website/upload/q_100,w_2048,o_webp/https://cofrasafety.biz/assets/d79bd1b6-6928-4286-ba74-0b9327771e2e?timestamp=2025-05-21T08:24:52.644Z&imageformat=image/jpeg"
+    ],
     "datasheet": "",
     "_supplier": "COFRA SRL",
     "_source_description": "Pantalone jeans BARCELLONA elasticizzato"
-  },
-  {
-    "sku": "0MA18779-230PANT",
-    "slug": "pantalone-mascot-accelerate",
-    "brand": "Mascot",
-    "name": "Pantalone MASCOT® ACCELERATE",
-    "category": "Corpo",
-    "subcategory": "Pantaloni",
-    "filterSlug": "pantaloni",
-    "description": "Per il lavoro in cantiere, in officina, in magazzino. Regge i lavaggi industriali. Te ne mostriamo qualcuno quando passi.",
-    "bullets": [
-      "Disponibile in più taglie a magazzino",
-      "Da provare prima di ordinarli per la squadra",
-      "Regge i lavaggi industriali"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "Mascot International S.r.l.",
-    "_source_description": "Pantalone MASCOT® ACCELERATE"
   },
   {
     "sku": "0MA17179-311PANT",
@@ -1235,37 +773,19 @@
     "category": "Corpo",
     "subcategory": "Pantaloni",
     "filterSlug": "pantaloni",
-    "description": "Pantalone da lavoro robusto e comodo. Taglio che lascia piegare e salire. Disponibile in più taglie a magazzino.",
+    "description": "Pantalone da lavoro molto performante ,Il materiale e’ flessibile in tutte le direzioni offrendo un’unica liberta’ di movimento con nulla che ti stringe o disturba.\nIl materiale elastico multifunzionale idrorepellente combina basso peso con alta durevolezza.\nLe tasche ginocchiere in CORDURA® durevole sono regolabili quindi le ginocchiere hanno l’ottima posizione sulle vostre ginocchia.\nLe ginocchiere sono facilmente inserite dai lati tramite una cerniera, anche mentre indossai i pantaloni.\nEfficace ventilazione nella zona del ginocchio tramite una cerniera sul lato della gamba. Disponibile in più taglie a magazzino.",
     "bullets": [
       "Per chi si muove tutto il giorno",
       "Disponibile in più taglie a magazzino",
       "Da provare prima di ordinarli per la squadra"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://productimage-1ccb8.kxcdn.com/17179-311-18_P01_1000pxweb.jpg",
+    "gallery": [
+      "https://productimage-1ccb8.kxcdn.com/17179-311-18_P01_1000pxweb.jpg"
+    ],
+    "datasheet": "https://mascotsitecore-1ccb8.kxcdn.com/pdf/17179-311-18-it.pdf",
     "_supplier": "Mascot International S.r.l.",
     "_source_description": "Pantalone MASCOT® ADVANCED con tasche e porta ginocchiere"
-  },
-  {
-    "sku": "0ABLPAPO00",
-    "slug": "pantalone-strech-4-vie-mascot",
-    "brand": "Mascot",
-    "name": "Pantalone STRECH 4 VIE (MASCOT)",
-    "category": "Corpo",
-    "subcategory": "Pantaloni",
-    "filterSlug": "pantaloni",
-    "description": "Pantalone da lavoro pensato per chi si muove tutto il giorno. Te lo facciamo provare prima dell'ordine — sulle taglie non si scherza. Ne teniamo le più richieste in scaffale.",
-    "bullets": [
-      "Da provare prima di ordinarli per la squadra",
-      "Regge i lavaggi industriali",
-      "Comodo per cantiere, officina, magazzino"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "Mascot International S.r.l.",
-    "_source_description": "Pantalone STRECH 4 VIE (MASCOT)"
   },
   {
     "sku": "0UPFU189PANT",
@@ -1275,77 +795,43 @@
     "category": "Corpo",
     "subcategory": "Pantaloni",
     "filterSlug": "pantaloni",
-    "description": "Pantalone da lavoro pensato per chi si muove tutto il giorno. Te lo facciamo provare prima dell'ordine — sulle taglie non si scherza. Ne teniamo le più richieste in scaffale.",
+    "description": "Pantalone da lavoro tecnico estivo pensato per chi si muove tutto il giorno. Te lo facciamo provare prima dell'ordine — sulle taglie non si scherza. Ne teniamo le più richieste in scaffale.\nPiù colori disponibili anche versione lady",
     "bullets": [
       "Disponibile in più taglie a magazzino",
-      "Da provare prima di ordinarli per la squadra",
-      "Regge i lavaggi industriali"
+      "Da provare prima di ordinarli per la squadra"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://pim.u-powergroup.it/assets/medium_pantalone_da_lavoro_upower_modello_world_colore_black_carbon_0_1828a9985c.jpg",
+    "gallery": [
+      "https://pim.u-powergroup.it/assets/medium_pantalone_da_lavoro_upower_modello_world_colore_black_carbon_0_1828a9985c.jpg",
+      "https://pim.u-powergroup.it/assets/medium_pantalone_da_lavoro_upower_modello_world_colore_asphalt_grey_prodotto_0_2b0e591445.jpg",
+      "https://pim.u-powergroup.it/assets/medium_pantalone_da_lavoro_upower_modello_world_colore_deep_blue_0_8a6aeb7d40.jpg",
+      "https://pim.u-powergroup.it/assets/medium_pantalone_da_lavoro_upower_modello_world_lady_colore_grey_0_7e24967805.jpg"
+    ],
+    "datasheet": "https://bff.u-powergroup.it/bff/documents/products/it-it/world-bc/sheet?lang=it",
     "_supplier": "UGROUP S.R.L.",
     "_source_description": "pantalone WORLD U-Power 4 way stretch 140 gr/m2"
   },
   {
-    "sku": "0GTIGO001202",
-    "slug": "guanti-lattice-ve920-venisette",
+    "sku": "0GTIGONEOVE530",
     "brand": "Delta Plus",
-    "name": "Guanti lattice VE920 Venisette",
+    "name": "Guanti NEOCOLOR Neoprene/lLattice VE530",
     "category": "Mani",
     "subcategory": "Rischio chimico",
     "filterSlug": "rischio-chimico",
-    "description": "Guanto in lattice VE920 Venisette — calzata morbida, presa salda da bagnato. Lo teniamo a magazzino sui modelli più richiesti.",
-    "bullets": [
-      "Lattice — calzata morbida",
-      "Presa salda anche da bagnato",
-      "In scorta sui modelli più richiesti"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "DELTA PLUS SRL",
-    "_source_description": "Guanti lattice VE920 Venisette"
-  },
-  {
-    "sku": "0GTIGONEOVE509",
-    "slug": "guanti-neoprene-ve509",
-    "brand": "Delta Plus",
-    "name": "Guanti NEOPRENE VE509",
-    "category": "Mani",
-    "subcategory": "Rischio chimico",
-    "filterSlug": "rischio-chimico",
-    "description": "Guanto pensato per chi maneggia liquidi non amichevoli. Calzata da provare prima dell'ordine. Ne teniamo qualche modello a magazzino.",
+    "description": "Guanto VE530 pensato per chi maneggia liquidi non amichevoli. Calzata da provare prima dell'ordine. Ne teniamo qualche modello a magazzino.",
     "bullets": [
       "Calzata da provare insieme",
       "Per chi maneggia liquidi aggressivi",
       "Lo provi in bottega prima di ordinare le casse"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "DELTA PLUS SRL",
-    "_source_description": "Guanti NEOPRENE VE509"
-  },
-  {
-    "sku": "0GTIGODE8303300",
-    "slug": "guanti-nitrile-azzurro-nitrex-ve830",
-    "brand": "Delta Plus",
-    "name": "Guanti nitrile azzurro NITREX VE830",
-    "category": "Mani",
-    "subcategory": "Rischio chimico",
-    "filterSlug": "rischio-chimico",
-    "description": "Protezione per le mani che lavorano con acidi, oli o sostanze aggressive. Lo provi in bottega prima dell'ordine. In scaffale sui modelli più richiesti.",
-    "bullets": [
-      "Lo provi in bottega prima di ordinare le casse",
-      "Disponibile in più taglie a magazzino",
-      "Pensato per uso quotidiano"
+    "image": "https://media.deltaplus.eu/m/3c416997116f7dfe/Liferay_Product_Zoom-VE530V2.png",
+    "gallery": [
+      "https://media.deltaplus.eu/m/3c416997116f7dfe/Liferay_Product_Zoom-VE530V2.png"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "datasheet": "https://www.deltaplus.eu/o/commerce-media/accounts/-1/attachments/219072972?download=true&locale=it_IT&siteKey=italie",
     "_supplier": "DELTA PLUS SRL",
-    "_source_description": "Guanti nitrile azzurro NITREX VE830"
+    "_source_description": "Guanti NEOPRENE VE509",
+    "slug": "guanti-neocolor-neoprene-llattice-ve530"
   },
   {
     "sku": "0GTIGO00500",
@@ -1355,37 +841,19 @@
     "category": "Mani",
     "subcategory": "Rischio chimico",
     "filterSlug": "rischio-chimico",
-    "description": "Guanto pensato per chi maneggia liquidi non amichevoli. Calzata da provare prima dell'ordine. Ne teniamo qualche modello a magazzino.",
+    "description": "Guanto in nitrile pensato per chi maneggia liquidi non amichevoli. Calzata da provare prima dell'ordine. Ne teniamo qualche modello a magazzino.",
     "bullets": [
       "Pensato per uso quotidiano",
       "Ne teniamo i modelli più richiesti in scaffale",
       "Calzata da provare insieme"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://media.deltaplus.eu/m/585307431ae6e1ea/Liferay_Product-NITREX846-VE846VE-eps.png",
+    "gallery": [
+      "https://media.deltaplus.eu/m/585307431ae6e1ea/Liferay_Product-NITREX846-VE846VE-eps.png"
+    ],
+    "datasheet": "https://www.deltaplus.eu/o/commerce-media/accounts/-1/attachments/61915472?download=true&locale=it_IT&siteKey=italie",
     "_supplier": "DELTA PLUS SRL",
     "_source_description": "Guanti nitrile NITREX 846 cm 46"
-  },
-  {
-    "sku": "0GTIGODE8013300",
-    "slug": "guanti-nitrile-nitrex801",
-    "brand": "Delta Plus",
-    "name": "Guanti nitrile NITREX801",
-    "category": "Mani",
-    "subcategory": "Rischio chimico",
-    "filterSlug": "rischio-chimico",
-    "description": "Protezione per le mani che lavorano con acidi, oli o sostanze aggressive. Lo provi in bottega prima dell'ordine. In scaffale sui modelli più richiesti.",
-    "bullets": [
-      "Lo provi in bottega prima di ordinare le casse",
-      "Disponibile in più taglie a magazzino",
-      "Pensato per uso quotidiano"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "DELTA PLUS SRL",
-    "_source_description": "Guanti nitrile NITREX801"
   },
   {
     "sku": "0GTIGODE8023300",
@@ -1395,37 +863,41 @@
     "category": "Mani",
     "subcategory": "Rischio chimico",
     "filterSlug": "rischio-chimico",
-    "description": "Protezione per le mani che lavorano con acidi, oli o sostanze aggressive. Lo provi in bottega prima dell'ordine. In scaffale sui modelli più richiesti.",
+    "description": "GUANTO NITREX VE802Protezione per le mani che lavorano con acidi, oli o sostanze aggressive. Lo provi in bottega prima dell'ordine. In scaffale sui modelli più richiesti",
     "bullets": [
       "Per chi maneggia liquidi aggressivi",
       "Lo provi in bottega prima di ordinare le casse",
       "Disponibile in più taglie a magazzino"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://media.deltaplus.eu/m/51bebfc916cf24da/Liferay_Product-NITREX802-VE802VE-eps.png",
+    "gallery": [
+      "https://media.deltaplus.eu/m/51bebfc916cf24da/Liferay_Product-NITREX802-VE802VE-eps.png"
+    ],
+    "datasheet": "https://www.deltaplus.eu/o/commerce-media/accounts/-1/attachments/61925316?download=true&locale=it_IT&siteKey=italie",
     "_supplier": "DELTA PLUS SRL",
     "_source_description": "Guanti nitrile NITREX802"
   },
   {
-    "sku": "0GTIATVE54",
-    "slug": "guanti-nitrile-spalmato-venicut-54",
+    "sku": "0GTIGO9000003",
     "brand": "Delta Plus",
-    "name": "Guanti nitrile spalmato venicut 54",
+    "name": "THRYM VV736",
     "category": "Mani",
     "subcategory": "Rischio chimico",
     "filterSlug": "rischio-chimico",
-    "description": "Protezione per le mani che lavorano con acidi, oli o sostanze aggressive. Lo provi in bottega prima dell'ordine. In scaffale sui modelli più richiesti.",
+    "description": "Protezione per le man,i Guanto impermeabile multinorma con ottima finezza per lavori intensivi al freddo. Lo provi in bottega prima dell'ordine. In scaffale sui modelli più richiesti.",
     "bullets": [
       "Lo provi in bottega prima di ordinare le casse",
       "Disponibile in più taglie a magazzino",
       "Pensato per uso quotidiano"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://media.deltaplus.eu/m/51733f85134e4a36/Liferay_Product_Zoom-THRYM-VV736-eps.png",
+    "gallery": [
+      "https://media.deltaplus.eu/m/51733f85134e4a36/Liferay_Product_Zoom-THRYM-VV736-eps.png"
+    ],
+    "datasheet": "https://www.deltaplus.eu/o/commerce-media/accounts/-1/attachments/61769102?download=true&locale=it_IT&siteKey=italie",
     "_supplier": "DELTA PLUS SRL",
-    "_source_description": "Guanti nitrile spalmato venicut 54"
+    "_source_description": "Guanti nitrile spalmato venicut 54",
+    "slug": "thrym-vv736"
   },
   {
     "sku": "0ABLBOGTCE0001",
@@ -1448,126 +920,6 @@
     "_source_description": "Guanti BOSCAIOLO per motosega TOCARAMA 101010568 CL2 (ARANCIO/NERO)"
   },
   {
-    "sku": "0GTIFB009OR00",
-    "slug": "guanti-f-bovino-bordato-driver-is",
-    "brand": "Industrial Starter",
-    "name": "Guanti f/bovino bordato driver (IS)",
-    "category": "Mani",
-    "subcategory": "Rischio meccanico",
-    "filterSlug": "rischio-meccanico",
-    "description": "Guanto driver in pelle di bovino bordato — calzata morbida che si fa al lavoro. Te lo facciamo provare prima dell'ordine, in scorta sui modelli più richiesti.",
-    "bullets": [
-      "Pelle di bovino, bordato",
-      "Calzata morbida che si fa al lavoro",
-      "Te lo facciamo provare prima dell'ordine"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "INDUSTRIAL STARTER SPA",
-    "_source_description": "Guanti f/bovino bordato driver (IS)"
-  },
-  {
-    "sku": "0GTIATVE42",
-    "slug": "guanti-poliuretano-taeki-ve42",
-    "brand": "Delta Plus",
-    "name": "Guanti poliuretano taeki VE42",
-    "category": "Mani",
-    "subcategory": "Rischio meccanico",
-    "filterSlug": "rischio-meccanico",
-    "description": "Per chi maneggia lamiere, profili, vetri. Te lo facciamo provare prima dell'ordine. Disponibile in più taglie a magazzino.",
-    "bullets": [
-      "In scorta sui modelli più richiesti",
-      "Comodo anche per ore continue",
-      "Per chi maneggia lamiere, profili, vetri"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "DELTA PLUS SRL",
-    "_source_description": "Guanti poliuretano taeki VE42"
-  },
-  {
-    "sku": "0GTIPU007PM00",
-    "slug": "guanti-poliuretano-venicut-59",
-    "brand": "Delta Plus",
-    "name": "Guanti poliuretano venicut 59",
-    "category": "Mani",
-    "subcategory": "Rischio meccanico",
-    "filterSlug": "rischio-meccanico",
-    "description": "Guanto da lavoro contro tagli, abrasioni e urti. Lo proviamo insieme prima di ordinarli a casse. In scorta sui modelli più richiesti.",
-    "bullets": [
-      "Per chi maneggia lamiere, profili, vetri",
-      "Te lo facciamo provare prima dell'ordine",
-      "Disponibile in più taglie a magazzino"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "DELTA PLUS SRL",
-    "_source_description": "Guanti poliuretano venicut 59"
-  },
-  {
-    "sku": "0GTIGO9000001",
-    "slug": "guanti-spalmato-pvc-vv750-nero",
-    "brand": "Delta Plus",
-    "name": "Guanti spalmato PVC VV750 nero",
-    "category": "Mani",
-    "subcategory": "Rischio meccanico",
-    "filterSlug": "rischio-meccanico",
-    "description": "Per chi maneggia lamiere, profili, vetri. Te lo facciamo provare prima dell'ordine. Disponibile in più taglie a magazzino.",
-    "bullets": [
-      "Disponibile in più taglie a magazzino",
-      "Pensato per il lavoro di tutti i giorni",
-      "In scorta sui modelli più richiesti"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "DELTA PLUS SRL",
-    "_source_description": "Guanti spalmato PVC VV750 nero"
-  },
-  {
-    "sku": "0GTIATVEBGREE",
-    "slug": "guanti-venicut-bgreen-blu",
-    "brand": "Delta Plus",
-    "name": "Guanti venicut BGREEN BLU",
-    "category": "Mani",
-    "subcategory": "Rischio meccanico",
-    "filterSlug": "rischio-meccanico",
-    "description": "Guanto per il lavoro di tutti i giorni. Pensato per chi sa cosa significa una mano scoperta tra le lame. Passa a provarlo.",
-    "bullets": [
-      "In scorta sui modelli più richiesti",
-      "Comodo anche per ore continue",
-      "Per chi maneggia lamiere, profili, vetri"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "DELTA PLUS SRL",
-    "_source_description": "Guanti venicut BGREEN BLU"
-  },
-  {
-    "sku": "0GTIKV011MA00",
-    "slug": "guanti-in-tessuto-aramidico-cm-28",
-    "brand": "Industrial Starter",
-    "name": "Guanti in tessuto aramidico cm 28",
-    "category": "Mani",
-    "subcategory": "Rischio termico",
-    "filterSlug": "rischio-termico",
-    "description": "Guanto in tessuto aramidico da 28 cm — pensato per chi tocca superfici calde o lavora vicino a scintille. Te lo facciamo provare prima dell'ordine. Disponibile in più taglie.",
-    "bullets": [
-      "Tessuto aramidico da 28 cm",
-      "Per superfici calde o vicino alle scintille",
-      "Disponibile in più taglie"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "INDUSTRIAL STARTER SPA",
-    "_source_description": "Guanti in tessuto aramidico cm 28"
-  },
-  {
     "sku": "0SCARLBABL00",
     "slug": "scarpa-antinf-blanco-bassa-s2",
     "brand": "U-Group",
@@ -1575,57 +927,65 @@
     "category": "Piedi",
     "subcategory": "Scarpe",
     "filterSlug": "scarpe",
-    "description": "Calzatura da lavoro pensata per turni lunghi. Da provare in bottega prima dell'ordine. Ne teniamo qualche modello in scaffale.",
+    "description": "Calzatura da lavoro per ambienti sanitari pensata per turni lunghi. Da provare in bottega prima dell'ordine. Ne teniamo qualche modello in scaffale.",
     "bullets": [
       "Pensata per turni lunghi",
       "Ne teniamo i modelli più richiesti in scaffale",
       "Per chi sta in piedi tutto il giorno"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://pim.u-powergroup.it/assets/medium_scarpa_antinfortunistica_upower_modello_blanco_linea_redlion_vista_laterale_232441ff84.jpg",
+    "gallery": [
+      "https://pim.u-powergroup.it/assets/medium_scarpa_antinfortunistica_upower_modello_blanco_linea_redlion_vista_laterale_232441ff84.jpg"
+    ],
+    "datasheet": "https://bff.u-powergroup.it/bff/documents/products/it-it/blanco-72/sheet?lang=it",
     "_supplier": "UGROUP S.R.L.",
     "_source_description": "Scarpa antinf. BLANCO bassa S2"
   },
   {
-    "sku": "0SCARLBAEG00",
-    "slug": "scarpa-antinf-egon-esd-s1p-src",
+    "sku": "0SCARLBAPO20036",
     "brand": "U-Group",
-    "name": "Scarpa antinf. EGON ESD S1P SRC",
+    "name": "Scarpa antinf. Deon S1P",
     "category": "Piedi",
     "subcategory": "Scarpe",
     "filterSlug": "scarpe",
     "description": "Calzatura da lavoro pensata per turni lunghi. Da provare in bottega prima dell'ordine. Ne teniamo qualche modello in scaffale.",
     "bullets": [
-      "Per chi sta in piedi tutto il giorno",
       "Tre taglie sempre a magazzino sui più richiesti",
-      "Una mezza misura cambia tutto — provala in bottega"
+      "Una mezza misura cambia tutto — provala in bottega",
+      "Comoda fin dal primo giorno"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://pim.u-powergroup.it/assets/medium_scarpa_antinfortunistica_upower_modello_deon_linea_red_ego_efd4c25a79.jpg",
+    "gallery": [
+      "https://pim.u-powergroup.it/assets/medium_scarpa_antinfortunistica_upower_modello_deon_linea_red_ego_efd4c25a79.jpg",
+      "https://pim.u-powergroup.it/assets/medium_scarpa_antinfortunistica_upower_modello_deon_linea_red_ego_top_db2fd05a26.jpg"
+    ],
+    "datasheet": "https://bff.u-powergroup.it/bff/documents/products/it-it/deon-36/sheet?lang=it",
     "_supplier": "UGROUP S.R.L.",
-    "_source_description": "Scarpa antinf. EGON ESD S1P SRC"
+    "_source_description": "Scarpa antinf. simple bassa S3",
+    "slug": "scarpa-antinf-deon-s1p"
   },
   {
-    "sku": "0SCAFIBA00",
-    "slug": "scarpa-antinf-elite-bassa-s3",
+    "sku": "0SCARLALHA00",
     "brand": "U-Group",
-    "name": "Scarpa antinf. elite bassa S3",
+    "name": "Scarpa antinf. Hummer S3",
     "category": "Piedi",
     "subcategory": "Scarpe",
     "filterSlug": "scarpe",
-    "description": "Calzatura da lavoro pensata per turni lunghi. Da provare in bottega prima dell'ordine. Ne teniamo qualche modello in scaffale.",
+    "description": "Scarpa antinfortunistica per chi sta in piedi tutto il giorno. Te le facciamo provare — una mezza misura cambia tutto. Tre taglie sempre a magazzino sui modelli più richiesti.",
     "bullets": [
-      "Pensata per turni lunghi",
       "Ne teniamo i modelli più richiesti in scaffale",
-      "Per chi sta in piedi tutto il giorno"
+      "Per chi sta in piedi tutto il giorno",
+      "Tre taglie sempre a magazzino sui più richiesti"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://pim.u-powergroup.it/assets/medium_scarpa_antinfortunistica_alta_upower_modello_hummer_linea_redlion_vista_laterale_9020758bca.jpg",
+    "gallery": [
+      "https://pim.u-powergroup.it/assets/medium_scarpa_antinfortunistica_alta_upower_modello_hummer_linea_redlion_vista_laterale_9020758bca.jpg",
+      "https://pim.u-powergroup.it/assets/medium_paio_di_scarpe_antinfortunistiche_alte_upower_modello_hummer_linea_redlion_vista_prospettica_dfadfac9f9.jpg"
+    ],
+    "datasheet": "https://bff.u-powergroup.it/bff/documents/products/it-it/hummer-74/sheet?lang=it",
     "_supplier": "UGROUP S.R.L.",
-    "_source_description": "Scarpa antinf. elite bassa S3"
+    "_source_description": "Scarpa antinf. safe polacco S3",
+    "slug": "scarpa-antinf-hummer-s3"
   },
   {
     "sku": "0SCASCBA01",
@@ -1641,51 +1001,37 @@
       "Per chi sta in piedi tutto il giorno",
       "Tre taglie sempre a magazzino sui più richiesti"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://pim.u-powergroup.it/assets/medium_scarpa_antinfortunistica_upower_modello_movida_linea_entry_vista_laterale_3c534da4b0.jpg",
+    "gallery": [
+      "https://pim.u-powergroup.it/assets/medium_scarpa_antinfortunistica_upower_modello_movida_linea_entry_vista_laterale_3c534da4b0.jpg"
+    ],
+    "datasheet": "https://bff.u-powergroup.it/bff/documents/products/it-it/movida-25/sheet?lang=it",
     "_supplier": "UGROUP S.R.L.",
     "_source_description": "Scarpa antinf. movida bassa S1P"
   },
   {
-    "sku": "0SCAGRAL00",
-    "slug": "scarpa-antinf-safe-polacco-s3",
+    "sku": "0SCARLBAPO00",
     "brand": "U-Group",
-    "name": "Scarpa antinf. safe polacco S3",
-    "category": "Piedi",
-    "subcategory": "Scarpe",
-    "filterSlug": "scarpe",
-    "description": "Scarpa antinfortunistica per chi sta in piedi tutto il giorno. Te le facciamo provare — una mezza misura cambia tutto. Tre taglie sempre a magazzino sui modelli più richiesti.",
-    "bullets": [
-      "Ne teniamo i modelli più richiesti in scaffale",
-      "Per chi sta in piedi tutto il giorno",
-      "Tre taglie sempre a magazzino sui più richiesti"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "UGROUP S.R.L.",
-    "_source_description": "Scarpa antinf. safe polacco S3"
-  },
-  {
-    "sku": "0SCAGRBA00",
-    "slug": "scarpa-antinf-simple-bassa-s3",
-    "brand": "U-Group",
-    "name": "Scarpa antinf. simple bassa S3",
+    "name": "Scarpa antinf. POINT ESD S1P SRC",
     "category": "Piedi",
     "subcategory": "Scarpe",
     "filterSlug": "scarpe",
     "description": "Calzatura da lavoro pensata per turni lunghi. Da provare in bottega prima dell'ordine. Ne teniamo qualche modello in scaffale.",
     "bullets": [
+      "Per chi sta in piedi tutto il giorno",
       "Tre taglie sempre a magazzino sui più richiesti",
-      "Una mezza misura cambia tutto — provala in bottega",
-      "Comoda fin dal primo giorno"
+      "provala in bottega"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://pim.u-powergroup.it/assets/medium_scarpa_antinfortunistica_upower_modello_point_linea_redlion_new_aa752f6436.jpg",
+    "gallery": [
+      "https://pim.u-powergroup.it/assets/medium_scarpa_antinfortunistica_upower_modello_point_linea_redlion_new_aa752f6436.jpg",
+      "https://pim.u-powergroup.it/assets/medium_scarpa_bassa_da_lavoro_upower_modello_point_03_8e819940d6.jpg",
+      "https://pim.u-powergroup.it/assets/medium_scarpa_bassa_da_lavoro_upower_modello_point_02_426840a5c1.jpg"
+    ],
+    "datasheet": "https://bff.u-powergroup.it/bff/documents/products/it-it/point-36/sheet?lang=it",
     "_supplier": "UGROUP S.R.L.",
-    "_source_description": "Scarpa antinf. simple bassa S3"
+    "_source_description": "Scarpa antinf. EGON ESD S1P SRC",
+    "slug": "scarpa-antinf-point-esd-s1p-src"
   },
   {
     "sku": "0SCARLZOMO00",
@@ -1701,9 +1047,11 @@
       "Comodo da togliere e rimettere",
       "Una mezza misura cambia tutto — provalo in bottega"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://pim.u-powergroup.it/assets/medium_scarpa_antinfortunistica_upower_modello_moon_linea_redlion_vista_laterale_3fb13abbcf.jpg",
+    "gallery": [
+      "https://pim.u-powergroup.it/assets/medium_scarpa_antinfortunistica_upower_modello_moon_linea_redlion_vista_laterale_3fb13abbcf.jpg"
+    ],
+    "datasheet": "https://bff.u-powergroup.it/bff/documents/products/it-it/moon-01/sheet?lang=it",
     "_supplier": "UGROUP S.R.L.",
     "_source_description": "Zoccola ANTINF. MOON"
   },
@@ -1721,70 +1069,56 @@
       "Copre la gamba dalle scintille e dai tagli",
       "Pensato per il lavoro con la motosega"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://eu.pipglobal.com/archive/pim/1200/31/08940N--3XL_image.jpg",
+    "gallery": [
+      "https://eu.pipglobal.com/archive/pim/1200/31/08940N--3XL_image.jpg"
+    ],
+    "datasheet": "https://eu.pipglobal.com/it/dynamic-spec-sheet-API.php?pID=P202994",
     "_supplier": "INDUSTRIAL STARTER SPA",
     "_source_description": "GAMBALE BOSCAIOLO 8940"
   },
   {
-    "sku": "0ABLBOSTICE000",
-    "slug": "stivale-boscaiolo",
-    "brand": "Industrial Starter",
-    "name": "stivale boscaiolo",
+    "sku": "0STIPVGI00",
+    "brand": "",
+    "name": "Stivale antinfortunistico giallo",
     "category": "Piedi",
     "subcategory": "Stivali",
     "filterSlug": "stivali",
-    "description": "Stivale da boscaiolo per chi taglia legna e lavora nel bosco — comodo per turni lunghi, suola pensata per il terreno smosso. In scorta sui modelli più richiesti.",
-    "bullets": [
-      "Pensato per il lavoro nel bosco",
-      "Suola per il terreno smosso",
-      "Comodo per turni lunghi"
-    ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
-    "_supplier": "INDUSTRIAL STARTER SPA",
-    "_source_description": "stivale boscaiolo"
-  },
-  {
-    "sku": "0STIPV01",
-    "slug": "stivale-pvc-scafandro",
-    "brand": "Industrial Starter",
-    "name": "Stivale pvc scafandro",
-    "category": "Piedi",
-    "subcategory": "Stivali",
-    "filterSlug": "stivali",
-    "description": "Calzatura alta per cantieri bagnati o ambienti che sporcano. Disponibile in più taglie. Te lo facciamo vedere quando passi.",
+    "description": "Stivale antinfortunistico alta per cantieri bagnati o ambienti che sporcano. Disponibile in più taglie. Te lo facciamo vedere quando passi.",
     "bullets": [
       "Per ambienti bagnati, fango, lavorazioni umide",
       "Da provare prima di ordinarne più paia",
       "Comodo da portare tutto il giorno"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
-    "datasheet": "",
+    "image": "https://eu.pipglobal.com/archive/pim/1200/30/06425R-010-36_image.jpg",
+    "gallery": [
+      "https://eu.pipglobal.com/archive/pim/1200/30/06425R-010-36_image.jpg"
+    ],
+    "datasheet": "https://eu.pipglobal.com/it/dynamic-spec-sheet-API.php?pID=P201734",
     "_supplier": "INDUSTRIAL STARTER SPA",
-    "_source_description": "Stivale pvc scafandro"
+    "_source_description": "Stivale pvc scafandro",
+    "slug": "stivale-antinfortunistico-giallo"
   },
   {
-    "sku": "0STIPV00",
-    "slug": "stivale-pvc-tuttacoscia",
-    "brand": "Industrial Starter",
-    "name": "Stivale pvc tuttacoscia",
+    "sku": "0STIGO004",
+    "brand": "",
+    "name": "Stivale gomma tuttacoscia",
     "category": "Piedi",
     "subcategory": "Stivali",
     "filterSlug": "stivali",
-    "description": "Calzatura alta per cantieri bagnati o ambienti che sporcano. Disponibile in più taglie. Te lo facciamo vedere quando passi.",
+    "description": "stivali tutta coscia in gomma per cantieri bagnati o ambienti che sporcano. Disponibile in più taglie. Te lo facciamo vedere quando passi.",
     "bullets": [
       "Comodo da portare tutto il giorno",
       "In scorta nelle taglie più richieste",
       "Te lo facciamo vedere quando passi"
     ],
-    "image": "assets/product-placeholder.png",
-    "gallery": [],
+    "image": "https://fratellibattistini.it/wp-content/uploads/2019/07/fratelli-battistini-tranto-stivali-art.95.jpg",
+    "gallery": [
+      "https://fratellibattistini.it/wp-content/uploads/2019/07/fratelli-battistini-tranto-stivali-art.95.jpg"
+    ],
     "datasheet": "",
     "_supplier": "INDUSTRIAL STARTER SPA",
-    "_source_description": "Stivale pvc tuttacoscia"
+    "_source_description": "Stivale pvc tuttacoscia",
+    "slug": "stivale-gomma-tuttacoscia"
   }
 ]
