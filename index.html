@@ -1392,41 +1392,47 @@
         updateCarousel();
       });
 
-      /* ── Swipe on mobile (with live drag feedback) ── */
+      /* ── Swipe (all touch devices — iPhone, iPad, Android) ── */
       var touchStartX = 0;
       var touchStartY = 0;
       var dragStartTranslate = 0;
       var isDragging = false;
       var TRANSITION = 'transform 0.45s cubic-bezier(0.4, 0, 0.2, 1)';
 
-      function getBaseTranslate() {
-        return -(currentIndex * getStep());
+      // Read the track's actual rendered translateX (handles mid-animation correctly)
+      function getLiveTranslateX() {
+        var t = window.getComputedStyle(track).transform;
+        if (!t || t === 'none') return 0;
+        // matrix(a,b,c,d,tx,ty) — tx is index 4
+        var match = t.match(/matrix.*\((.+)\)/);
+        if (!match) return 0;
+        return parseFloat(match[1].split(',')[4]) || 0;
       }
 
       track.addEventListener('touchstart', function (e) {
-        if (!isMobile()) return;
         touchStartX = e.touches[0].clientX;
         touchStartY = e.touches[0].clientY;
-        dragStartTranslate = getBaseTranslate();
         isDragging = false;
+        // Snap to actual visual position before disabling transition
+        // so a fast second swipe doesn't create a jump
+        dragStartTranslate = getLiveTranslateX();
         track.style.transition = 'none';
+        track.style.transform = 'translateX(' + dragStartTranslate + 'px)';
       }, { passive: true });
 
       track.addEventListener('touchmove', function (e) {
-        if (!isMobile()) return;
         var dx = e.touches[0].clientX - touchStartX;
         var dy = e.touches[0].clientY - touchStartY;
-        // Don't start dragging until clearly horizontal
+        // Only hijack horizontal swipes
         if (!isDragging) {
           if (Math.abs(dx) < 6) return;
-          if (Math.abs(dy) > Math.abs(dx)) return; // vertical scroll — leave it alone
+          if (Math.abs(dy) > Math.abs(dx)) return;
           isDragging = true;
         }
         track.style.transform = 'translateX(' + (dragStartTranslate + dx) + 'px)';
       }, { passive: true });
 
       track.addEventListener('touchend', function (e) {
-        if (!isMobile()) return;
         track.style.transition = TRANSITION;
         var dx = e.changedTouches[0].clientX - touchStartX;
         var dy = e.changedTouches[0].clientY - touchStartY;
