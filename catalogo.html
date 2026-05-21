@@ -172,14 +172,21 @@
     .catalog-section-header {
       margin-bottom: 40px;
       padding: 40px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
     }
 
-    .section-label { font-size: 18px; color: var(--black); margin-bottom: 4px; }
+    .section-label { font-size: 18px; color: var(--black); }
+
+    /* Label only shown on mobile */
+    .catalog-label { display: none; }
 
     .section-title {
       font-family: var(--font-head);
       font-weight: 600;
       font-size: 36px;
+      line-height: 40px;
       letter-spacing: -0.5px;
       color: var(--black);
     }
@@ -466,7 +473,7 @@
        MOBILE — ≤ 768px
     ═══════════════════════════════════════ */
     @media (max-width: 768px) {
-      :root { --pad-x: 20px; }
+      :root { --pad-x: 24px; }
 
       .contact-bar { display: none; }
 
@@ -492,7 +499,22 @@
       .nav-cta-desktop { display: none; }
       .nav-hamburger { display: flex; z-index: 110; }
 
-      .catalog-section { padding: 40px var(--pad-x) 60px; }
+      .catalog-section { padding: 24px var(--pad-x) 60px; }
+
+      .catalog-section-header {
+        padding: 0;
+        margin-bottom: 24px;
+      }
+
+      .catalog-label { display: block; }
+
+      .section-title {
+        font-family: var(--font-body);
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: -0.3px;
+      }
 
       .catalog-body { flex-direction: column; }
 
@@ -503,12 +525,17 @@
       .filter-sidebar { display: none !important; }
 
       .product-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
       }
 
-      .product-card__image { height: 220px; }
+      .product-card__image { height: 214px; }
 
-      .section-title { font-size: 28px; }
+      .product-card__brand { font-size: 12px; }
+
+      .product-card__name { font-size: 14px; }
+
+      .product-card__details { font-size: 12px; }
 
       .footer { padding: 48px var(--pad-x); }
       .footer__info { flex-direction: column; gap: 40px; font-size: 16px; }
@@ -607,6 +634,7 @@
   ═══════════════════════════════════════ -->
   <section class="catalog-section">
     <div class="catalog-section-header">
+      <p class="section-label catalog-label">I nostri prodotti</p>
       <h2 class="section-title" id="articoli-count-title">— articoli totali</h2>
     </div>
 
