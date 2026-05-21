@@ -390,6 +390,38 @@
       color: var(--black);
     }
 
+    /* ── Mobile category list (replaces carousel on small screens) ── */
+    .category-list {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      padding: 24px 0 0;
+    }
+
+    .category-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding: 12px;
+      border-radius: 8px;
+      width: 100%;
+    }
+
+    .category-row__img {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .category-row__title {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 30px;
+      letter-spacing: -0.5px;
+      color: var(--black);
+    }
+
     /* ═══════════════════════════════════════
        ONLINE ORDER SECTION
     ═══════════════════════════════════════ */
@@ -857,24 +889,14 @@
       .hero-buttons { flex-direction: column; gap: 12px; }
       .btn-white, .btn-white-outline { width: 100%; justify-content: center; padding: 12px 32px; }
 
-      /* Carousel */
+      /* Carousel → category list on mobile */
       .carousel-section { padding: 48px var(--pad-x); }
-      .carousel-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 32px;
-        margin-bottom: 24px;
-      }
+      .carousel-header { margin-bottom: 0; }
       .carousel-header-left { gap: 4px; }
       .carousel-header-left .section-title { font-size: 30px; }
-      .carousel-controls {
-        width: 100%;
-        justify-content: space-between;
-      }
-      .carousel-card { flex: 0 0 350px; height: 350px; padding: 24px; gap: 32px; }
-      .carousel-card__img { width: 150px; height: 150px; }
-      .carousel-card__title { font-size: 36px; }
-      .carousel-card__desc { font-size: 18px; }
+      .carousel-controls { display: none; }
+      .carousel-viewport { display: none; }
+      .category-list { display: flex; }
 
       /* Online order */
       .online-order { padding: 48px var(--pad-x); gap: 32px; }
@@ -1161,6 +1183,34 @@
         </a>
 
       </div>
+    </div>
+
+    <!-- Mobile-only: vertical category list (replaces swipe carousel) -->
+    <div class="category-list">
+      <a class="category-row" href="catalogo.html#capo" style="background: var(--orange);">
+        <img class="category-row__img" src="assets/capo-image.png" alt="Protezione Capo" />
+        <p class="category-row__title">Capo</p>
+      </a>
+      <a class="category-row" href="catalogo.html#corpo" style="background: var(--green);">
+        <img class="category-row__img" src="assets/corpo-image.png" alt="Protezione Corpo" />
+        <p class="category-row__title">Corpo</p>
+      </a>
+      <a class="category-row" href="catalogo.html#mani" style="background: var(--yellow);">
+        <img class="category-row__img" src="assets/mani-image.png" alt="Protezione Mani" />
+        <p class="category-row__title">Mani</p>
+      </a>
+      <a class="category-row" href="catalogo.html#piedi" style="background: var(--blue);">
+        <img class="category-row__img" src="assets/piedi-image.png" alt="Protezione Piedi" />
+        <p class="category-row__title">Piedi</p>
+      </a>
+      <a class="category-row" href="catalogo.html#alberghiero" style="background: var(--fog);">
+        <img class="category-row__img" src="assets/alberghiero-image.png" alt="Alberghiero" />
+        <p class="category-row__title">Alberghiero</p>
+      </a>
+      <a class="category-row" href="catalogo.html#sanitario" style="background: var(--fog);">
+        <img class="category-row__img" src="assets/sanitario-image.png" alt="Sanitario" />
+        <p class="category-row__title">Sanitario</p>
+      </a>
     </div>
   </section>
 
