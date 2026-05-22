@@ -544,6 +544,7 @@
         background: var(--white);
         margin-left: calc(-1 * var(--pad-x));
         margin-right: calc(-1 * var(--pad-x));
+        transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         padding: 12px var(--pad-x);
         border-bottom: 1px solid var(--divider);
         margin-bottom: 16px;
@@ -1814,6 +1815,7 @@
     (function () {
       if (window.innerWidth > 768) return;
       var nav = document.querySelector('.navbar');
+      var filterBar = document.querySelector('.filter-bar');
       var lastY = window.scrollY;
       var currentY = lastY;
       var ticking = false;
@@ -1822,15 +1824,25 @@
         sp.style.height = nav.offsetHeight + 'px';
         nav.insertAdjacentElement('afterend', sp);
       }
+      function setFilterBarTop(navVisible) {
+        if (!filterBar) return;
+        filterBar.style.top = navVisible ? nav.offsetHeight + 'px' : '0';
+      }
       function update() {
         var y = currentY;
         var menuOpen = !!document.querySelector('.nav-links.open');
         if (y < 8) {
           nav.classList.remove('mob-scrolled', 'mob-hidden');
+          setFilterBarTop(true);
         } else {
           nav.classList.add('mob-scrolled');
-          if (!menuOpen && y > lastY + 4) nav.classList.add('mob-hidden');
-          else if (y < lastY - 4) nav.classList.remove('mob-hidden');
+          if (!menuOpen && y > lastY + 4) {
+            nav.classList.add('mob-hidden');
+            setFilterBarTop(false);
+          } else if (y < lastY - 4) {
+            nav.classList.remove('mob-hidden');
+            setFilterBarTop(true);
+          }
         }
         lastY = y;
         ticking = false;
@@ -1840,8 +1852,13 @@
         if (!ticking) { requestAnimationFrame(update); ticking = true; }
       }, { passive: true });
       window.addEventListener('resize', function () {
-        if (window.innerWidth > 768) nav.classList.remove('mob-scrolled', 'mob-hidden');
+        if (window.innerWidth > 768) {
+          nav.classList.remove('mob-scrolled', 'mob-hidden');
+          if (filterBar) filterBar.style.top = '';
+        }
       }, { passive: true });
+      /* Initialise filter bar position on page load */
+      setFilterBarTop(true);
     })();
   </script>
 
