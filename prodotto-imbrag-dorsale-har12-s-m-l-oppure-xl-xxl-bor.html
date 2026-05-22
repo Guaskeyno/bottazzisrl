@@ -115,6 +115,20 @@
       gap: 40px;
     }
 
+    @media (min-width: 769px) {
+      .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 200;
+        background: var(--white);
+        box-shadow: none;
+        transition: box-shadow 0.2s;
+      }
+      .navbar.is-elevated {
+        box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      }
+    }
+
     .nav-logo img { height: 48px; width: auto; }
 
     .nav-links {
@@ -613,7 +627,7 @@
     <div class="product-info__header">
       <h1 class="product-info__name"><!-- TMPL:NAME -->Imbrag. dorsale HAR12 S/M/L oppure XL/XXL +BOR<!-- /TMPL:NAME --></h1>
       <p class="product-info__desc"><!-- TMPL:DESC -->Sistema anticaduta per chi lavora in quota — tetti, ponteggi, pali. La proviamo insieme prima di consegnarla, una taglia non vale l&#39;altra. Ne teniamo qualche pezzo in scaffale.<!-- /TMPL:DESC --></p>
-      <!-- TMPL:DATASHEET --><a href="https://www.deltaplus.eu/o/commerce-media/accounts/-1/attachments/66743523?download=true&amp;locale=it_IT&amp;siteKey=italie" class="btn-dark-outline" target="_blank" rel="noopener">Scarica scheda tecnica</a><!-- /TMPL:DATASHEET -->
+      <!-- TMPL:DATASHEET --><a href="https://www.deltaplus.eu/o/commerce-media/accounts/-1/attachments/66743523?download=true&amp;locale=it_IT&amp;siteKey=italie" class="btn-dark-outline" target="_blank" rel="noopener">Scarica scheda tecnica <span class="arrow-glyph">↓</span></a><!-- /TMPL:DATASHEET -->
     </div>
 
     <div class="perche">
@@ -786,6 +800,20 @@
           hamburger.querySelector('i').className = 'ph ph-list';
         });
       });
+
+      /* ── Sticky navbar elevation (desktop only) ── */
+      (function () {
+        if (window.innerWidth <= 768) return;
+        var nav = document.querySelector('.navbar');
+        function onScroll() {
+          if (window.scrollY > 0) {
+            nav.classList.add('is-elevated');
+          } else {
+            nav.classList.remove('is-elevated');
+          }
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+      })();
     })();
   </script>
 

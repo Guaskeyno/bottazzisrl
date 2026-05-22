@@ -115,6 +115,20 @@
       gap: 40px;
     }
 
+    @media (min-width: 769px) {
+      .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 200;
+        background: var(--white);
+        box-shadow: none;
+        transition: box-shadow 0.2s;
+      }
+      .navbar.is-elevated {
+        box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      }
+    }
+
     .nav-logo img { height: 48px; width: auto; }
 
     .nav-links {
@@ -613,7 +627,7 @@
     <div class="product-info__header">
       <h1 class="product-info__name"><!-- TMPL:NAME -->Giubbino S365 bicolore in AV<!-- /TMPL:NAME --></h1>
       <p class="product-info__desc"><!-- TMPL:DESC -->Un moderno bomber 3 in 1 alta visibilità ricco di funzioni intelligenti tra cui una tasca sul petto per smartphone, passanti per radio e un pannello inferiore a contrasto per la protezione dallo sporco. Incorporando un maglione con zip staccabile, questa giacca è adattabile a tutte le condizioni atmosferiche. Questo capo è completamente impermeabile e presenta cappuccio ripiegabile con coulisse, 7 tasche, polsini regolabili e zip frontale a doppio cursore per un facile accesso.<!-- /TMPL:DESC --></p>
-      <!-- TMPL:DATASHEET --><a href="https://documents.portwest.com/datasheet.php?style=S365&amp;lang=IT&amp;itemcol=S365YBR" class="btn-dark-outline" target="_blank" rel="noopener">Scheda tecnica</a><!-- /TMPL:DATASHEET -->
+      <!-- TMPL:DATASHEET --><a href="https://documents.portwest.com/datasheet.php?style=S365&amp;lang=IT&amp;itemcol=S365YBR" class="btn-dark-outline" target="_blank" rel="noopener">Scheda tecnica <span class="arrow-glyph">↗</span></a><!-- /TMPL:DATASHEET -->
     </div>
 
     <div class="perche">
@@ -781,6 +795,20 @@
           hamburger.querySelector('i').className = 'ph ph-list';
         });
       });
+
+      /* ── Sticky navbar elevation (desktop only) ── */
+      (function () {
+        if (window.innerWidth <= 768) return;
+        var nav = document.querySelector('.navbar');
+        function onScroll() {
+          if (window.scrollY > 0) {
+            nav.classList.add('is-elevated');
+          } else {
+            nav.classList.remove('is-elevated');
+          }
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+      })();
     })();
   </script>
 

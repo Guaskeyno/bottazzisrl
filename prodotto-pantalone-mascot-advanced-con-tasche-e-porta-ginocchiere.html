@@ -115,6 +115,20 @@
       gap: 40px;
     }
 
+    @media (min-width: 769px) {
+      .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 200;
+        background: var(--white);
+        box-shadow: none;
+        transition: box-shadow 0.2s;
+      }
+      .navbar.is-elevated {
+        box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      }
+    }
+
     .nav-logo img { height: 48px; width: auto; }
 
     .nav-links {
@@ -617,7 +631,7 @@ Il materiale elastico multifunzionale idrorepellente combina basso peso con alta
 Le tasche ginocchiere in CORDURA® durevole sono regolabili quindi le ginocchiere hanno l’ottima posizione sulle vostre ginocchia.
 Le ginocchiere sono facilmente inserite dai lati tramite una cerniera, anche mentre indossai i pantaloni.
 Efficace ventilazione nella zona del ginocchio tramite una cerniera sul lato della gamba. Disponibile in più taglie a magazzino.<!-- /TMPL:DESC --></p>
-      <!-- TMPL:DATASHEET --><a href="https://mascotsitecore-1ccb8.kxcdn.com/pdf/17179-311-18-it.pdf" class="btn-dark-outline" target="_blank" rel="noopener">Scarica scheda tecnica</a><!-- /TMPL:DATASHEET -->
+      <!-- TMPL:DATASHEET --><a href="https://mascotsitecore-1ccb8.kxcdn.com/pdf/17179-311-18-it.pdf" class="btn-dark-outline" target="_blank" rel="noopener">Scarica scheda tecnica <span class="arrow-glyph">↓</span></a><!-- /TMPL:DATASHEET -->
     </div>
 
     <div class="perche">
@@ -790,6 +804,20 @@ Efficace ventilazione nella zona del ginocchio tramite una cerniera sul lato del
           hamburger.querySelector('i').className = 'ph ph-list';
         });
       });
+
+      /* ── Sticky navbar elevation (desktop only) ── */
+      (function () {
+        if (window.innerWidth <= 768) return;
+        var nav = document.querySelector('.navbar');
+        function onScroll() {
+          if (window.scrollY > 0) {
+            nav.classList.add('is-elevated');
+          } else {
+            nav.classList.remove('is-elevated');
+          }
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+      })();
     })();
   </script>
 

@@ -157,6 +157,19 @@
       gap: 40px;
     }
 
+    @media (min-width: 769px) {
+      .navbar.is-sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: var(--black);
+        padding: 20px var(--pad-x);
+        z-index: 200;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+      }
+    }
+
     .nav-logo img {
       height: 48px;
       width: auto;
@@ -1506,6 +1519,23 @@
           hamburger.querySelector('i').className = 'ph ph-list';
         });
       });
+
+      /* ── Sticky navbar (desktop only) ── */
+      (function () {
+        if (window.innerWidth <= 768) return;
+        var nav  = document.querySelector('.navbar');
+        var hero = document.querySelector('.hero-wrapper');
+        function onScroll() {
+          if (window.innerWidth <= 768) return;
+          if (window.scrollY > hero.offsetHeight) {
+            nav.classList.add('is-sticky');
+          } else {
+            nav.classList.remove('is-sticky');
+          }
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll, { passive: true });
+      })();
     })();
   </script>
 
