@@ -553,6 +553,24 @@
       .footer { padding: 48px var(--pad-x); }
       .footer__info { flex-direction: column; gap: 40px; font-size: 16px; }
       .footer__legal { font-size: 16px; margin-top: 24px; }
+
+      /* ── Mobile slide-in navbar ── */
+      .navbar {
+        position: fixed !important;
+        top: 0 !important; left: 0 !important; right: 0 !important;
+        z-index: 150 !important;
+        padding: 12px var(--pad-x) !important;
+        background: transparent;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                    background 0.25s ease, box-shadow 0.25s ease;
+      }
+      .navbar.mob-scrolled {
+        background: var(--white) !important;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      }
+      .navbar.mob-scrolled .nav-hamburger i { color: var(--black) !important; }
+      .navbar.mob-scrolled:has(.nav-links.open) .nav-hamburger i { color: var(--white) !important; }
+      .navbar.mob-hidden { transform: translateY(-100%); }
     }
 
     @media (min-width: 769px) and (max-width: 1100px) {
@@ -814,6 +832,40 @@
           }
         }
         window.addEventListener('scroll', onScroll, { passive: true });
+      })();
+
+      /* ── Mobile: hide on scroll-down, slide in on scroll-up ── */
+      (function () {
+        if (window.innerWidth > 768) return;
+        var nav = document.querySelector('.navbar');
+        var lastY = window.scrollY;
+        var currentY = lastY;
+        var ticking = false;
+        if (!document.querySelector('.hero-wrapper')) {
+          var sp = document.createElement('div');
+          sp.style.height = nav.offsetHeight + 'px';
+          nav.insertAdjacentElement('afterend', sp);
+        }
+        function update() {
+          var y = currentY;
+          var menuOpen = !!document.querySelector('.nav-links.open');
+          if (y < 8) {
+            nav.classList.remove('mob-scrolled', 'mob-hidden');
+          } else {
+            nav.classList.add('mob-scrolled');
+            if (!menuOpen && y > lastY + 4) nav.classList.add('mob-hidden');
+            else if (y < lastY - 4) nav.classList.remove('mob-hidden');
+          }
+          lastY = y;
+          ticking = false;
+        }
+        window.addEventListener('scroll', function () {
+          currentY = window.scrollY;
+          if (!ticking) { requestAnimationFrame(update); ticking = true; }
+        }, { passive: true });
+        window.addEventListener('resize', function () {
+          if (window.innerWidth > 768) nav.classList.remove('mob-scrolled', 'mob-hidden');
+        }, { passive: true });
       })();
     })();
   </script>
