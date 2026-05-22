@@ -151,10 +151,18 @@
         top: 0;
         left: 0;
         right: 0;
-        background: var(--black);
+        background: var(--white);
         padding: 20px var(--pad-x);
         z-index: 200;
-        box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+        box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      }
+      .navbar.is-sticky .nav-links a {
+        color: var(--black);
+        opacity: 0.5;
+      }
+      .navbar.is-sticky .nav-links a:hover,
+      .navbar.is-sticky .nav-links a.active {
+        opacity: 1;
       }
     }
 
