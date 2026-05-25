@@ -1,0 +1,31 @@
+# Bottazzi Srl
+
+> Antinfortunistica, dispositivi di protezione individuale (DPI) e abbigliamento da lavoro a Casale Monferrato (AL) dal 1983. Tre generazioni della famiglia Bottazzi al servizio di chi lavora in Piemonte e nel Monferrato. Vendita, consulenza gratuita per la scelta dei DPI e personalizzazione (stampa e ricamo) di divise e capi da lavoro.
+
+## Pagine principali
+
+- [Home](https://www.bottazzisrl.com/): chi siamo in breve, brand rappresentati, panoramica del catalogo.
+- [Catalogo DPI](https://www.bottazzisrl.com/catalogo.html): 89 articoli, filtrabili per zona del corpo (capo, corpo, mani, piedi) e per settore.
+- [Azienda](https://www.bottazzisrl.com/azienda.html): storia, valori, persone — Bottazzi Srl dal 1983.
+- [Consulenza DPI](https://www.bottazzisrl.com/consulenza.html): servizio gratuito di scelta dei DPI in base alle mansioni; proposta entro 48–72 ore.
+- [Personalizzazione](https://www.bottazzisrl.com/personalizzazione.html): stampa e ricamo di divise e capi da lavoro, senza minimi, consegna in 7–14 giorni.
+
+## Catalogo per categoria
+
+- [Protezione del capo](https://www.bottazzisrl.com/catalogo.html#capo): elmetti, berretti, occhiali, protezione udito, respirazione (monouso, semimaschere, rilevatori gas). Brand: Deltaplus, Portwest, PIP, 3M, Sekur, Honeywell.
+- [Protezione del corpo](https://www.bottazzisrl.com/catalogo.html#corpo): anticaduta e revisioni, alta visibilità EN ISO 20471 (giubbini, gilet, pantaloni), multi-protezione (ignifugo, antiacido, antistatico). Brand: Payper, PIP, Deltaplus, Rossini, P&P, U-Power, Sparco, Bonetti, Tractel, Akrobat, Kong.
+- [Protezione delle mani](https://www.bottazzisrl.com/catalogo.html#mani): guanti chimici EN 374, antitaglio EN 388, boscaiolo EN 17249, antifreddo, saldatura. Brand: Deltaplus, G-tek (PIP), Showa, Neri.
+- [Protezione dei piedi](https://www.bottazzisrl.com/catalogo.html#piedi): scarpe antinfortunistiche basse e alte (S1, S2, S3, WR, boscaiolo, motosega), stivali da lavoro e in gomma. Brand: U-Power, Diadora Utility, Sparco, Albatros, About Blu, Panther, EVA, EXENA, Deltaplus.
+
+## Contatti
+
+- Indirizzo: Via Pier Enrico Motta 52, 15033 Casale Monferrato (AL), Italia
+- Telefono: +39 0142 452805
+- Email: info@bottazzisrl.com
+- Orari: Lun–Ven 8:30–12:30 e 14:30–18:30; Sab 8:30–12:30
+- P.IVA: 01093750063
+
+## Optional
+
+- [Sitemap XML](https://www.bottazzisrl.com/sitemap.xml) — elenco completo delle URL canoniche (pagine principali + 89 schede prodotto).
+- [robots.txt](https://www.bottazzisrl.com/robots.txt) — politica di crawling (aperta a tutti i crawler inclusi quelli AI: GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot-Extended).

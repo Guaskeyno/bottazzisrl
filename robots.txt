@@ -1,4 +1,38 @@
+# Default: open to all crawlers.
 User-agent: *
+Allow: /
+
+# Explicit allowlist for AI search and assistant crawlers.
+# (Redundant with the wildcard above, but documents the policy:
+# Bottazzi welcomes inclusion in AI search answers.)
+
+# OpenAI — model training
+User-agent: GPTBot
+Allow: /
+
+# OpenAI — live retrieval for ChatGPT browsing / search
+User-agent: ChatGPT-User
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic — Claude with web access
+User-agent: ClaudeBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Google — Gemini / AI Overviews (separate from Googlebot, which is implied by *)
+User-agent: Google-Extended
+Allow: /
+
+# Microsoft Copilot is served by Bingbot; nothing to add.
+# Apple Intelligence uses Applebot-Extended; allow it too.
+User-agent: Applebot-Extended
 Allow: /
 
 Sitemap: https://www.bottazzisrl.com/sitemap.xml
