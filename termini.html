@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Termini e Condizioni, Privacy Policy — Bottazzi Srl</title>
+  <meta name="description" content="Termini e Condizioni d'uso e Privacy Policy di Bottazzi Srl, distributore di DPI e abbigliamento da lavoro a Casale Monferrato." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://www.bottazzisrl.com/termini.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Bottazzi Srl" />
+  <meta property="og:locale" content="it_IT" />
+  <meta property="og:url" content="https://www.bottazzisrl.com/termini.html" />
+  <meta property="og:title" content="Termini e Condizioni, Privacy Policy — Bottazzi Srl" />
+  <meta property="og:description" content="Termini e Condizioni d'uso e Privacy Policy di Bottazzi Srl." />
+  <meta property="og:image" content="https://www.bottazzisrl.com/assets/opengraph.png" />
+
+  <meta name="theme-color" content="#DE3813" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600&family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    img { display: block; }
+    a { text-decoration: none; }
+    ul { list-style: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+    /* ── Tokens ── */
+    :root {
+      --black:     #1e1e1e;
+      --white:     #ffffff;
+      --red:       #de3813;
+      --fog:       #f4f4f4;
+      --concrete:  #c3b9b9;
+      --steel:     #5d5858;
+      --divider:   #d9d9d9;
+
+      --font-head: 'Sora', sans-serif;
+      --font-body: 'Geist', sans-serif;
+      --pad-x: 40px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-weight: 400;
+      color: var(--black);
+      background: var(--white);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ═══════════════════════════════════════
+       CONTACT BAR + NAVBAR
+    ═══════════════════════════════════════ */
+    .contact-bar {
+      background: var(--fog);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      height: 49px;
+      padding: 0 var(--pad-x);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--black);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .contact-item i { font-size: 24px; flex-shrink: 0; line-height: 1; }
+
+    /* iOS/Safari auto-detects phone numbers as links — keep them black */
+    .contact-item a { color: inherit; text-decoration: none; }
+
+    .contact-divider {
+      width: 1px;
+      height: 24px;
+      background: var(--concrete);
+      flex-shrink: 0;
+    }
+
+    /* ── Navbar ── */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 32px var(--pad-x);
+      background: var(--white);
+      gap: 40px;
+    }
+
+    @media (min-width: 769px) {
+      .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 200;
+        box-shadow: none;
+        transition: box-shadow 0.2s;
+      }
+      .navbar.is-elevated {
+        box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      }
+    }
+
+    .nav-logo img { height: 48px; width: auto; }
+
+    .nav-links {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--black);
+      font-size: 16px;
+      font-weight: 400;
+      opacity: 0.5;
+      transition: opacity 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { opacity: 1; }
+
+    .btn-red {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--red);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 32px;
+      border-radius: 4px;
+      white-space: nowrap;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--white);
+      color: var(--black);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 32px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+    .nav-hamburger i { font-size: 24px; color: var(--black); line-height: 1; }
+
+    /* ═══════════════════════════════════════
+       CONTENT SECTION
+    ═══════════════════════════════════════ */
+    .terms-section {
+      padding: 60px var(--pad-x) 80px;
+      max-width: 760px;
+    }
+
+    .terms-title {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 36px;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      color: var(--black);
+      margin-bottom: 40px;
+    }
+
+    .terms-body {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      font-size: 18px;
+      line-height: 1.65;
+      color: var(--black);
+    }
+
+    .terms-body p { }
+
+    .terms-body h2 {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 1.4;
+      margin-bottom: -12px;
+    }
+
+    .terms-body ul {
+      list-style: disc;
+      padding-left: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* ═══════════════════════════════════════
+       FINAL CTA
+    ═══════════════════════════════════════ */
+    .final-cta {
+      background: var(--red);
+      padding: 80px var(--pad-x);
+    }
+
+    .final-cta__content {
+      width: 581px;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 40px;
+    }
+
+    .final-cta__text {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      color: var(--white);
+    }
+
+    .final-cta__label {
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    .final-cta__headline {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 48px;
+      letter-spacing: -0.5px;
+      line-height: 1.05;
+    }
+
+    /* ═══════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════ */
+    .footer {
+      background: var(--black);
+      color: var(--white);
+      padding: 80px var(--pad-x);
+    }
+
+    .footer__inner { display: flex; flex-direction: column; gap: 32px; }
+    .footer__signet { width: 64px; height: 64px; object-fit: contain; }
+
+    .footer__info {
+      display: flex;
+      gap: 219px;
+      font-size: 20px;
+    }
+
+    .footer__col {
+      display: flex;
+      flex-direction: column;
+      gap: 42px;
+    }
+
+    .footer__col-block {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer__col-block--hours {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer__hours-row {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer__links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 20px;
+    }
+
+    .footer__links a {
+      color: var(--white);
+    }
+
+    .footer__legal {
+      font-size: 20px;
+      margin-top: 40px;
+    }
+
+    .footer__legal a {
+      color: var(--white);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .footer a { color: var(--white); text-decoration: none; }
+
+    /* ═══════════════════════════════════════
+       MOBILE — ≤ 768px
+    ═══════════════════════════════════════ */
+    @media (max-width: 768px) {
+      :root { --pad-x: 24px; }
+
+      /* Contact bar: hide on mobile */
+      .contact-bar { display: none; }
+
+      /* Navbar */
+      .navbar { padding: 16px var(--pad-x); gap: 0; }
+
+      .nav-links {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.92);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        z-index: 100;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: 22px; color: var(--white); opacity: 1; }
+      .nav-cta-desktop { display: none; }
+      .nav-hamburger { display: flex; z-index: 110; }
+
+      /* Terms content */
+      .terms-section { padding: 40px var(--pad-x) 60px; }
+      .terms-title { font-size: 28px; margin-bottom: 32px; }
+      .terms-body { font-size: 16px; gap: 24px; }
+
+      /* CTA */
+      .final-cta { padding: 60px var(--pad-x); }
+      .final-cta__content { width: 100%; }
+      .final-cta__headline { font-size: 30px; }
+      .final-cta__label { font-size: 16px; }
+
+      /* Footer */
+      .footer { padding: 48px var(--pad-x); }
+      .footer__info { flex-direction: column; gap: 40px; font-size: 16px; }
+      .footer__links { font-size: 16px; }
+      .footer__legal { font-size: 16px; margin-top: 24px; }
+
+      /* ── Mobile slide-in navbar ── */
+      .navbar {
+        position: fixed !important;
+        top: 0 !important; left: 0 !important; right: 0 !important;
+        z-index: 150 !important;
+        padding: 12px var(--pad-x) !important;
+        background: transparent;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                    background 0.25s ease, box-shadow 0.25s ease;
+      }
+      .navbar.mob-scrolled {
+        background: var(--white) !important;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      }
+      .navbar.mob-scrolled .nav-hamburger i { color: var(--black) !important; }
+      .navbar.mob-scrolled:has(.nav-links.open) .nav-hamburger i { color: var(--white) !important; }
+      .navbar.mob-hidden { transform: translateY(-100%); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       CONTACT BAR
+  ═══════════════════════════════════════ -->
+  <div class="contact-bar">
+    <div class="contact-item">
+      <i class="ph ph-envelope"></i>
+      info@bottazzisrl.com
+    </div>
+    <div class="contact-divider"></div>
+    <div class="contact-item">
+      <i class="ph ph-phone"></i>
+      +39 0142 452805
+    </div>
+    <div class="contact-divider"></div>
+    <div class="contact-item">
+      <i class="ph ph-map-pin"></i>
+      Via Enrico Motta 52, 15033 Casale Monferrato (AL)
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════ -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <a href="index.html"><img src="assets/main-logo.png" alt="Bottazzi Srl" /></a>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="catalogo.html">Catalogo</a></li>
+      <li><a href="personalizzazione.html">Personalizzazione</a></li>
+      <li><a href="consulenza.html">Consulenza</a></li>
+      <li><a href="azienda.html">Azienda</a></li>
+    </ul>
+    <a href="mailto:info@bottazzisrl.com" class="btn-red nav-cta-desktop">Contattaci</a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <i class="ph ph-list"></i>
+    </button>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       TERMS CONTENT
+  ═══════════════════════════════════════ -->
+  <section class="terms-section">
+    <h1 class="terms-title">Termini e Condizioni, Privacy Policy</h1>
+    <div class="terms-body">
+
+      <p><strong>BOTTAZZI SRL</strong><br>
+      Via Pier Enrico Motta, 52 - 15033 Casale Monferrato (AL)<br>
+      P.IVA 01093750063</p>
+
+      <h2>Accettazione delle Condizioni d'uso del sito</h2>
+      <p>L'accesso a questo sito implica l'accettazione da parte dell'utente, senza eccezioni o riserve delle seguenti condizioni:</p>
+      <ul>
+        <li>Nessuna parte del sito può essere riprodotta, tradotta o convertita in qualsiasi formato elettronico o cartaceo, senza la preventiva autorizzazione scritta dell'azienda BOTTAZZI SRL</li>
+        <li>BOTTAZZI SRL non si assume nessuna responsabilità riguardo a danni causati, direttamente o indirettamente dall'utilizzo delle informazioni ed eventuali software contenuti nel sito ed all'uso che terzi ne potranno fare;</li>
+        <li>questo sito può contenere links ad altri siti web.</li>
+        <li>BOTTAZZI SRL non è responsabile né per il contenuto né per la politica sulla privacy e sulla sicurezza adottata da tali siti.</li>
+      </ul>
+
+      <h2>Limitazione di Responsabilità</h2>
+      <p>BOTTAZZI SRL si impegna affinché il contenuto del presente sito sia quanto più possibile aggiornato ed accurato; tuttavia declina ogni responsabilità diretta ed indiretta, nei confronti degli utenti e in generale di qualsiasi terzo, per ogni danno, sia esso diretto, incidentale, consequenziale o indiretto, nonché per perdite o per danneggiamento di dati, perdita di profitti, avviamento, affari o opportunità, per eventuali imprecisioni, errori, omissioni nei contenuti e nei dati pubblicati sul Sito, o in relazione al suo utilizzo, ovvero dall'impossibilità di utilizzo del Sito o dei contenuti ivi pubblicati ed ancora dall'accesso a siti terzi resi disponibili tramite collegamenti ipertestuali, o dal relativo utilizzo, ovvero dall'impossibilità di utilizzo degli stessi o dei contenuti ivi pubblicati.</p>
+      <p>BOTTAZZI SRL si impegna, a rimuovere con la massima sollecitudine consentita, a seguito di segnalazioni, i contenuti ritenuti lesivi a proprio insindacabile giudizio o, comunque, dichiarati tali con provvedimento dell'Autorità Giudiziaria.</p>
+      <p>La presente sezione del Sito può essere modificata in qualsiasi momento. È onere degli Utenti prenderne costante visione. L'utilizzo del Sito costituisce comportamento concludente avente valore di piena ed incondizionata accettazione delle clausole sopra riportate.</p>
+
+      <h2>Utilizzo del sito</h2>
+      <p>In nessun caso BOTTAZZI SRL potrà essere ritenuta responsabile dei danni di qualsiasi natura causati direttamente o indirettamente dall'accesso al sito, dall'incapacità o impossibilità di accedervi, dal Vostro affidamento ed utilizzo in merito alle notizie in esso contenute. BOTTAZZI SRL inserirà nel sito informazioni aggiornate, ma non garantisce circa la loro completezza o accuratezza.</p>
+      <p>BOTTAZZI SRL si riserva il diritto di modificare i contenuti del sito e delle note legali in qualsiasi momento e senza alcun preavviso.</p>
+
+      <h2>Accesso ai siti esterni collegati</h2>
+      <p>BOTTAZZI SRL non ha alcuna responsabilità per quanto riguarda i siti ai quali è possibile accedere tramite i collegamenti posti all'interno del sito stesso, forniti come semplice servizio agli Utenti della rete.</p>
+      <p>Il fatto che BOTTAZZI SRL fornisca questi collegamenti, non implica l'approvazione dei siti stessi, sulla cui qualità, contenuti e grafica, BOTTAZZI SRL declina ogni tipo di responsabilità. BOTTAZZI SRL non è, quindi, responsabile in alcun modo in merito alle informazioni ottenute dall'Utente tramite l'accesso ai siti collegati a BOTTAZZI SRL. Pertanto in merito alla correttezza delle informazioni di tali siti sono da ritenersi, esclusivamente, responsabili, i soggetti titolari dei siti ai quali si accede alle condizioni previste dagli stessi.</p>
+
+      <h2>Copyright</h2>
+      <p>Le pagine di questo sito con i relativi contenuti pubblicati — testo, grafica, files, immagini e altre informazioni — sono protetti dalla vigente normativa recante disposizioni sul diritto d'autore (Legge n. 633/41) e sui diritti di proprietà industriale. I contenuti del Sito sono disponibili per un uso esclusivamente personale e non commerciale; pertanto, nessun contenuto può essere copiato, riprodotto, pubblicato, scaricato, spedito, ritrasmesso oppure distribuito in qualsiasi modo, salvo il caso di semplice registrazione su terminale per proprio uso personale ed a fini non commerciali; anche nel caso consentito di utilizzo per uso personale, devono essere mantenute integre le relative indicazioni e/o menzioni di proprietà del contenuto utilizzato.</p>
+      <p>Ogni prodotto o società menzionati in questo sito sono marchi dei rispettivi proprietari o titolari e possono essere protetti da brevetti e/o copyright concessi o registrati dalle autorità preposte. Possono quindi essere scaricati o utilizzati solo per uso personale e non commerciale: pertanto nulla, neppure in parte, potrà essere copiato, modificato o rivenduto per fini di lucro o per trarne qualsivoglia utilità. È vietato l'utilizzo, la pubblicazione, la distribuzione, l'inclusione dei contenuti pubblicati nel Sito in altri siti Internet, salvo apposita autorizzazione dei titolari dei diritti sui contenuti stessi.</p>
+      <p>Il Sito può contenere collegamenti ipertestuali ad altri siti Internet. BOTTAZZI SRL non esercita alcun controllo sui contenuti di detti siti e, di conseguenza, non si assume responsabilità in ordine alla relativa veridicità, attendibilità, accuratezza, completezza e aggiornamento.</p>
+
+      <h2>Privacy</h2>
+      <p>I dati e le informazioni personali che vengono raccolte all'atto della registrazione sono soggette alle Regole sulla Privacy.</p>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FINAL CTA
+  ═══════════════════════════════════════ -->
+  <div class="final-cta">
+    <div class="final-cta__content">
+      <div class="final-cta__text">
+        <p class="final-cta__label">Da quarant'anni dietro il bancone</p>
+        <p class="final-cta__headline">Pronto ad equipaggiare il tuo team?</p>
+      </div>
+      <a href="mailto:info@bottazzisrl.com" class="btn-white">Contattaci</a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <img class="footer__signet" src="assets/brand-signet.png" alt="Bottazzi Srl" />
+      <div class="footer__info">
+        <div class="footer__col">
+          <div class="footer__col-block">
+            <p>Bottazzi Srl</p>
+            <p>P.IVA 01093750063</p>
+          </div>
+          <div class="footer__col-block">
+            <p>+39 0142 452805</p>
+            <p>info@bottazzisrl.com</p>
+          </div>
+        </div>
+        <div class="footer__col">
+          <div class="footer__col-block">
+            <p>Via Pier Enrico Motta, 52</p>
+            <p>15033, Casale Monferrato (AL)</p>
+          </div>
+          <div class="footer__col-block--hours">
+            <div class="footer__hours-row">
+              <p>Lun - Ven</p>
+              <p>8,30 - 12,00; 14,30 - 19,00</p>
+            </div>
+            <div class="footer__hours-row">
+              <p>Sabato</p>
+              <p>8,30 - 12,00</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer__links">
+          <a href="catalogo.html">Catalogo</a>
+          <a href="personalizzazione.html">Personalizzazione</a>
+          <a href="consulenza.html">Consulenza</a>
+          <a href="azienda.html">Azienda</a>
+        </div>
+      </div>
+      <p class="footer__legal"><a href="termini.html">Termini e Condizioni, Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      /* ── Hamburger menu ── */
+      const hamburger = document.getElementById('hamburger');
+      const navLinks  = document.getElementById('navLinks');
+
+      hamburger.addEventListener('click', function () {
+        const isOpen = navLinks.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', isOpen);
+        hamburger.querySelector('i').className = isOpen ? 'ph ph-x' : 'ph ph-list';
+      });
+
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          navLinks.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          hamburger.querySelector('i').className = 'ph ph-list';
+        });
+      });
+
+      /* ── Sticky navbar elevation (desktop only) ── */
+      (function () {
+        if (window.innerWidth <= 768) return;
+        var nav = document.querySelector('.navbar');
+        function onScroll() {
+          if (window.scrollY > 0) {
+            nav.classList.add('is-elevated');
+          } else {
+            nav.classList.remove('is-elevated');
+          }
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+      })();
+
+      /* ── Mobile: hide on scroll-down, slide in on scroll-up ── */
+      (function () {
+        if (window.innerWidth > 768) return;
+        var nav = document.querySelector('.navbar');
+        var lastY = window.scrollY;
+        var currentY = lastY;
+        var ticking = false;
+        if (!document.querySelector('.hero-wrapper')) {
+          var sp = document.createElement('div');
+          sp.style.height = nav.offsetHeight + 'px';
+          nav.insertAdjacentElement('afterend', sp);
+        }
+        function update() {
+          var y = currentY;
+          var menuOpen = !!document.querySelector('.nav-links.open');
+          if (y < 8) {
+            nav.classList.remove('mob-scrolled', 'mob-hidden');
+          } else {
+            nav.classList.add('mob-scrolled');
+            if (!menuOpen && y > lastY + 4) nav.classList.add('mob-hidden');
+            else if (y < lastY - 4) nav.classList.remove('mob-hidden');
+          }
+          lastY = y;
+          ticking = false;
+        }
+        window.addEventListener('scroll', function () {
+          currentY = window.scrollY;
+          if (!ticking) { requestAnimationFrame(update); ticking = true; }
+        }, { passive: true });
+        window.addEventListener('resize', function () {
+          if (window.innerWidth > 768) nav.classList.remove('mob-scrolled', 'mob-hidden');
+        }, { passive: true });
+      })();
+    })();
+  </script>
+
+</body>
+</html>
