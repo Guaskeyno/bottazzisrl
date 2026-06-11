@@ -100,7 +100,8 @@
     "description": "Occhiale che si aggancia all'elmetto QUARTZ III — protezione per gli occhi senza dover indossare due cose separate. Lo provi in negozio.",
     "bullets": [
       "Si aggancia direttamente all'elmetto",
-      "Una sola cosa da indossare invece di due"
+      "Una sola cosa da indossare invece di due",
+      "Da vedere in negozio"
     ],
     "image": "https://media.deltaplus.eu/m/f2c015c3b8d05f5/Liferay_Product_Zoom-FUEGO-eps.png",
     "gallery": [
@@ -121,9 +122,9 @@
     "filterSlug": "occhiali",
     "description": "Occhiali da lavoro per officina e cantiere. Te li facciamo provare prima dell'ordine — la calzata fa la differenza. In scorta sui modelli più richiesti.",
     "bullets": [
-      "Comodi anche con la mascherina",
-      "Ne teniamo i modelli più richiesti in scaffale",
-      "Peso:33 g\nArea d'uso:lavori all’aperto, lavori meccanici con rischio di abbagliamento, agricoltura, edilizia, raffinerie."
+      "Per lavori all’aperto",
+      "Pesano solo 33g",
+      "Ne teniamo i modelli più richiesti in scaffale"
     ],
     "image": "https://cofrasafety.website/upload/q_75,w_320,o_webp/https://cofrasafety.biz/assets/3eff1ead-8ed3-4ce0-9577-eb92a3f2ecd2?timestamp=2023-11-",
     "gallery": [
@@ -145,8 +146,9 @@
     "filterSlug": "occhiali",
     "description": "Occhiali pensati per chi sta in officina o in cantiere tutti i giorni. Calzata da provare in bottega — non tutte le facce sono uguali. Ne teniamo qualche modello in scaffale.",
     "bullets": [
-      "Peso:29 g\nArea d'uso:lavori all’aperto in presenza di luce solare particolarmente intensa e con rischio di abbagliamento, edilizia, raccolta rifiuti, agricoltura, pesca.\nPlus:\n• DESIGN AVVOLGENTE\n• LENTI REVO",
-      "Calzata da provare insieme"
+      "Per lavori in presenza di luce intensaPlus:",
+      "Design avvolgente",
+      "Lenti Revo"
     ],
     "image": "https://cofrasafety.website/upload/q_100,w_2048,o_webp/https://cofrasafety.biz/assets/8081b550-430c-452a-ace3-42e584187366?timestamp=2024-02-26T11:38:53.472Z&imageformat=image/jpeg",
     "gallery": [
@@ -165,8 +167,9 @@
     "filterSlug": "occhiali",
     "description": "Skyler™ - Occhiali di sicurezza Full Frame futuristici, aste nere co-iniettate (policarbonato + TPR), lenti a specchio blu con trattamento antigraffio/antiappannamento/UV400, ponte nasale in TPR morbido regolabile, curva base 6, visione periferica migliorata, confezione al dettaglio individuale, peso: 36,4 gr.. Passa a provarli quando vuoi.",
     "bullets": [
-      "• Lente monopezzo in stile futuristico\n• I nostri futuristici occhiali di sicurezza Skyler offrono visioni periferiche migliorate per adattarsi a tutti i portatori.\n• Aste avvolgenti a doppio colpo (PC co-iniettato +TPR) per una vestibilità prolungata e un aspetto superiore",
-      "Calzata da provare insieme"
+      "Lente monopezzo",
+      "Visioni periferiche migliorate",
+      "Vestibilità prolungata"
     ],
     "image": "https://us.pipglobal.com/archive/pim/600/37/Skyler-glasses-2.jpg",
     "gallery": [
@@ -210,7 +213,7 @@
     "filterSlug": "respirazione",
     "description": "Filtro A1 di ricambio — . Per vapori organici, da abbinare alla semimaschera. Lo teniamo a magazzino tutto l'anno.",
     "bullets": [
-      "Classe A1 — per vapori organici",
+      "Classe A1 per vapori organici",
       "Da abbinare alla semimaschera",
       "Da abbinare alla semimaschera"
     ],
@@ -251,7 +254,7 @@
     "bullets": [
       "Classe P3- polveri sottili es amianto",
       "Da abbinare alla semimaschera",
-      "scorta in magazzino"
+      "In scorta a magazzino"
     ],
     "image": "assets/item-placeholder.png",
     "gallery": [],
@@ -291,7 +294,7 @@
     "filterSlug": "respirazione",
     "description": "Raccordo per pemettere alle maschere pienofacciali attacco dirin di diventare compatibili coi filtri 230",
     "bullets": [
-      "permette di usare lo stesso filtro su più tipi di maschera",
+      "Permette di usare lo stesso filtro su più tipi di maschera",
       "Da abbinare alla maschera pienofacciale",
       "Lo teniamo a magazzino tutto l'anno"
     ],
@@ -335,7 +338,7 @@
     "description": "Protezione per l'udito di tutti i giorni.Cuffie leggere, comode ed economiche\nProtezione SNR 28 dB\nArchetto regolabile per una facile vestibilità e un maggiore comfort\nL'archetto equalizza la pressione e assicura che i cuscini rimangano in posizione\nPressione minima sulla parte superiore della testa grazie alla fascia comfort\nI morbidi e ampi cuscini si adattano comodamente alle orecchie Passa a provarla quando vuoi.",
     "bullets": [
       "Per chi lavora vicino a macchine rumorose",
-      "sempre disponibile in negozio",
+      "Sempre disponibile in negozio",
       "Comodi anche per turni lunghi"
     ],
     "image": "https://eu.pipglobal.com/archive/pim/1200/12/263-NP220.jpg",
@@ -400,7 +403,8 @@
     "description": "Indumento ad alta visibilità per chi sta in mezzo al traffico o ai mezzi pesanti. Ne teniamo qualche pezzo in scorta tutto l'anno.",
     "bullets": [
       "Si lava in lavatrice senza problemi",
-      "Disponibile in più taglie a magazzino"
+      "Disponibile in più taglie a magazzino",
+      "In scorta sui modelli più richiesti"
     ],
     "image": "https://www.peployal.it/b2b/foto/AVC05204-08.jpg",
     "gallery": [
@@ -457,6 +461,28 @@
     "_source_description": "Polo GUARD manica corta in alta visibilità"
   },
   {
+    "sku": "0CARAL",
+    "brand": "ABC Signs",
+    "name": "Segnaletica",
+    "category": "Corpo",
+    "subcategory": "Alta visibilità",
+    "filterSlug": "alta-visibilita",
+    "description": "Segnaletica in vernice a base di solvente, resistente agli agenti atmosferici e duratura nel tempo. Standard di processo rispettosi dei requisiti previsti dalla ISO 9001. Disponibili in vari materiali: dall’alluminio, alla plastica.",
+    "bullets": [
+      "A norma ISO 9001",
+      "Disponibile in vari materiali",
+      "Sempre disponibili in negozio"
+    ],
+    "image": "https://www.gruppopastorello.it/Tmp/Images/Antincendio_Segnaletica-443-332.jpg",
+    "gallery": [
+      "https://www.gruppopastorello.it/Tmp/Images/Antincendio_Segnaletica-443-332.jpg"
+    ],
+    "datasheet": "http://catalogo.abc-signs.com/pdf/catalogo2024.pdf",
+    "_supplier": "",
+    "_source_description": "",
+    "slug": "segnaletica"
+  },
+  {
     "sku": "0ABLMAPOHV001",
     "slug": "t-shirt-alta-visibilta-avenue",
     "brand": "Industrial Wear",
@@ -485,10 +511,10 @@
     "category": "Corpo",
     "subcategory": "Anticaduta",
     "filterSlug": "anticaduta",
-    "description": "Dispositivo per il lavoro in altezza. Pensato per chi sale tutti i giorni. In bottega lo provi prima di prenderlo.",
+    "description": "Dispositivo per il lavoro in altezza. Pensato per chi sale tutti i giorni. In negozio lo provi prima di prenderlo.",
     "bullets": [
-      "Ne teniamo qualche pezzo in scaffale",
-      "Regolazione precisa sul corpo"
+      "Regolazione precisa sul corpo",
+      "Ne teniamo qualche pezzo in scaffale"
     ],
     "image": "https://media.deltaplus.eu/m/6890d87c51d09cfe/Liferay_Product-AN213200ZDD-eps.png",
     "gallery": [
@@ -506,7 +532,7 @@
     "category": "Corpo",
     "subcategory": "Anticaduta",
     "filterSlug": "anticaduta",
-    "description": "Dispositivo per il lavoro in altezza. Pensato per chi sale tutti i giorni. In bottega lo provi prima di prenderlo.",
+    "description": "Dispositivo per il lavoro in altezza. Pensato per chi sale tutti i giorni. In negozio lo provi prima di prenderlo.",
     "bullets": [
       "La proviamo insieme prima di consegnarla",
       "Pensata per tetti, ponteggi"
@@ -531,6 +557,7 @@
     "description": "Dispositivo per il lavoro in altezza. Pensato per chi sale tutti i giorni. In bottega lo provi prima di prenderlo.",
     "bullets": [
       "Pensata per tetti, ponteggi",
+      "Ideale per l’utilizzo quotidiano",
       "Ne teniamo qualche pezzo in scaffale"
     ],
     "image": "https://eu.pipglobal.com/archive/pim/1200/31/AK30-_image.jpg",
@@ -552,7 +579,7 @@
     "bullets": [
       "La proviamo insieme prima di consegnarla",
       "Pensata per tetti, ponteggi",
-      "sempre disponibile in negozio"
+      "Sempre disponibile in negozio"
     ],
     "image": "https://media.deltaplus.eu/m/9612c942b2bb205/Liferay_Product-HAR12-eps.png",
     "gallery": [
@@ -573,8 +600,9 @@
     "filterSlug": "busto",
     "description": "Capo da lavoro per officina, cantiere, magazzino. Tessuto che regge i lavaggi, taglio comodo. Disponibile in più taglie e più colori a magazzino.\nAnche versione lady",
     "bullets": [
-      "Taglio che lascia muoversi",
-      "Comodo per giornate intere"
+      "Taglio che lascia il corpo muoversi",
+      "Comodo per giornate intere",
+      "Disponibile in versione lady"
     ],
     "image": "https://pim.u-powergroup.it/assets/medium_UNIVERSE_DB_04bcb69db5.jpg",
     "gallery": [
@@ -593,7 +621,7 @@
     "category": "Corpo",
     "subcategory": "Busto",
     "filterSlug": "busto",
-    "description": "Capo da lavoro per officina, cantiere, magazzino. Tessuto che regge i lavaggi, taglio comodo. Disponibile in più taglie a magazzino.\nAnche versione lady",
+    "description": "Capo da lavoro per officina, cantiere, magazzino. Tessuto che regge i lavaggi, taglio comodo. Disponibile in più taglie a magazzino. Anche in versione lady.",
     "bullets": [
       "Comodo per giornate intere",
       "Per chi indossa la divisa otto ore al giorno",
@@ -951,7 +979,7 @@
     "description": "Calzatura da lavoro pensata per turni lunghi. Da provare in bottega prima dell'ordine. Ne teniamo qualche modello in scaffale.",
     "bullets": [
       "Tre taglie sempre a magazzino sui più richiesti",
-      "Una mezza misura cambia tutto — provala in bottega",
+      "Una mezza misura cambia tutto: da provare in negozio",
       "Comoda fin dal primo giorno"
     ],
     "image": "https://pim.u-powergroup.it/assets/medium_scarpa_antinfortunistica_upower_modello_deon_linea_red_ego_efd4c25a79.jpg",
@@ -1020,7 +1048,7 @@
     "bullets": [
       "Per chi sta in piedi tutto il giorno",
       "Tre taglie sempre a magazzino sui più richiesti",
-      "provala in bottega"
+      "Provala in negozio"
     ],
     "image": "https://pim.u-powergroup.it/assets/medium_scarpa_antinfortunistica_upower_modello_point_linea_redlion_new_aa752f6436.jpg",
     "gallery": [
@@ -1045,7 +1073,7 @@
     "bullets": [
       "Per chi sta in piedi tutto il giorno",
       "Comodo da togliere e rimettere",
-      "Una mezza misura cambia tutto — provalo in bottega"
+      "Una mezza misura cambia tutto: da provare in negozio"
     ],
     "image": "https://pim.u-powergroup.it/assets/medium_scarpa_antinfortunistica_upower_modello_moon_linea_redlion_vista_laterale_3fb13abbcf.jpg",
     "gallery": [
