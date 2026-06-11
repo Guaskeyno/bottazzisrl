@@ -42,6 +42,16 @@ function jsonScriptSafe(obj) {
   return JSON.stringify(obj).replace(/<\/(script)/gi, '<\\/$1');
 }
 
+// ── Strip TMPL scaffolding from generated output ───────────────
+// <title>, <script>, and HTML attribute values are NOT comment-parsed:
+// any `<!-- TMPL:X -->` inside them becomes literal text visible to
+// browsers, scrapers, and JSON.parse. The template keeps the markers
+// so subsequent builds can find them; the generated per-product files
+// must come out clean.
+function stripTmplMarkers(html) {
+  return html.replace(/<!--\s*\/?TMPL:[A-Z_]+\s*-->/g, '');
+}
+
 // ── Replace a <!-- TMPL:NAME -->...<!-- /TMPL:NAME --> block ───
 function replaceBlock(html, name, newInner) {
   const re = new RegExp(
@@ -237,7 +247,7 @@ function buildProductPages() {
     html = replaceBlock(html, 'SUGGESTED',         suggestedHTML(p));
     html = replaceBlock(html, 'JSONLD_PRODUCT',    productJsonLd(p, { canonical, imageUrl, desc }));
     html = replaceBlock(html, 'JSONLD_BREADCRUMB', breadcrumbJsonLd(p, { canonical }));
-    writeFileSync(join(ROOT, `prodotto-${p.slug}.html`), html);
+    writeFileSync(join(ROOT, `prodotto-${p.slug}.html`), stripTmplMarkers(html));
   }
   console.log(`  prodotto-<slug>.html — ${products.length} pages`);
 }
